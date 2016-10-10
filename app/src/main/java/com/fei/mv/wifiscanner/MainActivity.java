@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             WifiScan newOne = new WifiScan();
             newOne.setSSID(one.SSID);
             newOne.setRSSI(String.valueOf(one.level));
+            newOne.setMAC(one.BSSID);
 
             scan.add(newOne);
             resultText.append("BSSID: "+one.BSSID+" SSID: "+one.SSID+" Level:"+one.level+"\n");

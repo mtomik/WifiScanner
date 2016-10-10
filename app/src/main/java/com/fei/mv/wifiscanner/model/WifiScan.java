@@ -13,6 +13,10 @@ public class WifiScan {
     @Expose
     private String rSSI;
 
+    @SerializedName("MAC")
+    @Expose
+    private String mAc;
+
     /**
      * 
      * @return
@@ -49,4 +53,22 @@ public class WifiScan {
         this.rSSI = rSSI;
     }
 
+
+    /**
+     *
+     * @return
+     *     The mAC
+     */
+    public String getMAC() {
+        return mAc;
+    }
+
+    /**
+     *
+     * @param mAC
+     *     The RSSI
+     */
+    public void setMAC(String mAC) {
+        this.mAc = mAC;
+    }
 }
