@@ -4,7 +4,7 @@ package com.fei.mv.wifiscanner.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class WifiScan {
+public class WifiScan{
 
     @SerializedName("SSID")
     @Expose
@@ -28,7 +28,7 @@ public class WifiScan {
 
     /**
      * 
-     * @param sSID
+         * @param sSID
      *     The SSID
      */
     public void setSSID(String sSID) {
@@ -71,4 +71,7 @@ public class WifiScan {
     public void setMAC(String mAC) {
         this.mAc = mAC;
     }
+
+
 }
+
