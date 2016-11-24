@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     WifiManager wifi;
     private static final String TAG = "MainActivity";
     TextView resultText;
+    TextView locationResultText;
     ResultWriter writer;
     EditText floorText;
     Spinner sectionSpinner;
