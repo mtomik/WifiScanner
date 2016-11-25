@@ -17,6 +17,10 @@ public class WifiScan{
     @Expose
     private String mAc;
 
+    @SerializedName("is_used")
+    @Expose
+    private int is_used;
+
     /**
      * 
      * @return
@@ -70,6 +74,24 @@ public class WifiScan{
      */
     public void setMAC(String mAC) {
         this.mAc = mAC;
+    }
+
+    /**
+     *
+     * @return
+     *     The is_used
+     */
+    public int getIs_used() {
+        return is_used;
+    }
+
+    /**
+     *
+     * @param is_used
+     *     The RSSI
+     */
+    public void setIs_used(int is_used) {
+        this.is_used = is_used;
     }
 
 
