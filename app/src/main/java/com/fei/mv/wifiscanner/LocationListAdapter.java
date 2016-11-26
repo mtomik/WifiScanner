@@ -96,7 +96,7 @@ public class LocationListAdapter extends BaseExpandableListAdapter {
         if (floor.equals("0")) {
             floor = this.context.getResources().getString(R.string.ground_floor);
         } else {
-            floor = floor + this.context.getResources().getString(R.string.floor);
+            floor = floor + ". " + this.context.getResources().getString(R.string.floor);
         }
 
         floorText.setText(floor);

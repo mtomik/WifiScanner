@@ -7,14 +7,20 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ExpandableListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fei.mv.wifiscanner.model.LocationListFragment;
 import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -25,19 +31,22 @@ public class MainActivity extends AppCompatActivity {
     WifiManager wifi;
     private static final String TAG = "MainActivity";
     TextView resultText;
-    TextView locationResultText;
     ResultWriter writer;
     EditText floorText;
     Spinner sectionSpinner;
-    ExpandableListView locationList;
+    List<Record> allRecords;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        locationResultText = (TextView) findViewById(R.id.location_result_text);
-        locationList = (ExpandableListView) findViewById(R.id.location_list);
+        // TODO Defaultne zaznamy ulozit po instalacii/prvom spusteni do DB?
+        this.allRecords = getDefaultRecords();
+
+        LocationListFragment locationListFragment = new LocationListFragment();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.main_frame, locationListFragment).commit();
 
         wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
@@ -47,6 +56,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public List<Record> getAllRecords() {
+        return allRecords;
+    }
+
+    private List<Record> getDefaultRecords() {
+        Gson gson = new GsonBuilder().create();
+        try {
+            InputStream is = this.getAssets().open("default-records.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            String json = new String(buffer, "UTF-8");
+            Type listType = new TypeToken<ArrayList<Record>>() {
+            }.getType();
+            List<Record> records = gson.fromJson(json, listType);
+            return records;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     public void startScan(View v){
         List<WifiScan> scan = new ArrayList<>();
