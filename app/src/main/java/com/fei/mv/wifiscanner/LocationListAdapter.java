@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.fei.mv.wifiscanner.model.Record;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -18,10 +20,10 @@ import java.util.List;
 public class LocationListAdapter extends BaseExpandableListAdapter {
     private Context context;
     private List<String> locationHeaders;
-    private HashMap<String, List<String>> locationItems;
+    private HashMap<String, List<Record>> locationItems;
 
     public LocationListAdapter(Context context, List<String> locationHeaders,
-                               HashMap<String, List<String>> locationItems) {
+                               HashMap<String, List<Record>> locationItems) {
         this.context = context;
         this.locationHeaders = locationHeaders;
         this.locationItems = locationItems;
@@ -81,7 +83,7 @@ public class LocationListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int i, int i1, boolean b, View convertView, ViewGroup viewGroup) {
-        final String childText = (String) getChild(i, i1);
+        final Record child = (Record) getChild(i, i1);
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this.context
@@ -89,10 +91,15 @@ public class LocationListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.location_list_item, null);
         }
 
-        TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.location_list_item);
+        TextView floorText = (TextView) convertView.findViewById(R.id.location_list_floor);
+        String floor = child.getFloor();
+        if (floor.equals("0")) {
+            floor = this.context.getResources().getString(R.string.ground_floor);
+        } else {
+            floor = floor + this.context.getResources().getString(R.string.floor);
+        }
 
-        txtListChild.setText(childText);
+        floorText.setText(floor);
         return convertView;
     }
 

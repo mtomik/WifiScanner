@@ -18,7 +18,6 @@ import com.fei.mv.wifiscanner.model.WifiScan;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,34 +36,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        resultText = (TextView) findViewById(R.id.result);
-//        floorText = (EditText) findViewById(R.id.floorText);
-       // sectionText = (EditText) findViewById(R.id.sectionText);
-
-        List<String> locationHeaders = new ArrayList<>();
-        locationHeaders.add("A");
-        locationHeaders.add("B");
-
-        List<String> blockA = new ArrayList<>();
-        blockA.add("prízemie");
-        blockA.add("1. poschodie");
-
-        List<String> blockB = new ArrayList<>();
-        blockB.add("5. poschodie");
-
-        HashMap<String, List<String>> locationItems = new HashMap<>();
-        locationItems.put(locationHeaders.get(0), blockA);
-        locationItems.put(locationHeaders.get(1), blockB);
-
+        locationResultText = (TextView) findViewById(R.id.location_result_text);
         locationList = (ExpandableListView) findViewById(R.id.location_list);
-        LocationListAdapter listAdapter = new LocationListAdapter(this, locationHeaders, locationItems);
-        locationList.setAdapter(listAdapter);
-
-//        sectionSpinner = (Spinner) findViewById(R.id.sectionSpinner);
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                R.array.sections, android.R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        sectionSpinner.setAdapter(adapter);
 
         wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
@@ -72,9 +45,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,"Enabling Wifi", Toast.LENGTH_SHORT).show();
             wifi.setWifiEnabled(true);
         }
-
-//        writer = new ResultWriter("test.json",this);
-
     }
 
 
