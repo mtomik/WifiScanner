@@ -7,12 +7,21 @@ import android.provider.BaseColumns;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import android.widget.SimpleCursorAdapter;
 
 import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
-import java.text.DateFormat;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,6 +31,8 @@ import java.util.Locale;
 
 
 public class SQLHelper extends SQLiteOpenHelper {
+    private Context context;
+
 
     private static final String TEXT_TYPE = " TEXT";
     private static final String DATE_TYPE = " DATETIME";
@@ -81,7 +92,9 @@ public class SQLHelper extends SQLiteOpenHelper {
             "DROP TABLE IF EXISTS " + FeedEntry.TABLE_LOCATION;
 
     public SQLHelper(Context context) {
+
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        this.context = context;
     }
 
     @Override
@@ -89,6 +102,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         //Vytvorenie tabuliek v db podla vopred vyskladanych SQL dotazov
         db.execSQL(CREATE_TABLE_LOCATION);
         db.execSQL(CREATE_TABLE_WS);
+        readDefaultData(db);
     }
 
     @Override
@@ -104,8 +118,8 @@ public class SQLHelper extends SQLiteOpenHelper {
     /**
      * Private - pridanie jedneho zaznamu o wifine
      */
-    private long insertWS(WifiScan ws, long location_id) {
-        SQLiteDatabase db = this.getWritableDatabase();
+    private long insertWS(WifiScan ws, long location_id,SQLiteDatabase db) {
+        //SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(FeedEntry.COLUMN_SSID, ws.getSSID());
@@ -121,12 +135,12 @@ public class SQLHelper extends SQLiteOpenHelper {
     /**
      * Private - pridanie listu zaznamov o wifinach ku konkretnej pozicii
      */
-    private void insertWifiScans(List<WifiScan> wifiScans, long location_id) {
-        SQLiteDatabase db = this.getWritableDatabase();
+    private void insertWifiScans(List<WifiScan> wifiScans, long location_id,SQLiteDatabase db) {
+        //SQLiteDatabase db = this.getWritableDatabase();
 
         for (WifiScan ws : wifiScans) {
             ws.setIs_used(1);
-            long ws_id = insertWS(ws,location_id);
+            long ws_id = insertWS(ws,location_id,db);
         }
 
     }
@@ -159,7 +173,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     public List<WifiScan> getWifiScansByLocation(String location){
         SQLiteDatabase db = this.getWritableDatabase();
         List<WifiScan> wifiScans = new ArrayList<WifiScan>();
-        String id = getLocationIDbyName(location).toString();
+        String id = getLocationIDbyName(location,db).toString();
         String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_WS + " WHERE "
                 + FeedEntry.COLUMN_LOC + " = " + id;
 
@@ -191,12 +205,12 @@ public class SQLHelper extends SQLiteOpenHelper {
         List<WifiScan> wifiScansDB = new ArrayList<WifiScan>();
         List<Long> wsIDs = new ArrayList<Long>();
         wifiScansDB = getWifiScansByLocation(location);
-        wsIDs = getWifiScanIDsByLocation(getLocationIDbyName(location));
+        wsIDs = getWifiScanIDsByLocation(getLocationIDbyName(location,db));
 
         for (Long id : wsIDs) {
             db.delete(FeedEntry.TABLE_WS, FeedEntry.KEY_ID + "="+id,null);
         }
-        insertWifiScans(wifiScans,getLocationIDbyName(location));
+        insertWifiScans(wifiScans,getLocationIDbyName(location,db),db);
     }
 
 
@@ -227,10 +241,10 @@ public class SQLHelper extends SQLiteOpenHelper {
     /**
     *  Pridanie noveho zazanmu pozicie: blok/poschodie/wifiny
     */
-    public long addLocationRecord(Record location) {
+    public long addLocationRecord(Record location,SQLiteDatabase db) {
         List<WifiScan> wifiscans = new ArrayList<WifiScan>();
         wifiscans = location.getWifiScan();
-        SQLiteDatabase db = this.getWritableDatabase();
+       // SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(FeedEntry.COLUMN_LOC_NAME, location.getSection()+location.getFloor());
@@ -238,7 +252,7 @@ public class SQLHelper extends SQLiteOpenHelper {
 
         long loc_id = db.insert(FeedEntry.TABLE_LOCATION, null, values);
 
-        insertWifiScans(wifiscans,loc_id);
+        insertWifiScans(wifiscans,loc_id,db);
 
         return loc_id;
     }
@@ -246,8 +260,8 @@ public class SQLHelper extends SQLiteOpenHelper {
     /**
      *  Private - True/False Overenie ci tabulka obsahuje zaznam o danej pozici blok/poschodie
      */
-    private boolean containsLocation(String locName) {
-        SQLiteDatabase db = this.getReadableDatabase();
+    private boolean containsLocation(String locName,SQLiteDatabase db) {
+        //SQLiteDatabase db = this.getReadableDatabase();
         boolean contains = false;
         String selectQuery = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION
                 + " WHERE " + FeedEntry.COLUMN_LOC_NAME + " = '" + locName + "'"
@@ -258,7 +272,12 @@ public class SQLHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         if (cursor != null)
-            contains=true;
+            cursor.moveToFirst();
+
+        if(cursor.getCount()> 0){
+            contains = true;
+        }
+
 
         return contains;
     }
@@ -266,8 +285,8 @@ public class SQLHelper extends SQLiteOpenHelper {
     /**
      *  Private - Ziskanie ID pozicie podla nazvu pozicie
      */
-    private Long getLocationIDbyName(String location_name) {
-        SQLiteDatabase db = this.getReadableDatabase();
+    private Long getLocationIDbyName(String location_name,SQLiteDatabase db) {
+        //SQLiteDatabase db = this.getReadableDatabase();
 
         String selectQuery = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION + " WHERE "
                 + FeedEntry.COLUMN_LOC_NAME + " = '"+ location_name+"'";
@@ -286,6 +305,7 @@ public class SQLHelper extends SQLiteOpenHelper {
      *  Ziskanie vsetkych objektov typu Record z DB
      */
     public List<Record> getAllLocationRecords(){
+
         SQLiteDatabase db = this.getWritableDatabase();
         List<WifiScan> wifiScans = new ArrayList<WifiScan>();
         List<Record> records = new ArrayList<Record>();
@@ -316,20 +336,45 @@ public class SQLHelper extends SQLiteOpenHelper {
     /**
      *  Metoda na prvu inicializaciu DB z suboru test.json, metodu treba volat v ResultWriteri pri recover() metode
      *  Neskor bude private - kedze default data budeme importovat nejak inac...
-     *  TODO treba doriesit import def dat
+     *  TODO treba doriesit import def dat   ===    HOTOVO
+     *
      */
-    public void addDefaultData(List<Record> locRecords ){
-        SQLiteDatabase db = this.getWritableDatabase();
-        //List<Long> wsIDs = new ArrayList<Long>();
-        //onUpgrade(db, 1, 2);
-        for (Record location : locRecords) {
+    private void readDefaultData(SQLiteDatabase db){
+        Gson gson = new Gson();
+        List<Record> recordList = new ArrayList<>();
 
-            //Podmienka aby sa nepridavali rovnake zaznamy viacej krat
-           if (!containsLocation(location.getSection()+location.getFloor())) {
-               long loc_id = addLocationRecord(location);
+        InputStream is = context.getResources().openRawResource(R.raw.defaultdata);
+        Writer writer = new StringWriter();
+        char[] buffer = new char[1024];
+        try {
+            Reader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            int n;
+            while ((n = reader.read(buffer)) != -1) {
+                writer.write(buffer, 0, n);
+            }
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        String jsonString = writer.toString();
+        Type listType = new TypeToken<ArrayList<Record>>(){}.getType();
+        recordList = gson.fromJson(jsonString,listType);
+
+        for (Record location : recordList) {
+
+            //Podmienka aby sa nepridavali rovnake zaznamy viacej krat tu by asi ani nemusela byt kedze je to on create TODO treba asi odstranit
+           if (!containsLocation(location.getSection()+location.getFloor(),db)) {
+               long loc_id = addLocationRecord(location,db);
            }
         }
-        updateWifiScansByLocation("A3",getWifiScansByLocation("A3"));
-        locRecords = getAllLocationRecords();
+
     }
 }
