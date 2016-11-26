@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         sqlHelper = new SQLHelper(this);
-        this.allRecords = sqlHelper.getAllLocationRecords();
+        allRecords = sqlHelper.getAllLocationRecords();
 
         LocationListFragment locationListFragment = new LocationListFragment();
         getSupportFragmentManager().beginTransaction()
