@@ -1,4 +1,4 @@
-package com.fei.mv.wifiscanner.model;
+package com.fei.mv.wifiscanner;
 
 
 import android.os.Bundle;
@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.fei.mv.wifiscanner.LocationListAdapter;
-import com.fei.mv.wifiscanner.MainActivity;
-import com.fei.mv.wifiscanner.R;
+import com.fei.mv.wifiscanner.model.Record;
 
 import java.util.ArrayList;
 import java.util.HashMap;
