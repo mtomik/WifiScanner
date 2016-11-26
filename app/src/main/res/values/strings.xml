@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Wifi Scanner</string>
+    <string name="ground_floor">prízemie</string>
+    <string name="floor">poschodie</string>
+    <string name="actualization">Aktualizované:</string>
 
     <string-array name="sections">
         <item>A</item>
