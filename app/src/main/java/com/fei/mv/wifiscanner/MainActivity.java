@@ -13,13 +13,7 @@ import android.widget.Toast;
 
 import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -34,14 +28,15 @@ public class MainActivity extends AppCompatActivity {
     EditText floorText;
     Spinner sectionSpinner;
     List<Record> allRecords;
+    SQLHelper sqlHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // TODO Defaultne zaznamy ulozit po instalacii/prvom spusteni do DB?
-        this.allRecords = getDefaultRecords();
+        sqlHelper = new SQLHelper(this);
+        this.allRecords = sqlHelper.getAllLocationRecords();
 
         LocationListFragment locationListFragment = new LocationListFragment();
         getSupportFragmentManager().beginTransaction()
@@ -57,26 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
     public List<Record> getAllRecords() {
         return allRecords;
-    }
-
-    private List<Record> getDefaultRecords() {
-        Gson gson = new GsonBuilder().create();
-        try {
-            InputStream is = this.getAssets().open("default-records.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-
-            String json = new String(buffer, "UTF-8");
-            Type listType = new TypeToken<ArrayList<Record>>() {
-            }.getType();
-            List<Record> records = gson.fromJson(json, listType);
-            return records;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     public void startScan(View v){

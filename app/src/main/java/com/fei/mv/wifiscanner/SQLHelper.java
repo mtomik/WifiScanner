@@ -1,11 +1,11 @@
 package com.fei.mv.wifiscanner;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.fei.mv.wifiscanner.model.Record;
@@ -343,7 +343,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         Gson gson = new Gson();
         List<Record> recordList = new ArrayList<>();
 
-        InputStream is = context.getResources().openRawResource(R.raw.defaultdata);
+        InputStream is = context.getResources().openRawResource(R.raw.default_data);
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];
         try {
