@@ -2,6 +2,7 @@
 package com.fei.mv.wifiscanner.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -14,6 +15,9 @@ public class Record {
     @SerializedName("floor")
     @Expose
     private String floor;
+    @SerializedName("edited_at")
+    @Expose
+    private Date edited_at;
     @SerializedName("wifiScan")
     @Expose
     private List<WifiScan> wifiScan = new ArrayList<WifiScan>();
@@ -52,6 +56,24 @@ public class Record {
      */
     public void setFloor(String floor) {
         this.floor = floor;
+    }
+
+    /**
+     *
+     * @return
+     *     The edited_at
+     */
+    public Date getEdited_at() {
+        return edited_at;
+    }
+
+    /**
+     *
+     * @param edited_at
+     *     The section
+     */
+    public void setEdited_at(Date edited_at) {
+        this.edited_at = edited_at;
     }
 
     /**
