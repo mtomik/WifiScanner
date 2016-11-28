@@ -31,9 +31,15 @@
 
         <TextView
             android:id="@+id/location_result"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/location_result_label" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/location_result"
+            android:text="Uloz"
+            android:onClick="saveNewLocation"/>
     </RelativeLayout>
 
     <ExpandableListView

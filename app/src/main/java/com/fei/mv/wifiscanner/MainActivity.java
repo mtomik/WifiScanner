@@ -4,6 +4,8 @@ import android.content.Context;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -47,7 +49,19 @@ public class MainActivity extends AppCompatActivity {
         if(!wifi.isWifiEnabled()){
             Toast.makeText(MainActivity.this,"Enabling Wifi", Toast.LENGTH_SHORT).show();
             wifi.setWifiEnabled(true);
+        }else{
+            // TODO: urob scan wifi a najdi polohu ak nepoznas polohu -> fragment na ulozenie polohy
+            
         }
+    }
+
+    public void saveNewLocation(View v){
+        LocationCreateFragment createFragment = new LocationCreateFragment();
+
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.replace(R.id.main_frame, createFragment);
+        transaction.commit();
     }
 
     public List<Record> getAllRecords() {
