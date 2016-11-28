@@ -9,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
@@ -23,7 +25,7 @@ import java.util.List;
  * Created by juraj on 28.11.2016.
  */
 
-public class LocationCreateFragment extends Fragment {
+public class LocationCreateFragment extends Fragment implements View.OnClickListener {
     private WifiManager wifi;
     private SQLHelper sqlHelper;
     private Spinner sectionSpinner;
@@ -60,7 +62,10 @@ public class LocationCreateFragment extends Fragment {
 //
 //        view.setAdapter(infoAdapter);
         populateListView(rootView);
-
+        Button saveButton = (Button) rootView.findViewById(R.id.save_location);
+        saveButton.setOnClickListener(this);
+        Button rescanButton = (Button) rootView.findViewById(R.id.rescan_wifi);
+        rescanButton.setOnClickListener(this);
 
         return rootView;
     }
@@ -87,7 +92,7 @@ public class LocationCreateFragment extends Fragment {
         }
     }
 
-    public void startScan(View v){
+    public void rescan(View v){
         List<WifiScan> scan = new ArrayList<>();
 
         wifi.startScan();
@@ -102,18 +107,37 @@ public class LocationCreateFragment extends Fragment {
         }
         scanResults = scan;
         fillInfoList();
-
-        populateListView(v);
-
+        infoAdapter.clear();
+        infoAdapter.addAll(info);
+        infoAdapter.notifyDataSetChanged();
     }
 
-    public void saveLocation(View v){
+    public void save(View v){
         Record record = new Record();
+        String floor = floorSpinner.getSelectedItem().toString();
+        String section = sectionSpinner.getSelectedItem().toString();
         record.setFloor(floorSpinner.getSelectedItem().toString());
         record.setSection(sectionSpinner.getSelectedItem().toString());
         record.setEdited_at(new Date());
         record.setWifiScan(scanResults);
 
+        List<Record> resultList = sqlHelper.getAllLocationRecords();
+
         sqlHelper.addLocationRecord(record);
+
+        resultList = sqlHelper.getAllLocationRecords();
+
+        Toast.makeText(rootView.getContext(),"Record for "+section+floor+" added!",Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.rescan_wifi){
+            rescan(v);
+        }else if(v.getId() == R.id.save_location){
+            save(v);
+        }
     }
 }
