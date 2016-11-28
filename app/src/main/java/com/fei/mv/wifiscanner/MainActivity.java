@@ -63,8 +63,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment).commit();
     }
 
+    public void showDetail(View v){
+        DetailFragment detailFragment = new DetailFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, detailFragment).commit();
+    }
+
     public List<Record> getAllRecords() {
         return allRecords;
+    }
+    public Record getRecordById(int id){
+        return allRecords.get(id);
     }
 
     public List<WifiScan> startScan(View v){
