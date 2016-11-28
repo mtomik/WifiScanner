@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -61,11 +63,6 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
 
         fillInfoList();
 
-
-//        infoAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_wifi ,R.id.wifi_info, info);
-//        ListView view = (ListView) rootView.findViewById(R.id.listview_wifi);
-//
-//        view.setAdapter(infoAdapter);
         populateListView(rootView);
         Button saveButton = (Button) rootView.findViewById(R.id.save_location);
         saveButton.setOnClickListener(this);
@@ -113,6 +110,16 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
     }
 
     public void save(View v){
+        ListView items = (ListView) getActivity().findViewById(R.id.listview_wifi);
+
+        for(int i=0;i<items.getCount();i++){
+            View view = items.getAdapter().getView(i, null, null);
+            CheckBox checkBox = (CheckBox) ((LinearLayout) view).getChildAt(1);
+            if(checkBox.isChecked())
+                scanResults.get(i).setIs_used(1);
+            else
+                scanResults.get(i).setIs_used(0);
+        }
         Record record = new Record();
         String floor = floorSpinner.getSelectedItem().toString();
         String section = sectionSpinner.getSelectedItem().toString();
