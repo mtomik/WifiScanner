@@ -5,6 +5,7 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -121,15 +122,13 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
         record.setEdited_at(new Date());
         record.setWifiScan(scanResults);
 
-        List<Record> resultList = sqlHelper.getAllLocationRecords();
-
         sqlHelper.addLocationRecord(record);
-
-        resultList = sqlHelper.getAllLocationRecords();
 
         Toast.makeText(rootView.getContext(),"Record for "+section+floor+" added!",Toast.LENGTH_SHORT).show();
 
-
+        LocationListFragment locationListFragment = new LocationListFragment();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction().replace(R.id.main_frame, locationListFragment);
+        transaction.commit();
     }
 
     @Override
