@@ -325,6 +325,7 @@ public class SQLHelper extends SQLiteOpenHelper {
             do {
                 Record r = new Record();
                 String loc_name = c.getString(c.getColumnIndex(FeedEntry.COLUMN_LOC_NAME));
+                r.setId(c.getInt(c.getColumnIndex(FeedEntry.KEY_ID)));
                 r.setSection(loc_name.substring(0,1));
                 r.setFloor(loc_name.substring(1,2));
                 r.setEdited_at(getDatefromString((c.getString(c.getColumnIndex(FeedEntry.COLUMN_SCAN_DATE)))));

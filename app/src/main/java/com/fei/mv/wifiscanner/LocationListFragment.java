@@ -23,7 +23,7 @@ public class LocationListFragment extends Fragment {
     List<String> locationHeaders;
     HashMap<String, List<Record>> locationItems;
 
-    ExpandableListView locationList;
+    ExpandableListView locationListView;
     TextView locationResultText;
 
     @Override
@@ -47,11 +47,26 @@ public class LocationListFragment extends Fragment {
         }
 
         View view = inflater.inflate(R.layout.location_list_fragment, container, false);
-        locationList = (ExpandableListView) view.findViewById(R.id.location_list);
+        locationListView = (ExpandableListView) view.findViewById(R.id.location_list);
 
-        LocationListAdapter listAdapter = new LocationListAdapter(
+        final LocationListAdapter listAdapter = new LocationListAdapter(
                 getActivity(), this.locationHeaders, this.locationItems);
-        locationList.setAdapter(listAdapter);
+        locationListView.setAdapter(listAdapter);
+        locationListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
+                Bundle bundle = new Bundle();
+                Record record = (Record) listAdapter.getChild(i, i1);
+                bundle.putInt("index", record.getId());
+
+                DetailFragment detailFragment = new DetailFragment();
+                detailFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.main_frame, detailFragment)
+                        .addToBackStack("location_detail").commit();
+                return false;
+            }
+        });
+
         return view;
     }
 

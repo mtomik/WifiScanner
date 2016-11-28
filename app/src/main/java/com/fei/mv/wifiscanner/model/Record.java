@@ -1,14 +1,15 @@
 
 package com.fei.mv.wifiscanner.model;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Record {
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
+public class Record {
+    private int id;
     @SerializedName("section")
     @Expose
     private String section;
@@ -21,6 +22,14 @@ public class Record {
     @SerializedName("wifiScan")
     @Expose
     private List<WifiScan> wifiScan = new ArrayList<WifiScan>();
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     /**
      * 

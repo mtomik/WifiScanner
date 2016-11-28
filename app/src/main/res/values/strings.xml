@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Wifi Scanner</string>
+
+    <!--Menu-->
+    <string name="add_location">Pridaj alebo aktualizuj lokáciu</string>
+
+    <!--LocationListFragment-->
     <string name="ground_floor">prízemie</string>
     <string name="floor">poschodie</string>
     <string name="you_are_on">Ste na:</string>

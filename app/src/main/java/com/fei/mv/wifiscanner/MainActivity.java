@@ -5,6 +5,9 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -45,31 +48,60 @@ public class MainActivity extends AppCompatActivity {
 
         wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
-        if(!wifi.isWifiEnabled()){
+        if (!wifi.isWifiEnabled()) {
             Toast.makeText(MainActivity.this,"Enabling Wifi", Toast.LENGTH_SHORT).show();
             wifi.setWifiEnabled(true);
-        }else{
+        } else {
             // TODO: urob scan wifi a najdi polohu ak nepoznas polohu -> fragment na ulozenie polohy
             //scanResults = startScan(getCurrentFocus());
         }
     }
 
-    public void saveNewLocation(View v){
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.add_location:
+                showSaveLocation();
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void showSaveLocation() {
         scanResults = startScan(getCurrentFocus());
         LocationCreateFragment createFragment = new LocationCreateFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment)
+                .addToBackStack("save_location").commit();
     }
 
     public void showDetail(View v){
         DetailFragment detailFragment = new DetailFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, detailFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, detailFragment)
+                .addToBackStack("location_detail").commit();
     }
 
     public List<Record> getAllRecords() {
         return allRecords;
     }
+
     public Record getRecordById(int id){
-        return allRecords.get(id);
+        for (Record record : allRecords) {
+            if (record.getId() == id) {
+                return record;
+            }
+        }
+        return null;
     }
 
     public List<WifiScan> startScan(View v){
