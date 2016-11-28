@@ -24,7 +24,8 @@ public class DetailFragment extends Fragment {
 
         MainActivity activity = (MainActivity) getActivity();
 
-        int index = Integer.parseInt(getArguments().get("index").toString());
+        int index = 2;
+       // int index = Integer.parseInt(getArguments().get("index").toString());
         Record record =  activity.getRecordById(index);
 
 
