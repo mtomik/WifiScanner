@@ -257,6 +257,11 @@ public class SQLHelper extends SQLiteOpenHelper {
         return loc_id;
     }
 
+    public long addLocationRecord(Record location) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return addLocationRecord(location, db);
+    }
+
     /**
      *  Private - True/False Overenie ci tabulka obsahuje zaznam o danej pozici blok/poschodie
      */
