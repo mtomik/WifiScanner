@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.fei.mv.wifiscanner.model.Record;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -91,15 +93,23 @@ public class LocationListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.location_list_item, null);
         }
 
-        TextView floorText = (TextView) convertView.findViewById(R.id.location_list_floor);
+        TextView floorText = (TextView) convertView.findViewById(R.id.location_list_item_floor);
         String floor = child.getFloor();
         if (floor.equals("0")) {
-            floor = this.context.getResources().getString(R.string.ground_floor);
+            floorText.setText(this.context.getResources().getString(R.string.ground_floor));
         } else {
-            floor = floor + ". " + this.context.getResources().getString(R.string.floor);
+            floorText.setText(floor + ". " + this.context.getResources().getString(R.string.floor));
         }
 
-        floorText.setText(floor);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("d. M. Y");
+        TextView updatedText = (TextView) convertView.findViewById(R.id.location_list_item_updated);
+        Date edited = child.getEdited_at();
+        if (edited == null) {
+            updatedText.setText(R.string.unknown);
+        } else {
+            updatedText.setText(dateFormat.format(edited));
+        }
+
         return convertView;
     }
 

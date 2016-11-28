@@ -51,8 +51,7 @@ tools:context=".MainActivity">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="ReScan"
-            android:onClick="startScan"/>
+            android:text="ReScan" />
         <Button
             android:id="@+id/save_location"
             android:layout_width="wrap_content"

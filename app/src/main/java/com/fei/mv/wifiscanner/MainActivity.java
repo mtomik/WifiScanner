@@ -56,10 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void saveNewLocation(View v){
         scanResults = startScan(getCurrentFocus());
-
         LocationCreateFragment createFragment = new LocationCreateFragment();
         createFragment.initializeView(scanResults, wifi, sqlHelper);
-
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment).commit();
     }
 
