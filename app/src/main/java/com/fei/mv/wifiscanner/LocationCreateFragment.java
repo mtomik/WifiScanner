@@ -1,5 +1,7 @@
 package com.fei.mv.wifiscanner;
 
+import android.net.wifi.ScanResult;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,9 +12,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,11 +24,13 @@ import java.util.List;
  */
 
 public class LocationCreateFragment extends Fragment {
+    private WifiManager wifi;
+    private SQLHelper sqlHelper;
     private Spinner sectionSpinner;
     private Spinner floorSpinner;
     private List<WifiScan> scanResults;
     private ArrayAdapter<String> infoAdapter;
-
+    private View rootView;
     private List<String> info;
 
 
@@ -32,7 +38,7 @@ public class LocationCreateFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.location_add, container, false);
+        rootView = inflater.inflate(R.layout.location_add, container, false);
 
         sectionSpinner = (Spinner) rootView.findViewById(R.id.section_spinner);
         ArrayAdapter<CharSequence> sectionAdapter = ArrayAdapter.createFromResource(getContext(),
@@ -46,24 +52,68 @@ public class LocationCreateFragment extends Fragment {
         floorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         floorSpinner.setAdapter(floorAdapter);
 
-        // TODO: naplnit listview
-        infoAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_wifi ,R.id.wifi_info, info);
-        ListView view = (ListView) rootView.findViewById(R.id.listview_wifi);
+        fillInfoList();
 
-        view.setAdapter(infoAdapter);
 
+//        infoAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_wifi ,R.id.wifi_info, info);
+//        ListView view = (ListView) rootView.findViewById(R.id.listview_wifi);
+//
+//        view.setAdapter(infoAdapter);
+        populateListView(rootView);
 
 
         return rootView;
     }
 
-    public void setScanResult(List<WifiScan> scanResults){
+    public void populateListView(View rootView){
+        infoAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_wifi ,R.id.wifi_info, info);
+        ListView view = (ListView) rootView.findViewById(R.id.listview_wifi);
+
+        view.setAdapter(infoAdapter);
+    }
+
+    public void initializeView(List<WifiScan> scanResults, WifiManager wifi, SQLHelper sqlHelper){
+        this.wifi = wifi;
+        this.sqlHelper = sqlHelper;
         this.scanResults = scanResults;
+    }
+    public void fillInfoList(){
+        info = null;
         if(scanResults != null){
             info = new ArrayList<String>();
             for (WifiScan s : scanResults){
                 this.info.add("Mac:" + s.getMAC()+"\nSSID:"+s.getSSID()+"\tLevel:"+s.getRSSI());
             }
         }
+    }
+
+    public void startScan(View v){
+        List<WifiScan> scan = new ArrayList<>();
+
+        wifi.startScan();
+        List<ScanResult> result =  wifi.getScanResults();
+        for (ScanResult one : result){
+            WifiScan newOne = new WifiScan();
+            newOne.setSSID(one.SSID);
+            newOne.setRSSI(String.valueOf(one.level));
+            newOne.setMAC(one.BSSID);
+
+            scan.add(newOne);
+        }
+        scanResults = scan;
+        fillInfoList();
+
+        populateListView(v);
+
+    }
+
+    public void saveLocation(View v){
+        Record record = new Record();
+        record.setFloor(floorSpinner.getSelectedItem().toString());
+        record.setSection(sectionSpinner.getSelectedItem().toString());
+        record.setEdited_at(new Date());
+        record.setWifiScan(scanResults);
+
+//        sqlHelper.addLocationRecord(record, );
     }
 }

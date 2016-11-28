@@ -4,8 +4,6 @@ import android.content.Context;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -60,12 +58,9 @@ public class MainActivity extends AppCompatActivity {
         scanResults = startScan(getCurrentFocus());
 
         LocationCreateFragment createFragment = new LocationCreateFragment();
-        createFragment.setScanResult(scanResults);
+        createFragment.initializeView(scanResults, wifi, sqlHelper);
 
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(R.id.main_frame, createFragment);
-        transaction.commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment).commit();
     }
 
     public List<Record> getAllRecords() {
