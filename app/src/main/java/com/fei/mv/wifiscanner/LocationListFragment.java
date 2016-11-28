@@ -48,13 +48,15 @@ public class LocationListFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.location_list_fragment, container, false);
         locationList = (ExpandableListView) view.findViewById(R.id.location_list);
-        // TODO Nastavit vysledok.
-//        locationResultText = (TextView) view.findViewById(R.id.location_result);
-//        locationResultText.setText();
 
         LocationListAdapter listAdapter = new LocationListAdapter(
                 getActivity(), this.locationHeaders, this.locationItems);
         locationList.setAdapter(listAdapter);
         return view;
+    }
+
+    public void setLocationResultText(String result) {
+        locationResultText = (TextView) this.getView().findViewById(R.id.location_result);
+        locationResultText.setText(result);
     }
 }
