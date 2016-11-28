@@ -18,9 +18,13 @@ import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     List<Record> allRecords;
     SQLHelper sqlHelper;
     List<WifiScan> scanResults;
+    LocationListFragment locationListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         sqlHelper = new SQLHelper(this);
         allRecords = sqlHelper.getAllLocationRecords();
 
-        LocationListFragment locationListFragment = new LocationListFragment();
+        locationListFragment = new LocationListFragment();
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.main_frame, locationListFragment).commit();
 
@@ -55,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
             // TODO: urob scan wifi a najdi polohu ak nepoznas polohu -> fragment na ulozenie polohy
             //scanResults = startScan(getCurrentFocus());
         }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        showMeFloor();
     }
 
     @Override
@@ -129,23 +140,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void showMeFloor(List<WifiScan> listWifs){
-
-        ////testovacie data
-        Record new1 = new Record();
-        new1.setFloor("3");
-        new1.setSection("A");
-        //List<WifiScan> listWifs = new ArrayList<>();
-        /*
+    public void showMeFloor(){
+         /*
         for (int i=0; i < 10; i++){
             WifiScan wif = new WifiScan();
             wif.setRSSI(Integer.toString(ThreadLocalRandom.current().nextInt(-100, 0 + 1)));
             listWifs.add(wif);
         }*/
-        new1.setWifiScan(listWifs);
-        ////
 
-        //tu pride iba list zdetekovanych wifin
+        List<WifiScan> scan = new ArrayList<>();
+        wifi.startScan();
+        List<ScanResult> result =  wifi.getScanResults();
+        for (ScanResult one : result){
+            WifiScan newOne = new WifiScan();
+            newOne.setSSID(one.SSID);
+            newOne.setRSSI(String.valueOf(one.level));
+            newOne.setMAC(one.BSSID);
+
+            scan.add(newOne);
+        }
+
+        /*
+        //sortovanie podla signalu
         List<WifiScan> listOfFindWifi = new1.getWifiScan();
         Collections.sort(listOfFindWifi, new Comparator<WifiScan>() {
             @Override
@@ -153,37 +169,71 @@ public class MainActivity extends AppCompatActivity {
                 return Integer.parseInt(wifi1.getRSSI()) > Integer.parseInt(wifi2.getRSSI()) ? -1 : Integer.parseInt(wifi1.getRSSI()) == Integer.parseInt(wifi2.getRSSI()) ? 0 : 1;
             }
         });
-        Record foundFloor = getTheFloor(listOfFindWifi);
-        new1.getWifiScan();
+        */
+        String foundFloor = getTheFloor(scan);
+        locationListFragment.setLocationResultText(foundFloor);
     }
 
-    public Record getTheFloor(List<WifiScan> listOfFindWifi){
-        //tu vytiahneme vsetky poschodia s 3 najsilnejsimi wifinami alebo aj  so vsetkymi, tu si ich uz vieme vysortovat
-        List<Record> floors = new ArrayList<>();
-        // test data
-        Record new1 = new Record();
-        new1.setFloor("4");
-        new1.setSection("B");
-        //tu som pridal tie iste wifiny co zdetekovalo, aby som si to otestoval, ale nechapem preco to porovnanie co je nizsie nesedi, MAC adresy su rovnake, ale vrati false
-        new1.setWifiScan(listOfFindWifi);
-        floors.add(new1);
-        //
+    public String getTheFloor(List<WifiScan> listOfFindWifi){
+        //tu vytiahneme vsetky poschodia so vsetkymi wifinami
+        List<Record> floors = allRecords;
+        Map<String,Integer> scoredFloors = new HashMap<>();
 
+        //Toast.makeText(this," z DB nacital "+floors.size()+" poschodi",Toast.LENGTH_SHORT).show();
+        List<WifiScan> savedFloorWifi;
+        //List<WifiScan> findFloorWifi = new ArrayList<>();
+
+        //testovacie find wifi
+        /*
+        for (Record flor:floors){
+            findFloorWifi = flor.getWifiScan();
+            break;
+        }
+        */
         for (Record floor:floors){
-            List<WifiScan> savedFloorWifi = floor.getWifiScan();
-            if(compareWifis(listOfFindWifi,savedFloorWifi)){
-                return floor;
-            }
+            savedFloorWifi = floor.getWifiScan();
+//            int floorScore = compareWifis(findFloorWifi,savedFloorWifi);
+            int floorScore = compareWifis(listOfFindWifi,savedFloorWifi);
+            scoredFloors.put(floor.getSection()+floor.getFloor(),floorScore);
         }
-        return null;
+        Integer[] scores = new Integer[floors.size()];
+        scoredFloors.values().toArray(scores);
+        //zoradit mapu podla score
+        Arrays.sort(scores);
+        List<Object> listScores = Arrays.asList((Object[]) scores);
+        Collections.reverse(listScores);
+
+        //najdenie kluca podla value
+        String key = new String();
+        if ((Integer)listScores.get(0) != 0){
+            Iterator<Map.Entry<String,Integer>> iter = scoredFloors.entrySet().iterator();
+
+            while (iter.hasNext()) {
+                Map.Entry<String,Integer> entry = iter.next();
+                if (entry.getValue().equals(listScores.get(0))) {
+                    key = entry.getKey();
+                }
+            }
+        }else
+            return "N/A";
+        return key;
     }
 
-    public boolean compareWifis(List<WifiScan> listOfFindWifi, List<WifiScan> savedFloorWifi){
-        for(int i=0; i < 3; i++){
-            if(!listOfFindWifi.get(i).getMAC().equals(savedFloorWifi.get(i).getMAC()));
-                return false;
+    public int compareWifis(List<WifiScan> listOfFindWifi, List<WifiScan> savedFloorWifi){
+        int score = 0;
+        for (WifiScan wifina:listOfFindWifi){
+            if (isWifiInList(wifina, savedFloorWifi))
+                score++;
         }
-        return true;
+        return score;
+    }
+
+    public boolean isWifiInList(WifiScan wifina, List<WifiScan> savedFloorWifi){
+        for (WifiScan wifiFromList:savedFloorWifi){
+            if (wifiFromList.getMAC().equals(wifina.getMAC()))
+                return true;
+        }
+        return false;
     }
 
 }
