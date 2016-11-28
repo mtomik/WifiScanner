@@ -43,6 +43,10 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.location_add, container, false);
 
+        this.scanResults = ((MainActivity)getActivity()).scanResults;
+        this.wifi = ((MainActivity)getActivity()).wifi;
+        this.sqlHelper = ((MainActivity)getActivity()).sqlHelper;
+
         sectionSpinner = (Spinner) rootView.findViewById(R.id.section_spinner);
         ArrayAdapter<CharSequence> sectionAdapter = ArrayAdapter.createFromResource(getContext(),
         R.array.sections, android.R.layout.simple_spinner_item);
@@ -78,11 +82,6 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
         view.setAdapter(infoAdapter);
     }
 
-    public void initializeView(List<WifiScan> scanResults, WifiManager wifi, SQLHelper sqlHelper){
-        this.wifi = wifi;
-        this.sqlHelper = sqlHelper;
-        this.scanResults = scanResults;
-    }
     public void fillInfoList(){
         info = null;
         if(scanResults != null){
