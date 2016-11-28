@@ -7,7 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
+
+import com.fei.mv.wifiscanner.model.WifiScan;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by juraj on 28.11.2016.
@@ -16,6 +22,12 @@ import android.widget.Spinner;
 public class LocationCreateFragment extends Fragment {
     private Spinner sectionSpinner;
     private Spinner floorSpinner;
+    private List<WifiScan> scanResults;
+    private ArrayAdapter<String> infoAdapter;
+
+    private List<String> info;
+
+
 
     @Nullable
     @Override
@@ -35,7 +47,23 @@ public class LocationCreateFragment extends Fragment {
         floorSpinner.setAdapter(floorAdapter);
 
         // TODO: naplnit listview
+        infoAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_wifi ,R.id.wifi_info, info);
+        ListView view = (ListView) rootView.findViewById(R.id.listview_wifi);
+
+        view.setAdapter(infoAdapter);
+
+
 
         return rootView;
+    }
+
+    public void setScanResult(List<WifiScan> scanResults){
+        this.scanResults = scanResults;
+        if(scanResults != null){
+            info = new ArrayList<String>();
+            for (WifiScan s : scanResults){
+                this.info.add("Mac:" + s.getMAC()+"\nSSID:"+s.getSSID()+"\tLevel:"+s.getRSSI());
+            }
+        }
     }
 }

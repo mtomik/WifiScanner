@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner sectionSpinner;
     List<Record> allRecords;
     SQLHelper sqlHelper;
+    List<WifiScan> scanResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +52,15 @@ public class MainActivity extends AppCompatActivity {
             wifi.setWifiEnabled(true);
         }else{
             // TODO: urob scan wifi a najdi polohu ak nepoznas polohu -> fragment na ulozenie polohy
-            
+            //scanResults = startScan(getCurrentFocus());
         }
     }
 
     public void saveNewLocation(View v){
+        scanResults = startScan(getCurrentFocus());
+
         LocationCreateFragment createFragment = new LocationCreateFragment();
+        createFragment.setScanResult(scanResults);
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
@@ -68,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
         return allRecords;
     }
 
-    public void startScan(View v){
+    public List<WifiScan> startScan(View v){
         List<WifiScan> scan = new ArrayList<>();
-        String section = sectionSpinner.getSelectedItem().toString();
-        String floor = floorText.getText().toString();
+//        String section = sectionSpinner.getSelectedItem().toString();
+//        String floor = floorText.getText().toString();
 
         wifi.startScan();
         List<ScanResult> result =  wifi.getScanResults();
@@ -82,12 +86,12 @@ public class MainActivity extends AppCompatActivity {
             newOne.setMAC(one.BSSID);
 
             scan.add(newOne);
-            resultText.append("BSSID: "+one.BSSID+" SSID: "+one.SSID+" Level:"+one.level+"\n");
+//            resultText.append("BSSID: "+one.BSSID+" SSID: "+one.SSID+" Level:"+one.level+"\n");
         }
-
-        writer.addNewFloor(section, floor,scan);
-        Toast.makeText(this,"Record for "+section+floor+" added!",Toast.LENGTH_SHORT).show();
-        showMeFloor(scan);
+        return scan;
+//        writer.addNewFloor(section, floor,scan);
+//        Toast.makeText(this,"Record for "+section+floor+" added!",Toast.LENGTH_SHORT).show();
+//        showMeFloor(scan);
     }
 
     public void clearOutput(View v){
