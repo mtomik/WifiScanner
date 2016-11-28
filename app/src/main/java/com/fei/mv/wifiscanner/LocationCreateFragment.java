@@ -114,6 +114,6 @@ public class LocationCreateFragment extends Fragment {
         record.setEdited_at(new Date());
         record.setWifiScan(scanResults);
 
-//        sqlHelper.addLocationRecord(record, );
+        sqlHelper.addLocationRecord(record, sqlHelper.getWritableDatabase());
     }
 }
