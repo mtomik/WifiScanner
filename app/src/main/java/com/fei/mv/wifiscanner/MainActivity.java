@@ -176,10 +176,10 @@ public class MainActivity extends AppCompatActivity {
         Map<String,Integer> sortedScoredFloors = new HashMap<>();
         //Toast.makeText(this," z DB nacital "+floors.size()+" poschodi",Toast.LENGTH_SHORT).show();
         List<WifiScan> savedFloorWifi;
-        List<WifiScan> findFloorWifi = new ArrayList<>();
+        //List<WifiScan> findFloorWifi = new ArrayList<>();
 
         //testovacie find wifi
-
+        /*
         for (Record flor:floors){
             if ((flor.getSection()+flor.getFloor()).equals("A2")){
                 findFloorWifi = flor.getWifiScan();
@@ -187,11 +187,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-
+        */
         for (Record floor:floors){
             savedFloorWifi = floor.getWifiScan();
-            int floorScore = compareWifis(findFloorWifi,savedFloorWifi);
-            //int floorScore = compareWifis(listOfFindWifi,savedFloorWifi);
+            //int floorScore = compareWifis(findFloorWifi,savedFloorWifi);
+            int floorScore = compareWifis(listOfFindWifi,savedFloorWifi);
             scoredFloors.put(floor.getSection()+floor.getFloor(),floorScore);
         }
         sortedScoredFloors = sortByComparator(scoredFloors,false);
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         }else
             return "N/A";
         */
-        Toast.makeText(this,entryListScores.get(0).getValue().toString()+"  "+entryListScores.get(1).getValue().toString()+"  "+entryListScores.get(2).getValue().toString()+"  "+entryListScores.get(3).getValue().toString(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(this,entryListScores.get(0).getValue().toString()+"  "+entryListScores.get(1).getValue().toString()+"  "+entryListScores.get(2).getValue().toString()+"  "+entryListScores.get(3).getValue().toString(),Toast.LENGTH_LONG).show();
         return key;
     }
 
@@ -274,34 +274,6 @@ public class MainActivity extends AppCompatActivity {
             topWifi = false;
         }
         return 0;
-    }
-
-    public Map<String, Integer> sortMapByValues(Map<String, Integer> passedMap) {
-        List<String> mapKeys = new ArrayList<>(passedMap.keySet());
-        List<Integer> mapValues = new ArrayList<>(passedMap.values());
-        Collections.sort(mapValues);
-        Collections.sort(mapKeys);
-
-        Map<String, Integer> sortedMap = new HashMap<>();
-
-        Iterator<Integer> valueIt = mapValues.iterator();
-        while (valueIt.hasNext()) {
-            Integer val = valueIt.next();
-            Iterator<String> keyIt = mapKeys.iterator();
-
-            while (keyIt.hasNext()) {
-                String key = keyIt.next();
-                Integer comp1 = passedMap.get(key);
-                Integer comp2 = val;
-
-                if (comp1.equals(comp2)) {
-                    keyIt.remove();
-                    sortedMap.put(key, val);
-                    break;
-                }
-            }
-        }
-        return sortedMap;
     }
 
     private Map<String, Integer> sortByComparator(Map<String, Integer> unsortMap, final boolean ascendingOrder)
