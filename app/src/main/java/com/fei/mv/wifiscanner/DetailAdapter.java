@@ -5,29 +5,32 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
-
-import java.util.List;
 
 
 public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClickListener{
 
-    private List<WifiScan> dataSet;
 
     private Context mContext;
+    private SQLHelper sqlHelper;
+    private Record record;
 
-    // View lookup cache
     private static class ViewHolder {
         TextView ssidText;
         TextView macText;
+        CheckBox checkBox;
     }
 
-    public DetailAdapter(List<WifiScan> data, Context context){
-        super(context,R.layout.list_item_detail,data);
+    public DetailAdapter(Record record, Context context){
+        super(context,R.layout.list_item_detail,record.getWifiScan());
         mContext = context;
-        dataSet = data;
+        this.record = record;
+        this.sqlHelper = ((MainActivity)getContext()).sqlHelper;
     }
 
 
@@ -38,21 +41,13 @@ public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClic
         Object object= getItem(position);
         WifiScan dataModel=(WifiScan)object;
 
-        switch (v.getId())
-        {
-//            case R.id.item_info:
-//                Snackbar.make(v, "Release date " +dataModel.getFeature(), Snackbar.LENGTH_LONG)
-//                        .setAction("No action", null).show();
-//                break;
-        }
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        // Get the data item for this position
-        WifiScan dataModel = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view.
-        ViewHolder viewHolder; // view lookup cache stored in tag
+    public View getView(final int position, View convertView, final ViewGroup parent) {
+
+        final WifiScan dataModel = getItem(position);
+        ViewHolder viewHolder;
         final View result;
 
         if (convertView == null) {
@@ -62,8 +57,17 @@ public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClic
             convertView = inflater.inflate(R.layout.list_item_detail, parent, false);
             viewHolder.ssidText = (TextView) convertView.findViewById(R.id.ssid);
             viewHolder.macText = (TextView) convertView.findViewById(R.id.mac);
+            viewHolder.checkBox = (CheckBox) convertView.findViewById(R.id.activateBox);
 
-
+            // volanie update na db
+            viewHolder.checkBox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dataModel.setIs_used( ((CheckBox)v).isChecked() ? 1 : 0 );
+                    sqlHelper.updateWifiScanUsed(record.getSection()+record.getFloor(), dataModel);
+                    Toast.makeText(mContext, "Zaznam aktualizovany!", Toast.LENGTH_SHORT).show();
+                }
+            });
             result=convertView;
 
             convertView.setTag(viewHolder);
@@ -72,16 +76,11 @@ public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClic
             result=convertView;
         }
 
-        // Add animations
-        // http://www.journaldev.com/10416/android-listview-with-custom-adapter-example-tutorial
-//        Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
-//        result.startAnimation(animation);
-//        lastPosition = position;
 
+        viewHolder.checkBox.setChecked( dataModel.getIs_used() == 1 );
         viewHolder.ssidText.setText(dataModel.getSSID());
         viewHolder.macText.setText(dataModel.getMAC());
 
-        // Return the completed view to render on screen
         return convertView;
     }
 }

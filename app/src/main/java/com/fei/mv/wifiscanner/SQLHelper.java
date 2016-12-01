@@ -198,6 +198,24 @@ public class SQLHelper extends SQLiteOpenHelper {
     }
 
     /**
+     * Update na USED - is_used v WifiScan
+     * @param locationName
+     * @param ws
+     */
+    public void updateWifiScanUsed(String locationName, WifiScan ws){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(FeedEntry.COLUMN_USED, ws.getIs_used());
+
+        System.out.println("WS "+ ws);
+
+        db.update(FeedEntry.TABLE_WS,values,
+                FeedEntry.COLUMN_LOC + "=" + getLocationIDbyName(locationName,db)
+                        + " AND "+FeedEntry.COLUMN_MAC_ADD + "='" + ws.getMAC()+"'", null);
+    }
+
+    /**
      * Update wifin priradenych k nejakej pozici. Najskor zmaze stare zaznamy a potom prida nove-updatnute.
      */
     public void updateWifiScansByLocation(String location, List<WifiScan> wifiScans ){

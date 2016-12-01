@@ -88,12 +88,39 @@ public class WifiScan{
     /**
      *
      * @param is_used
-     *     The RSSI
+     *     The is_used
      */
     public void setIs_used(int is_used) {
         this.is_used = is_used;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof WifiScan)) return false;
 
+        WifiScan wifiScan = (WifiScan) o;
+
+        if (rSSI != null ? !rSSI.equals(wifiScan.rSSI) : wifiScan.rSSI != null) return false;
+        return mAc != null ? mAc.equals(wifiScan.mAc) : wifiScan.mAc == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = rSSI != null ? rSSI.hashCode() : 0;
+        result = 31 * result + (mAc != null ? mAc.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "WifiScan{" +
+                "sSID='" + sSID + '\'' +
+                ", rSSI='" + rSSI + '\'' +
+                ", mAc='" + mAc + '\'' +
+                ", is_used=" + is_used +
+                '}';
+    }
 }
 

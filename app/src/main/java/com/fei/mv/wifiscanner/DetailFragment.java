@@ -29,12 +29,13 @@ public class DetailFragment extends Fragment {
         View view = inflater.inflate(R.layout.activity_detail, container, false);
         ListView listView = (ListView)view.findViewById(R.id.detail_list_view);
         TextView text = (TextView) view.findViewById(R.id.recordText);
-        text.setText("Floor: "+record.getFloor()+" Section: "+record.getSection());
 
+        text.setText("Poschodie: "+record.getFloor()+" Blok: "+record.getSection());
 
-        DetailAdapter adapter = new DetailAdapter(record.getWifiScan(), getActivity());
-
+        DetailAdapter adapter = new DetailAdapter(record, getActivity());
         listView.setAdapter(adapter);
+
+
         return view;
 
     }
