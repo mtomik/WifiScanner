@@ -33,7 +33,8 @@
             android:id="@+id/location_result"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/location_result_label" />
+            android:layout_toRightOf="@+id/location_result_label"
+            android:text="N/A" />
     </RelativeLayout>
 
     <ExpandableListView

@@ -1,44 +1,38 @@
 package com.fei.mv.wifiscanner;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Vector;
-import java.lang.Math;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
+    private static final int MY_PERMISSIONS_ACCESS_COARSE_LOCATION = 1;
 
     WifiManager wifi;
-    private static final String TAG = "MainActivity";
-    TextView resultText;
-    ResultWriter writer;
-    EditText floorText;
-    Spinner sectionSpinner;
     List<Record> allRecords;
     SQLHelper sqlHelper;
     List<WifiScan> scanResults;
@@ -57,20 +51,25 @@ public class MainActivity extends AppCompatActivity {
                 .add(R.id.main_frame, locationListFragment).commit();
 
         wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-
-        if (!wifi.isWifiEnabled()) {
-            Toast.makeText(MainActivity.this,"Enabling Wifi", Toast.LENGTH_SHORT).show();
-            wifi.setWifiEnabled(true);
-        } else {
-            // TODO: urob scan wifi a najdi polohu ak nepoznas polohu -> fragment na ulozenie polohy
-            //scanResults = startScan(getCurrentFocus());
-        }
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        showMeFloor();
+
+        if (!wifi.isWifiEnabled()) {
+            Toast.makeText(MainActivity.this, "Enabling Wifi", Toast.LENGTH_SHORT).show();
+            wifi.setWifiEnabled(true);
+        }
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                    MY_PERMISSIONS_ACCESS_COARSE_LOCATION);
+        } else {
+            showMeFloor();
+        }
     }
 
     @Override
@@ -94,8 +93,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case MY_PERMISSIONS_ACCESS_COARSE_LOCATION:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    showMeFloor();
+                } else {
+                    Toast.makeText(this, R.string.location_permission_not_granted,
+                            Toast.LENGTH_LONG).show();
+                }
+                return;
+
+            default:
+                return;
+        }
+    }
+
     public void showSaveLocation() {
-        scanResults = startScan(getCurrentFocus());
+        scanResults = startScan();
         LocationCreateFragment createFragment = new LocationCreateFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment)
                 .addToBackStack("save_location").commit();
@@ -114,58 +131,22 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
-    public List<WifiScan> startScan(View v){
-        List<WifiScan> scan = new ArrayList<>();
-//        String section = sectionSpinner.getSelectedItem().toString();
-//        String floor = floorText.getText().toString();
-
+    public List<WifiScan> startScan() {
         wifi.startScan();
-        List<ScanResult> result =  wifi.getScanResults();
-        for (ScanResult one : result){
-            WifiScan newOne = new WifiScan();
-            newOne.setSSID(one.SSID);
-            newOne.setRSSI(String.valueOf(one.level));
-            newOne.setMAC(one.BSSID);
-
-            scan.add(newOne);
-//            resultText.append("BSSID: "+one.BSSID+" SSID: "+one.SSID+" Level:"+one.level+"\n");
+        List<WifiScan> scans = new ArrayList<>();
+        for (ScanResult result : wifi.getScanResults()) {
+            WifiScan scan = new WifiScan();
+            scan.setSSID(result.SSID);
+            scan.setRSSI(String.valueOf(result.level));
+            scan.setMAC(result.BSSID);
+            scans.add(scan);
         }
-        return scan;
-//        writer.addNewFloor(section, floor,scan);
-//        Toast.makeText(this,"Record for "+section+floor+" added!",Toast.LENGTH_SHORT).show();
-//        showMeFloor(scan);
+        return scans;
     }
 
-    public void clearOutput(View v){
-        this.resultText.setText("");
-    }
-
-    public void save(View v){
-        writer.save(this);
-    }
-
-
-    public void showMeFloor(){
-         /*
-        for (int i=0; i < 10; i++){
-            WifiScan wif = new WifiScan();
-            wif.setRSSI(Integer.toString(ThreadLocalRandom.current().nextInt(-100, 0 + 1)));
-            listWifs.add(wif);
-        }*/
-
-        List<WifiScan> scan = new ArrayList<>();
-        wifi.startScan();
-        List<ScanResult> result =  wifi.getScanResults();
-        for (ScanResult one : result){
-            WifiScan newOne = new WifiScan();
-            newOne.setSSID(one.SSID);
-            newOne.setRSSI(String.valueOf(one.level));
-            newOne.setMAC(one.BSSID);
-
-            scan.add(newOne);
-        }
-
-        String foundFloor = getTheFloor(scan);
+    public void showMeFloor() {
+        scanResults = startScan();
+        String foundFloor = getTheFloor(scanResults);
         locationListFragment.setLocationResultText(foundFloor);
     }
 
