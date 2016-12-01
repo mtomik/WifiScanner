@@ -29,7 +29,7 @@ public class LocationListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        MainActivity activity = (MainActivity) getActivity();
+        final MainActivity activity = (MainActivity) getActivity();
 
         locationHeaders = new ArrayList<>();
         locationItems = new HashMap<>();
@@ -46,7 +46,7 @@ public class LocationListFragment extends Fragment {
             }
         }
 
-        View view = inflater.inflate(R.layout.location_list_fragment, container, false);
+        final View view = inflater.inflate(R.layout.location_list_fragment, container, false);
         locationListView = (ExpandableListView) view.findViewById(R.id.location_list);
 
         final LocationListAdapter listAdapter = new LocationListAdapter(
@@ -64,6 +64,19 @@ public class LocationListFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.main_frame, detailFragment)
                         .addToBackStack("location_detail").commit();
                 return false;
+            }
+        });
+
+        this.locationResultText = (TextView) view.findViewById(R.id.location_result);
+
+        this.locationResultText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //activity.scanResults = activity.startScan(view);
+                IdentifiedLocationFragment createFragment = new IdentifiedLocationFragment();
+
+                getFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment)
+                        .addToBackStack("show_compare_result").commit();
             }
         });
 

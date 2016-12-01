@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     SQLHelper sqlHelper;
     List<WifiScan> scanResults;
     LocationListFragment locationListFragment;
+    String foundFloor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showMeFloor() {
         scanResults = startScan();
-        String foundFloor = getTheFloor(scanResults);
+        foundFloor = getTheFloor(scanResults);
         locationListFragment.setLocationResultText(foundFloor);
     }
 
