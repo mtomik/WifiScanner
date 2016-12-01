@@ -337,7 +337,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         return records;
     }
 
-    public Record getLocationRecordsByName(String name){
+    public Record getLocationRecordByName(String name){
 
         SQLiteDatabase db = this.getWritableDatabase();
         List<WifiScan> wifiScans = new ArrayList<WifiScan>();
