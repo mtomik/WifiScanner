@@ -230,7 +230,8 @@ public class MainActivity extends AppCompatActivity {
         }else
             return "N/A";
         */
-        //Toast.makeText(this,entryListScores.get(0).getValue().toString()+"  "+entryListScores.get(1).getValue().toString()+"  "+entryListScores.get(2).getValue().toString()+"  "+entryListScores.get(3).getValue().toString(),Toast.LENGTH_LONG).show();
+        Toast.makeText(this,entryListScores.get(0).getKey().toString()+": "+ entryListScores.get(0).getValue().toString()+"  "+entryListScores.get(1).getKey().toString()+": "+ entryListScores.get(1).getValue().toString()+"  "+
+                entryListScores.get(2).getKey().toString()+": "+ entryListScores.get(2).getValue().toString()+"  "+entryListScores.get(3).getKey().toString()+": "+ entryListScores.get(3).getValue().toString()+"  ",Toast.LENGTH_LONG).show();
         return key;
     }
 
@@ -249,8 +250,8 @@ public class MainActivity extends AppCompatActivity {
 
         for (WifiScan wifina:listOfFindWifi){
             score = score + isWifiInList(wifina, savedFloorWifi);
-
         }
+        score = (int) Math.round(Math.sqrt(score));
         return score;
     }
 
@@ -260,15 +261,19 @@ public class MainActivity extends AppCompatActivity {
         for (WifiScan wifiFromList:savedFloorWifi){
             if (wifiFromList.getIs_used()==1){
                 if (wifiFromList.getMAC().equals(wifina.getMAC())){
+                    int euklid = (int)Math.pow(Math.abs( Math.abs(Integer.parseInt(wifiFromList.getRSSI())) - Math.abs(Integer.parseInt(wifina.getRSSI())) ),2);
+                    /*
                      if( Math.abs( Math.abs(Integer.parseInt(wifiFromList.getRSSI())) - Math.abs(Integer.parseInt(wifina.getRSSI())) ) <= signalTolerance ){
                          if (topWifi){
                               topWifi = false;
-                              return 4;
+                              return 3;
                          }
                          else
                             return 2;
                      }else
                          return 1;
+                         */
+                    return euklid;
                 }
             }
             topWifi = false;
