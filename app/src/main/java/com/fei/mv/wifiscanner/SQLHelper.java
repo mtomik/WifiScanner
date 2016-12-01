@@ -337,6 +337,28 @@ public class SQLHelper extends SQLiteOpenHelper {
         return records;
     }
 
+    public Record getLocationRecordsByName(String name){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        List<WifiScan> wifiScans = new ArrayList<WifiScan>();
+        Record r = new Record();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION ;
+
+        Log.e(LOG, selectQueryWS);
+        Cursor c = db.rawQuery(selectQueryWS, null);
+
+        //prejdem cursorom vsetky zazanamy co vrati select a naplnim ich do pola Record-ov
+        if (c.moveToFirst()) {
+                r.setId(c.getInt(c.getColumnIndex(FeedEntry.KEY_ID)));
+                r.setSection(name.substring(0,1));
+                r.setFloor(name.substring(1,2));
+                r.setEdited_at(getDatefromString((c.getString(c.getColumnIndex(FeedEntry.COLUMN_SCAN_DATE)))));
+                r.setWifiScan(getWifiScansByLocation(name));
+        }
+        return r;
+    }
+
     // ------------------------ "DEFAUL" metody ----------------//
 
     /**
