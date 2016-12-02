@@ -17,7 +17,10 @@ import android.widget.Toast;
 
 import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -31,6 +34,7 @@ import java.util.Map.Entry;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private static final int MY_PERMISSIONS_ACCESS_COARSE_LOCATION = 1;
+    private static final int RSSI_COMPARE_CONST = 60;
 
     WifiManager wifi;
     List<Record> allRecords;
@@ -158,12 +162,30 @@ public class MainActivity extends AppCompatActivity {
         Map<String,Integer> sortedScoredFloors = new HashMap<>();
         //Toast.makeText(this," z DB nacital "+floors.size()+" poschodi",Toast.LENGTH_SHORT).show();
         List<WifiScan> savedFloorWifi;
-        //List<WifiScan> findFloorWifi = new ArrayList<>();
 
+        /*
         //testovacie find wifi
+        List<WifiScan> findFloorWifi = new ArrayList<>();
+        String jsonn = "{\"floor\": \"7\", \"wifiScan\": [{\"SSID\": \"KEE7\", \"RSSI\": \"-75\", \"MAC\": \"00:22:2d:03:cb:14\"}, {\"SSID\": \"OEMP\", \"RSSI\": \"-90\", \"MAC\": \"00:0e:a6:26:83:54\"}, {\"SSID\": \"D-Link DSL-2751\", \"RSSI\": \"-87\", \"MAC\": \"bc:f6:85:5b:36:d3\"}, {\"SSID\": \"c604\", \"RSSI\": \"-87\", \"MAC\": \"c4:e9:84:e5:b1:40\"}, {\"SSID\": \"Asus RT-N10\", \"RSSI\": \"-93\", \"MAC\": \"48:5b:39:d7:33:0e\"}], \"section\": \"C\"}";
+        WifiScan wif1 = new WifiScan();
+        Gson gson = new Gson();
+        //Type listType = new TypeToken<ArrayList<Record>>(){}.getType();
+        Record findRecor = new Record();
+        findRecor = gson.fromJson(jsonn,Record.class);
+
+        wif1.setIs_used(1);
+        wif1.setMAC("00:26:f2:24:96:f4");
+        wif1.setRSSI("-80");
+        wif1.setSSID("Allegro-512");
+        findRecor.getWifiScan().get(0).setIs_used(1);
+        findRecor.getWifiScan().get(1).setIs_used(1);
+        findRecor.getWifiScan().get(2).setIs_used(1);
+        findRecor.getWifiScan().get(3).setIs_used(1);
+        findFloorWifi = findRecor.getWifiScan();
+        */
         /*
         for (Record flor:floors){
-            if ((flor.getSection()+flor.getFloor()).equals("A2")){
+            if ((flor.getSection()+flor.getFloor()).equals("A8")){
                 findFloorWifi = flor.getWifiScan();
                 break;
             }
@@ -243,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
         for (WifiScan wifiFromList:savedFloorWifi){
             if (wifiFromList.getIs_used()==1){
                 if (wifiFromList.getMAC().equals(wifina.getMAC())){
-                    int euklid = (int)Math.pow(Math.abs( Math.abs(Integer.parseInt(wifiFromList.getRSSI())) - Math.abs(Integer.parseInt(wifina.getRSSI())) ),2);
+                    int euklid = (int)Math.pow(RSSI_COMPARE_CONST - Math.abs( Math.abs(Integer.parseInt(wifiFromList.getRSSI())) - Math.abs(Integer.parseInt(wifina.getRSSI())) ),2);
                     /*
                      if( Math.abs( Math.abs(Integer.parseInt(wifiFromList.getRSSI())) - Math.abs(Integer.parseInt(wifina.getRSSI())) ) <= signalTolerance ){
                          if (topWifi){
