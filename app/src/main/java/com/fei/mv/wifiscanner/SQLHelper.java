@@ -139,7 +139,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         //SQLiteDatabase db = this.getWritableDatabase();
 
         for (WifiScan ws : wifiScans) {
-            ws.setIs_used(1);
+            //ws.setIs_used(1);
             long ws_id = insertWS(ws,location_id,db);
         }
 

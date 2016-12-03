@@ -100,7 +100,8 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
 
         sqlHelper.addLocationRecord(record);
         Record temp = sqlHelper.getLocationRecordByName(record.getSection()+record.getFloor());
-        ((MainActivity)getActivity()).allRecords.add(temp);
+        //((MainActivity)getActivity()).allRecords.add(temp);
+        ((MainActivity)getActivity()).allRecords = sqlHelper.getAllLocationRecords();
 
         Toast.makeText(rootView.getContext(),"Record for "+section+floor+" added!",Toast.LENGTH_SHORT).show();
 
