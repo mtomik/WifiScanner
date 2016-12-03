@@ -14,7 +14,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by rakyi on 14.11.2016.
@@ -102,7 +101,7 @@ public class LocationListAdapter extends BaseExpandableListAdapter {
             floorText.setText(floor + ". " + this.context.getResources().getString(R.string.floor));
         }
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/mm/yyyy", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("d. MMM yyyy");
         TextView updatedText = (TextView) convertView.findViewById(R.id.location_list_item_updated);
         Date edited = child.getEdited_at();
         if (edited == null) {

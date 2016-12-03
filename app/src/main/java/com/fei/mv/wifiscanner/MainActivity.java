@@ -17,10 +17,7 @@ import android.widget.Toast;
 
 import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -114,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        showMeFloor();
     }
 
     public void showSaveLocation() {
