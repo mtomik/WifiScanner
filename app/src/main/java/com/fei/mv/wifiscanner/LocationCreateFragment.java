@@ -104,13 +104,10 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
 
         Toast.makeText(rootView.getContext(),"Record for "+section+floor+" added!",Toast.LENGTH_SHORT).show();
 
-        LocationListFragment locationListFragment = new LocationListFragment();
-        getFragmentManager().beginTransaction().replace(R.id.main_frame, locationListFragment)
-                .addToBackStack("location_saved").commit();
-        //transaction.commit();
-//        TextView tv = (TextView)((MainActivity)getActivity()).findViewById(R.id.location_result);
-//        tv.setText(record.getSection()+record.getFloor());
-//        ((MainActivity)getActivity()).onBackPressed();
+//        LocationListFragment locationListFragment = new LocationListFragment();
+//        getFragmentManager().beginTransaction().replace(R.id.main_frame, locationListFragment)
+//                .addToBackStack("location_saved").commit();
+        ((MainActivity)getActivity()).onBackPressed();
     }
 
     @Override

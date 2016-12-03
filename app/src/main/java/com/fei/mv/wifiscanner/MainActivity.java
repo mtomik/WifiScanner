@@ -157,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
         foundFloor = getTheFloor(scanResults);
         locationListFragment.setLocationResultText(foundFloor);
     }
-
     public String getTheFloor(List<WifiScan> listOfFindWifi){
         //tu vytiahneme vsetky poschodia so vsetkymi wifinami
         List<Record> floors = allRecords;
