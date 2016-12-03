@@ -34,17 +34,17 @@ public class LocationCreateAdapter extends ArrayAdapter<WifiScan> implements Vie
 
     @Override
     public void onClick(View v) {
-        int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        WifiScan dataModel=(WifiScan)object;
+//        int position=(Integer) v.getTag();
+//        Object object= getItem(position);
+//        WifiScan dataModel=(WifiScan)object;
     }
 
     @Override
     public View getView(final int position, View convertView, final ViewGroup parent) {
 
-        final WifiScan dataModel = getItem(position);
+        //final WifiScan dataModel = getItem(position);
         ViewHolder viewHolder;
-        final View result;
+        //final View result;
 
         if (convertView == null) {
 
@@ -55,28 +55,30 @@ public class LocationCreateAdapter extends ArrayAdapter<WifiScan> implements Vie
             viewHolder.macText = (TextView) convertView.findViewById(R.id.mac);
             viewHolder.checkBox = (CheckBox) convertView.findViewById(R.id.activateBox);
 
-            // volanie update na db
+            convertView.setTag(viewHolder);
+
+
             viewHolder.checkBox.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    dataModel.setIs_used( ((CheckBox)v).isChecked() ? 1 : 0 );
-                    updateScanResult(dataModel);
-//                    sqlHelper.updateWifiScanUsed(record.getSection()+record.getFloor(), dataModel);
-//                    Toast.makeText(mContext, "Zaznam aktualizovany!", Toast.LENGTH_SHORT).show();
+                    CheckBox cb = (CheckBox) v;
+                    WifiScan scan = (WifiScan) cb.getTag();
+                    scan.setIs_used(cb.isChecked() ? 1 : 0 );
+                    updateScanResult(scan);
                 }
             });
-            result=convertView;
+
 
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
-            result=convertView;
         }
 
-
+        final WifiScan dataModel = scanResults.get(position);
         viewHolder.checkBox.setChecked( dataModel.getIs_used() == 1 );
         viewHolder.ssidText.setText(dataModel.getSSID());
         viewHolder.macText.setText(dataModel.getMAC());
+        viewHolder.checkBox.setTag(dataModel);
 
         return convertView;
     }
