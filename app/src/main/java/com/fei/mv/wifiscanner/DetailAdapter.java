@@ -64,8 +64,9 @@ public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClic
                 @Override
                 public void onClick(View v) {
                     dataModel.setIs_used( ((CheckBox)v).isChecked() ? 1 : 0 );
+                    notifyDataSetChanged();
                     sqlHelper.updateWifiScanUsed(record.getSection()+record.getFloor(), dataModel);
-                    Toast.makeText(mContext, "Zaznam aktualizovany!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Zaznam aktualizovany! "+position, Toast.LENGTH_SHORT).show();
                 }
             });
             result=convertView;
