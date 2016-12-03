@@ -139,7 +139,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         //SQLiteDatabase db = this.getWritableDatabase();
 
         for (WifiScan ws : wifiScans) {
-            ws.setIs_used(1);
+            //ws.setIs_used(1);
             long ws_id = insertWS(ws,location_id,db);
         }
 
@@ -173,7 +173,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     public List<WifiScan> getWifiScansByLocation(String location){
         SQLiteDatabase db = this.getWritableDatabase();
         List<WifiScan> wifiScans = new ArrayList<WifiScan>();
-        String id = getLocationIDbyName(location,db).toString();
+        String id = String.valueOf(getLocationIDbyName(location,db));
         String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_WS + " WHERE "
                 + FeedEntry.COLUMN_LOC + " = " + id;
 
@@ -262,15 +262,24 @@ public class SQLHelper extends SQLiteOpenHelper {
     public long addLocationRecord(Record location,SQLiteDatabase db) {
         List<WifiScan> wifiscans = new ArrayList<WifiScan>();
         wifiscans = location.getWifiScan();
-       // SQLiteDatabase db = this.getWritableDatabase();
+        String locname = location.getSection()+location.getFloor();
+        long loc_id;
+        // SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(FeedEntry.COLUMN_LOC_NAME, location.getSection()+location.getFloor());
         values.put(FeedEntry.COLUMN_SCAN_DATE, getDateTime());
 
-        long loc_id = db.insert(FeedEntry.TABLE_LOCATION, null, values);
+        if(getLocationIDbyName(locname,db) == -1){
+            loc_id = db.insert(FeedEntry.TABLE_LOCATION, null, values);
+            insertWifiScans(wifiscans,loc_id,db);
+        }else {
+            loc_id = db.update(FeedEntry.TABLE_LOCATION,values,
+                    FeedEntry.COLUMN_LOC_NAME+ "='" +locname+"'", null);
+            updateWifiScansByLocation(location.getSection()+location.getFloor(),wifiscans);
+        }
 
-        insertWifiScans(wifiscans,loc_id,db);
+
 
         return loc_id;
     }
@@ -310,18 +319,26 @@ public class SQLHelper extends SQLiteOpenHelper {
      */
     private Long getLocationIDbyName(String location_name,SQLiteDatabase db) {
         //SQLiteDatabase db = this.getReadableDatabase();
+        Long result;
 
         String selectQuery = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION + " WHERE "
-                + FeedEntry.COLUMN_LOC_NAME + " = '"+ location_name+"'";
+                + FeedEntry.COLUMN_LOC_NAME + " = '" + location_name + "'";
 
         Log.e(LOG, selectQuery);
 
         Cursor c = db.rawQuery(selectQuery, null);
 
-        if (c != null)
+        if (c != null) {
             c.moveToFirst();
-
-        return c.getLong((c.getColumnIndex(FeedEntry.KEY_ID)));
+            if (c.getCount() < 1) {
+                result = Long.valueOf(-1);
+            } else {
+                result = c.getLong((c.getColumnIndex(FeedEntry.KEY_ID)));
+            }
+        } else {
+            result = Long.valueOf(-1);
+        }
+        return result;
     }
 
     /**

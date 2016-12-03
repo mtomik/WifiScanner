@@ -11,8 +11,12 @@
 
 
     <LinearLayout
+        android:id="@+id/namelocindetail"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
         <TextView
             android:id="@+id/recordText"
             android:layout_width="wrap_content"
@@ -24,7 +28,8 @@
     <ListView
         android:id="@+id/detail_list_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namelocindetail">
     </ListView>
 
 </RelativeLayout>
