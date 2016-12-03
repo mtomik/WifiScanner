@@ -99,6 +99,8 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
         record.setWifiScan(((MainActivity)getActivity()).scanResults);
 
         sqlHelper.addLocationRecord(record);
+        Record temp = sqlHelper.getLocationRecordByName(record.getSection()+record.getFloor());
+        ((MainActivity)getActivity()).allRecords.add(temp);
 
         Toast.makeText(rootView.getContext(),"Record for "+section+floor+" added!",Toast.LENGTH_SHORT).show();
 
