@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.fei.mv.wifiscanner.model.Record;
 import com.fei.mv.wifiscanner.model.WifiScan;
@@ -23,6 +22,7 @@ public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClic
     private static class ViewHolder {
         TextView ssidText;
         TextView macText;
+        TextView signal;
         CheckBox checkBox;
     }
 
@@ -55,6 +55,7 @@ public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClic
             convertView = inflater.inflate(R.layout.list_item_detail, parent, false);
             viewHolder.ssidText = (TextView) convertView.findViewById(R.id.ssid);
             viewHolder.macText = (TextView) convertView.findViewById(R.id.mac);
+            viewHolder.signal = (TextView) convertView.findViewById(R.id.signal);
             viewHolder.checkBox = (CheckBox) convertView.findViewById(R.id.activateBox);
 
             convertView.setTag(viewHolder);
@@ -79,6 +80,7 @@ public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClic
         viewHolder.checkBox.setChecked( dataModel.getIs_used() == 1 );
         viewHolder.ssidText.setText(dataModel.getSSID());
         viewHolder.macText.setText(dataModel.getMAC());
+        viewHolder.signal.setText(dataModel.getRSSI());
         viewHolder.checkBox.setTag(dataModel);
 
         return convertView;
