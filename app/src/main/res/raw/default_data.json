@@ -1,1 +1,2696 @@
-[{"floor": "8", "wifiScan": [{"SSID": "A806", "RSSI": "-55", "MAC": "bc:ae:c5:c4:96:c1"}, {"SSID": "rlan-skolka", "RSSI": "-94", "MAC": "00:0c:42:31:20:f5"}], "section": "A"}, {"floor": "7", "wifiScan": [{"SSID": "KMECH", "RSSI": "-87", "MAC": "f0:79:59:c6:31:b4"}, {"SSID": "Student_WiFi", "RSSI": "-88", "MAC": "f0:79:59:c6:31:b5"}, {"SSID": "svetla", "RSSI": "-92", "MAC": "00:4f:69:6f:ae:aa"}, {"SSID": "KMECH253", "RSSI": "-81", "MAC": "00:12:0e:51:84:c7"}], "section": "A"}, {"floor": "6", "wifiScan": [{"SSID": "KMECH253", "RSSI": "-80", "MAC": "00:12:0e:51:84:c7"}, {"SSID": "radiolan-hreb-5n4", "RSSI": "-92", "MAC": "24:a4:3c:e8:8b:49"}, {"SSID": "KJFT-WPA2", "RSSI": "-89", "MAC": "00:22:15:a3:43:d2"}, {"SSID": "Student_WiFi", "RSSI": "-72", "MAC": "f0:79:59:c6:31:b5"}, {"SSID": "KMECH", "RSSI": "-71", "MAC": "f0:79:59:c6:31:b4"}, {"SSID": "A806", "RSSI": "-91", "MAC": "bc:ae:c5:c4:96:c1"}, {"SSID": "GravityLab", "RSSI": "-91", "MAC": "f0:7d:68:49:6f:30"}, {"SSID": "KJFT", "RSSI": "-90", "MAC": "00:40:f4:80:b5:d8"}, {"SSID": "HP-Print-88-LaserJet Pro MFP", "RSSI": "-82", "MAC": "54:35:30:7f:a2:88"}], "section": "A"}, {"floor": "5", "wifiScan": [{"SSID": "radiolan-hreb-5n4", "RSSI": "-92", "MAC": "24:a4:3c:e8:8b:49"}, {"SSID": "KJFT-WPA2", "RSSI": "-87", "MAC": "00:22:15:a3:43:d2"}, {"SSID": "Student_WiFi", "RSSI": "-84", "MAC": "f0:79:59:c6:31:b5"}, {"SSID": "KMECH", "RSSI": "-85", "MAC": "f0:79:59:c6:31:b4"}, {"SSID": "KJFT", "RSSI": "-75", "MAC": "00:40:f4:80:b5:d8"}, {"SSID": "HP-Print-88-LaserJet Pro MFP", "RSSI": "-75", "MAC": "54:35:30:7f:a2:88"}, {"SSID": "", "RSSI": "-89", "MAC": "00:24:36:aa:c1:82"}, {"SSID": "rlan-bkis2", "RSSI": "-92", "MAC": "00:0c:42:ec:4a:e8"}, {"SSID": "svetla", "RSSI": "-95", "MAC": "00:4f:69:6f:ae:aa"}, {"SSID": "", "RSSI": "-88", "MAC": "00:24:36:aa:c1:81"}, {"SSID": "TP-LINK_1C80D8", "RSSI": "-94", "MAC": "00:27:19:1c:80:d8"}], "section": "A"}, {"floor": "4", "wifiScan": [{"SSID": "KJFT-WPA2", "RSSI": "-86", "MAC": "00:22:15:a3:43:d2"}, {"SSID": "TP-LINK_1C80D8", "RSSI": "-78", "MAC": "00:27:19:1c:80:d8"}, {"SSID": "wajfaj", "RSSI": "-93", "MAC": "f8:d1:11:43:f1:c8"}, {"SSID": "acs_jamkub", "RSSI": "-89", "MAC": "00:0b:6b:85:ec:81"}, {"SSID": "HP-Print-88-LaserJet Pro MFP", "RSSI": "-68", "MAC": "54:35:30:7f:a2:88"}, {"SSID": "rlan-bkis2", "RSSI": "-89", "MAC": "00:0c:42:ec:4a:e8"}], "section": "A"}, {"floor": "3", "wifiScan": [{"SSID": "KJFT-WPA2", "RSSI": "-91", "MAC": "00:22:15:a3:43:d2"}, {"SSID": "Allegro-512", "RSSI": "-64", "MAC": "00:26:f2:24:96:f4"}, {"SSID": "Mato", "RSSI": "-84", "MAC": "3a:71:de:03:c8:fa"}, {"SSID": "acs_jamkub", "RSSI": "-87", "MAC": "00:0b:6b:85:ec:81"}, {"SSID": "GravityLab", "RSSI": "-90", "MAC": "f0:7d:68:49:6f:30"}], "section": "A"}, {"floor": "2", "wifiScan": [{"SSID": "KJFT-WPA2", "RSSI": "-93", "MAC": "00:22:15:a3:43:d2"}, {"SSID": "Allegro-512", "RSSI": "-73", "MAC": "00:26:f2:24:96:f4"}, {"SSID": "Mato", "RSSI": "-84", "MAC": "3a:71:de:03:c8:fa"}, {"SSID": "GravityLab", "RSSI": "-90", "MAC": "f0:7d:68:49:6f:30"}, {"SSID": "rlan-skolka", "RSSI": "-94", "MAC": "00:0c:42:31:20:f5"}], "section": "A"}, {"floor": "1", "wifiScan": [{"SSID": "KJFT-WPA2", "RSSI": "-92", "MAC": "00:22:15:a3:43:d2"}, {"SSID": "Allegro-512", "RSSI": "-88", "MAC": "00:26:f2:24:96:f4"}, {"SSID": "GravityLab", "RSSI": "-91", "MAC": "f0:7d:68:49:6f:30"}, {"SSID": "Mato", "RSSI": "-62", "MAC": "3a:71:de:03:c8:fa"}, {"SSID": "SP_WiFi", "RSSI": "-93", "MAC": "00:4f:62:01:e9:c0"}], "section": "A"}, {"floor": "0", "wifiScan": [{"SSID": "Mato", "RSSI": "-72", "MAC": "3a:71:de:03:c8:fa"}, {"SSID": "SP_WiFi", "RSSI": "-83", "MAC": "00:4f:62:01:e9:c0"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-82", "MAC": "00:c8:8b:9c:7b:01"}, {"SSID": "eduroam", "RSSI": "-86", "MAC": "00:c8:8b:e8:64:7d"}, {"SSID": "eduroam", "RSSI": "-61", "MAC": "00:c8:8b:9c:7b:0d"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-57", "MAC": "00:c8:8b:9c:7b:0e"}], "section": "A"}, {"floor": "7", "wifiScan": [{"SSID": "B-410", "RSSI": "-87", "MAC": "4c:5e:0c:6a:f0:87"}, {"SSID": "TP-LINK_DF112E", "RSSI": "-83", "MAC": "c4:6e:1f:df:11:2e"}, {"SSID": "steamlab", "RSSI": "-90", "MAC": "b0:48:7a:dc:ce:aa"}, {"SSID": "ktee", "RSSI": "-91", "MAC": "74:ea:3a:ae:9c:14"}, {"SSID": "MSI", "RSSI": "-87", "MAC": "00:11:09:0c:70:f7"}, {"SSID": "B-508", "RSSI": "-88", "MAC": "f8:1a:67:5c:68:aa"}, {"SSID": "HQ", "RSSI": "-82", "MAC": "4c:5e:0c:6e:10:49"}, {"SSID": "KTL", "RSSI": "-76", "MAC": "00:1b:fc:df:0b:18"}, {"SSID": "KTL", "RSSI": "-86", "MAC": "00:1b:fc:df:0c:b7"}], "section": "B"}, {"floor": "6", "wifiScan": [{"SSID": "B-508", "RSSI": "-90", "MAC": "f8:1a:67:5c:68:aa"}, {"SSID": "HQ", "RSSI": "-87", "MAC": "4c:5e:0c:6e:10:49"}], "section": "B"}, {"floor": "5", "wifiScan": [{"SSID": "B-508", "RSSI": "-84", "MAC": "f8:1a:67:5c:68:aa"}, {"SSID": "HQ", "RSSI": "-73", "MAC": "4c:5e:0c:6e:10:49"}, {"SSID": "B-410", "RSSI": "-84", "MAC": "4c:5e:0c:6a:f0:87"}, {"SSID": "KTL", "RSSI": "-78", "MAC": "00:1b:fc:df:0c:b7"}, {"SSID": "KTL", "RSSI": "-88", "MAC": "00:1e:8c:50:e5:d9"}, {"SSID": "B5posch-zapad", "RSSI": "-86", "MAC": "00:18:f3:98:e4:af"}, {"SSID": "KTL", "RSSI": "-69", "MAC": "00:1b:fc:df:0b:18"}], "section": "B"}, {"floor": "4", "wifiScan": [{"SSID": "B-508", "RSSI": "-62", "MAC": "f8:1a:67:5c:68:aa"}, {"SSID": "HQ", "RSSI": "-74", "MAC": "4c:5e:0c:6e:10:49"}, {"SSID": "B-410", "RSSI": "-80", "MAC": "4c:5e:0c:6a:f0:87"}, {"SSID": "KTL", "RSSI": "-73", "MAC": "00:1b:fc:df:0c:b7"}, {"SSID": "KTL", "RSSI": "-86", "MAC": "00:1e:8c:50:e5:d9"}, {"SSID": "B5posch-zapad", "RSSI": "-77", "MAC": "00:18:f3:98:e4:af"}, {"SSID": "KTL", "RSSI": "-88", "MAC": "00:1b:fc:df:0b:18"}, {"SSID": "B501", "RSSI": "-91", "MAC": "00:1d:60:b6:56:2d"}, {"SSID": "MMCLab_public", "RSSI": "-85", "MAC": "4c:5e:0c:71:5d:a2"}, {"SSID": "Multimedia1 B401", "RSSI": "-82", "MAC": "4c:5e:0c:76:74:28"}, {"SSID": "hp_laserjet1020", "RSSI": "-92", "MAC": "00:1c:f0:83:cd:e4"}, {"SSID": "B-417", "RSSI": "-92", "MAC": "4c:5e:0c:71:5e:08"}, {"SSID": "B-516", "RSSI": "-75", "MAC": "00:1f:c6:ce:3f:d8"}], "section": "B"}, {"floor": "3", "wifiScan": [{"SSID": "B-508", "RSSI": "-90", "MAC": "f8:1a:67:5c:68:aa"}, {"SSID": "B-410", "RSSI": "-71", "MAC": "4c:5e:0c:6a:f0:87"}, {"SSID": "KTL", "RSSI": "-87", "MAC": "00:1b:fc:df:0c:b7"}, {"SSID": "KTL", "RSSI": "-74", "MAC": "00:1e:8c:50:e5:d9"}, {"SSID": "B5posch-zapad", "RSSI": "-87", "MAC": "00:18:f3:98:e4:af"}, {"SSID": "KTL", "RSSI": "-94", "MAC": "00:1b:fc:df:0b:18"}, {"SSID": "MMCLab_public", "RSSI": "-86", "MAC": "4c:5e:0c:71:5d:a2"}, {"SSID": "Multimedia1 B401", "RSSI": "-85", "MAC": "4c:5e:0c:76:74:28"}, {"SSID": "B402", "RSSI": "-88", "MAC": "34:08:04:d4:5e:60"}, {"SSID": "MSI", "RSSI": "-90", "MAC": "00:11:09:0c:70:f7"}], "section": "B"}, {"floor": "2", "wifiScan": [{"SSID": "B-508", "RSSI": "-84", "MAC": "f8:1a:67:5c:68:aa"}, {"SSID": "B-410", "RSSI": "-68", "MAC": "4c:5e:0c:6a:f0:87"}, {"SSID": "KTL", "RSSI": "-77", "MAC": "00:1e:8c:50:e5:d9"}, {"SSID": "MMCLab_public", "RSSI": "-86", "MAC": "4c:5e:0c:71:5d:a2"}, {"SSID": "Multimedia1 B401", "RSSI": "-85", "MAC": "4c:5e:0c:76:74:28"}, {"SSID": "MSI", "RSSI": "-77", "MAC": "00:11:09:0c:70:f7"}, {"SSID": "ktee1", "RSSI": "-93", "MAC": "74:ea:3a:de:ae:1c"}, {"SSID": "B-417", "RSSI": "-94", "MAC": "4c:5e:0c:71:5e:08"}, {"SSID": "KMer-PK", "RSSI": "-77", "MAC": "34:08:04:d4:05:3c"}, {"SSID": "steamlab", "RSSI": "-93", "MAC": "b0:48:7a:dc:ce:aa"}], "section": "B"}, {"floor": "1", "wifiScan": [{"SSID": "B-410", "RSSI": "-86", "MAC": "4c:5e:0c:6a:f0:87"}, {"SSID": "steamlab", "RSSI": "-74", "MAC": "b0:48:7a:dc:ce:aa"}, {"SSID": "steamlab", "RSSI": "-83", "MAC": "54:a0:50:d8:06:78"}, {"SSID": "steamlab-guest", "RSSI": "-84", "MAC": "54:a0:50:d8:06:79"}, {"SSID": "TP-LINK_DF112E", "RSSI": "-69", "MAC": "c4:6e:1f:df:11:2e"}, {"SSID": "eduroam", "RSSI": "-79", "MAC": "00:78:88:bf:eb:a2"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:c8:8b:c4:a8:72"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-79", "MAC": "00:78:88:bf:eb:a1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-84", "MAC": "00:c8:8b:c4:a8:71"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-90", "MAC": "00:c8:8b:ab:9b:01"}], "section": "B"}, {"floor": "0", "wifiScan": [{"SSID": "steamlab", "RSSI": "-91", "MAC": "b0:48:7a:dc:ce:aa"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-84", "MAC": "00:c8:8b:ab:9b:01"}, {"SSID": "ktee1", "RSSI": "-60", "MAC": "74:ea:3a:de:ae:1c"}, {"SSID": "eduroam", "RSSI": "-72", "MAC": "00:42:68:9c:29:7d"}, {"SSID": "eduroam", "RSSI": "-73", "MAC": "00:c8:8b:5b:bc:9d"}, {"SSID": "ktee3", "RSSI": "-85", "MAC": "00:1b:fc:60:de:c6"}, {"SSID": "eduroam", "RSSI": "-82", "MAC": "00:c8:8b:e8:86:b2"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:c8:8b:5b:bc:92"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-80", "MAC": "00:42:68:9c:29:7e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-72", "MAC": "00:c8:8b:5b:bc:9e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-84", "MAC": "00:c8:8b:5b:bc:91"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-86", "MAC": "00:c8:8b:e8:86:b1"}, {"SSID": "ktee", "RSSI": "-87", "MAC": "74:ea:3a:ae:9c:14"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-87", "MAC": "00:42:68:9c:29:71"}, {"SSID": "eduroam", "RSSI": "-85", "MAC": "00:78:88:bf:eb:ad"}, {"SSID": "eduroam", "RSSI": "-87", "MAC": "00:c8:8b:ab:9b:0d"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-84", "MAC": "00:78:88:bf:eb:ae"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-87", "MAC": "00:c8:8b:ab:9b:0e"}, {"SSID": "DIRECT-YnM283x Series", "RSSI": "-64", "MAC": "32:cd:a7:9e:58:cd"}, {"SSID": "eduroam", "RSSI": "-67", "MAC": "00:c8:8b:e8:86:bd"}, {"SSID": "eduroam", "RSSI": "-88", "MAC": "00:c8:8b:ab:9b:02"}, {"SSID": "eduroam", "RSSI": "-89", "MAC": "00:c8:8b:c4:a8:72"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-67", "MAC": "00:c8:8b:e8:86:be"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-89", "MAC": "00:c8:8b:9c:7b:61"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-89", "MAC": "00:c8:8b:c4:a8:71"}], "section": "B"}, {"floor": "0", "wifiScan": [{"SSID": "FEI-FREE-1Mbit", "RSSI": "-76", "MAC": "00:c8:8b:ab:9b:01"}, {"SSID": "eduroam", "RSSI": "-82", "MAC": "00:c8:8b:e8:86:b2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-82", "MAC": "00:c8:8b:e8:86:b1"}, {"SSID": "ktee", "RSSI": "-87", "MAC": "74:ea:3a:ae:9c:14"}, {"SSID": "eduroam", "RSSI": "-72", "MAC": "00:c8:8b:e8:86:bd"}, {"SSID": "eduroam", "RSSI": "-85", "MAC": "00:c8:8b:ab:9b:02"}, {"SSID": "eduroam", "RSSI": "-84", "MAC": "00:c8:8b:c4:a8:72"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-72", "MAC": "00:c8:8b:e8:86:be"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-81", "MAC": "00:c8:8b:9c:7b:61"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-80", "MAC": "00:c8:8b:c4:a8:71"}, {"SSID": "eduroam", "RSSI": "-72", "MAC": "00:c8:8b:9c:7b:6d"}, {"SSID": "eduroam", "RSSI": "-68", "MAC": "00:c8:8b:ab:59:32"}, {"SSID": "eduroam", "RSSI": "-82", "MAC": "00:c8:8b:ab:59:3d"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-79", "MAC": "00:c8:8b:9c:7b:6e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-72", "MAC": "00:c8:8b:ab:59:31"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-82", "MAC": "00:c8:8b:ab:59:3e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-69", "MAC": "00:c8:8b:9c:7b:01"}, {"SSID": "SP_WiFi", "RSSI": "-90", "MAC": "00:4f:62:01:e9:c0"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:c8:8b:9c:7b:62"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:c8:8b:9c:7b:0d"}, {"SSID": "eduroam", "RSSI": "-72", "MAC": "00:c8:8b:9c:7b:02"}, {"SSID": "eduroam", "RSSI": "-92", "MAC": "00:24:38:f3:eb:b0"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-82", "MAC": "00:c8:8b:9c:7b:0e"}, {"SSID": "eduroam", "RSSI": "-61", "MAC": "00:42:68:80:0b:cd"}, {"SSID": "eduroam", "RSSI": "-67", "MAC": "00:78:88:bf:eb:a2"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:42:68:6e:29:62"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-61", "MAC": "00:42:68:80:0b:ce"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-80", "MAC": "00:42:68:6e:29:6e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-80", "MAC": "00:42:68:6e:29:61"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-73", "MAC": "00:78:88:bf:eb:a1"}, {"SSID": "eduroam", "RSSI": "-78", "MAC": "00:42:68:6e:29:6d"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:c8:8b:c4:a8:7d"}, {"SSID": "eduroam", "RSSI": "-82", "MAC": "00:78:88:bf:eb:ad"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:c8:8b:67:d5:02"}, {"SSID": "eduroam", "RSSI": "-62", "MAC": "00:42:68:74:8c:3d"}, {"SSID": "eduroam", "RSSI": "-59", "MAC": "00:42:68:9c:89:6d"}, {"SSID": "eduroam", "RSSI": "-86", "MAC": "00:c8:8b:67:d5:0d"}, {"SSID": "eduroam", "RSSI": "-87", "MAC": "00:c8:8b:ab:9b:0d"}, {"SSID": "eduroam", "RSSI": "-73", "MAC": "00:42:68:9c:71:f2"}, {"SSID": "eduroam", "RSSI": "-65", "MAC": "00:42:68:74:8c:32"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-78", "MAC": "00:c8:8b:67:d5:01"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-62", "MAC": "00:42:68:74:8c:3e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-86", "MAC": "00:c8:8b:ab:9b:0e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-86", "MAC": "00:c8:8b:67:d5:0e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-72", "MAC": "00:42:68:9c:71:f1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-71", "MAC": "00:42:68:74:8c:31"}, {"SSID": "eduroam", "RSSI": "-65", "MAC": "00:42:68:80:0b:c2"}, {"SSID": "eduroam", "RSSI": "-62", "MAC": "00:42:68:9c:71:fd"}, {"SSID": "eduroam", "RSSI": "-86", "MAC": "00:42:68:9c:89:62"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-79", "MAC": "00:42:68:9c:71:fe"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-62", "MAC": "00:42:68:80:0b:c1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-59", "MAC": "00:42:68:9c:89:6e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-82", "MAC": "00:78:88:bf:eb:ae"}], "section": "C"}, {"floor": "8", "wifiScan": [{"SSID": "eduroam", "RSSI": "-66", "MAC": "00:42:68:80:0b:cd"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:78:88:bf:eb:a2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-66", "MAC": "00:42:68:80:0b:ce"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-82", "MAC": "00:78:88:bf:eb:a1"}, {"SSID": "eduroam", "RSSI": "-58", "MAC": "00:42:68:9c:89:6d"}, {"SSID": "eduroam", "RSSI": "-86", "MAC": "00:42:68:9c:71:fd"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-56", "MAC": "00:42:68:9c:89:6e"}, {"SSID": "Hatapata-2p", "RSSI": "-89", "MAC": "c8:3a:35:40:c2:88"}, {"SSID": "UEAE", "RSSI": "-89", "MAC": "1c:87:2c:67:2e:04"}], "section": "C"}, {"floor": "7", "wifiScan": [{"SSID": "KEE7", "RSSI": "-75", "MAC": "00:22:2d:03:cb:14"}, {"SSID": "OEMP", "RSSI": "-90", "MAC": "00:0e:a6:26:83:54"}, {"SSID": "D-Link DSL-2751", "RSSI": "-87", "MAC": "bc:f6:85:5b:36:d3"}, {"SSID": "c604", "RSSI": "-87", "MAC": "c4:e9:84:e5:b1:40"}, {"SSID": "Asus RT-N10", "RSSI": "-93", "MAC": "48:5b:39:d7:33:0e"}], "section": "C"}, {"floor": "6", "wifiScan": [{"SSID": "KEE7", "RSSI": "-62", "MAC": "00:22:2d:03:cb:14"}, {"SSID": "OEMP", "RSSI": "-78", "MAC": "00:0e:a6:26:83:54"}, {"SSID": "D-Link DSL-2751", "RSSI": "-74", "MAC": "bc:f6:85:5b:36:d3"}, {"SSID": "c604", "RSSI": "-82", "MAC": "c4:e9:84:e5:b1:40"}, {"SSID": "Asus RT-N10", "RSSI": "-78", "MAC": "48:5b:39:d7:33:0e"}, {"SSID": "MLgroup_guest", "RSSI": "-93", "MAC": "16:fe:ed:89:21:4b"}, {"SSID": "ml_group2", "RSSI": "-93", "MAC": "10:fe:ed:89:21:4b"}], "section": "C"}, {"floor": "5", "wifiScan": [{"SSID": "KEE7", "RSSI": "-78", "MAC": "00:22:2d:03:cb:14"}, {"SSID": "OEMP", "RSSI": "-91", "MAC": "00:0e:a6:26:83:54"}, {"SSID": "D-Link DSL-2751", "RSSI": "-68", "MAC": "bc:f6:85:5b:36:d3"}, {"SSID": "c604", "RSSI": "-70", "MAC": "c4:e9:84:e5:b1:40"}, {"SSID": "Asus RT-N10", "RSSI": "-84", "MAC": "48:5b:39:d7:33:0e"}, {"SSID": "MLgroup_guest", "RSSI": "-81", "MAC": "16:fe:ed:89:21:4b"}, {"SSID": "ml_group2", "RSSI": "-85", "MAC": "10:fe:ed:89:21:4b"}, {"SSID": "Yoichi Nikka", "RSSI": "-88", "MAC": "c4:e9:84:e5:b1:3f"}, {"SSID": "DESKTOP-B7V49EG 7306", "RSSI": "-75", "MAC": "00:71:cc:7d:ff:85"}, {"SSID": "TP-LINK_5GHz_D79484", "RSSI": "-85", "MAC": "30:b5:c2:d7:94:84"}, {"SSID": "UEAE", "RSSI": "-93", "MAC": "1c:87:2c:67:2e:00"}], "section": "C"}, {"floor": "4", "wifiScan": [{"SSID": "KEE7", "RSSI": "-85", "MAC": "00:22:2d:03:cb:14"}, {"SSID": "OEMP", "RSSI": "-91", "MAC": "00:0e:a6:26:83:54"}, {"SSID": "D-Link DSL-2751", "RSSI": "-88", "MAC": "bc:f6:85:5b:36:d3"}, {"SSID": "c604", "RSSI": "-70", "MAC": "c4:e9:84:e5:b1:40"}, {"SSID": "MLgroup_guest", "RSSI": "-87", "MAC": "16:fe:ed:89:21:4b"}, {"SSID": "ml_group2", "RSSI": "-82", "MAC": "10:fe:ed:89:21:4b"}, {"SSID": "Yoichi Nikka", "RSSI": "-88", "MAC": "c4:e9:84:e5:b1:3f"}, {"SSID": "UEAE", "RSSI": "-86", "MAC": "1c:87:2c:67:2e:00"}, {"SSID": "ml_group3", "RSSI": "-82", "MAC": "10:fe:ed:89:21:4c"}, {"SSID": "C516", "RSSI": "-78", "MAC": "64:66:b3:f7:97:78"}, {"SSID": "UEAE", "RSSI": "-88", "MAC": "1c:87:2c:67:36:b8"}, {"SSID": "SinaY", "RSSI": "-92", "MAC": "f0:7d:68:46:ef:42"}], "section": "C"}, {"floor": "3", "wifiScan": [{"SSID": "KEE7", "RSSI": "-85", "MAC": "00:22:2d:03:cb:14"}, {"SSID": "D-Link DSL-2751", "RSSI": "-91", "MAC": "bc:f6:85:5b:36:d3"}, {"SSID": "MLgroup_guest", "RSSI": "-88", "MAC": "16:fe:ed:89:21:4b"}, {"SSID": "ml_group2", "RSSI": "-87", "MAC": "10:fe:ed:89:21:4b"}, {"SSID": "UEAE", "RSSI": "-77", "MAC": "1c:87:2c:67:2e:00"}, {"SSID": "UEAE", "RSSI": "-72", "MAC": "1c:87:2c:67:36:b8"}, {"SSID": "SinaY", "RSSI": "-89", "MAC": "f0:7d:68:46:ef:42"}, {"SSID": "UEAE", "RSSI": "-80", "MAC": "1c:87:2c:67:2e:04"}, {"SSID": "UEAE", "RSSI": "-83", "MAC": "1c:87:2c:67:36:bc"}, {"SSID": "UEAE", "RSSI": "-85", "MAC": "1c:b7:2c:d8:31:08"}, {"SSID": "Hatapata-2p", "RSSI": "-89", "MAC": "c8:3a:35:40:c2:88"}, {"SSID": "samsung_print", "RSSI": "-79", "MAC": "ee:8e:37:14:b8:a1"}, {"SSID": "UEAE", "RSSI": "-94", "MAC": "1c:b7:2c:d8:31:0a"}, {"SSID": "CP120-5330A", "RSSI": "-92", "MAC": "00:14:a5:45:33:0a"}], "section": "C"}, {"floor": "2", "wifiScan": [{"SSID": "D-Link DSL-2751", "RSSI": "-91", "MAC": "bc:f6:85:5b:36:d3"}, {"SSID": "UEAE", "RSSI": "-66", "MAC": "1c:87:2c:67:2e:00"}, {"SSID": "UEAE", "RSSI": "-94", "MAC": "1c:87:2c:67:36:b8"}, {"SSID": "UEAE", "RSSI": "-75", "MAC": "1c:87:2c:67:2e:04"}, {"SSID": "Hatapata-2p", "RSSI": "-82", "MAC": "c8:3a:35:40:c2:88"}, {"SSID": "CP120-5330A", "RSSI": "-86", "MAC": "00:14:a5:45:33:0a"}, {"SSID": "UEAE-R", "RSSI": "-75", "MAC": "5c:d9:98:6c:94:02"}, {"SSID": "Hatapata1", "RSSI": "-91", "MAC": "f8:d1:11:92:0a:0c"}], "section": "C"}, {"floor": "1", "wifiScan": [{"SSID": "UEAE", "RSSI": "-71", "MAC": "1c:87:2c:67:2e:00"}, {"SSID": "UEAE", "RSSI": "-87", "MAC": "1c:87:2c:67:2e:04"}, {"SSID": "Hatapata-2p", "RSSI": "-53", "MAC": "c8:3a:35:40:c2:88"}, {"SSID": "CP120-5330A", "RSSI": "-90", "MAC": "00:14:a5:45:33:0a"}, {"SSID": "UEAE-R", "RSSI": "-90", "MAC": "5c:d9:98:6c:94:02"}, {"SSID": "Hatapata1", "RSSI": "-73", "MAC": "f8:d1:11:92:0a:0c"}], "section": "C"}, {"floor": "0", "wifiScan": [{"SSID": "FEI-FREE-1Mbit", "RSSI": "-84", "MAC": "00:42:68:9c:89:6e"}, {"SSID": "eduroam", "RSSI": "-72", "MAC": "00:42:68:81:e1:ed"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-84", "MAC": "00:42:68:81:e1:ee"}, {"SSID": "eduroam", "RSSI": "-71", "MAC": "00:42:68:9c:86:ad"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-73", "MAC": "00:42:68:9c:86:ae"}, {"SSID": "eduroam", "RSSI": "-77", "MAC": "00:42:68:80:0b:cd"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-77", "MAC": "00:42:68:80:0b:ce"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-82", "MAC": "00:42:68:80:0b:c1"}, {"SSID": "eduroam", "RSSI": "-52", "MAC": "00:42:68:6e:29:6d"}, {"SSID": "eduroam", "RSSI": "-77", "MAC": "00:42:68:9c:8a:4d"}, {"SSID": "eduroam", "RSSI": "-78", "MAC": "00:c8:8b:ab:a4:fd"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:c8:8b:45:e0:d2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-52", "MAC": "00:42:68:6e:29:6e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-76", "MAC": "00:42:68:9c:8a:4e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-78", "MAC": "00:c8:8b:ab:a4:fe"}, {"SSID": "eduroam", "RSSI": "-64", "MAC": "00:42:68:9c:8a:42"}, {"SSID": "eduroam", "RSSI": "-66", "MAC": "00:c8:8b:45:e0:dd"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:42:68:9c:19:2d"}, {"SSID": "eduroam", "RSSI": "-78", "MAC": "00:c8:8b:ab:a4:f2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-58", "MAC": "00:42:68:6e:29:61"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-72", "MAC": "00:c8:8b:45:e0:d1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-68", "MAC": "00:c8:8b:45:e0:de"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-73", "MAC": "00:42:68:9c:8a:41"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-77", "MAC": "00:c8:8b:ab:a4:f1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-85", "MAC": "00:42:68:9c:19:2e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-80", "MAC": "00:c8:8b:e8:7d:21"}, {"SSID": "eduroam", "RSSI": "-79", "MAC": "00:c8:8b:e8:7d:22"}, {"SSID": "eduroam", "RSSI": "-85", "MAC": "00:c8:8b:e8:7d:2d"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:42:68:81:e1:e2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-83", "MAC": "00:c8:8b:e8:7d:2e"}], "section": "D"}, {"floor": "1", "wifiScan": [{"SSID": "FEI-FREE-1Mbit", "RSSI": "-84", "MAC": "00:42:68:9c:89:6e"}, {"SSID": "eduroam", "RSSI": "-72", "MAC": "00:42:68:81:e1:ed"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-84", "MAC": "00:42:68:81:e1:ee"}, {"SSID": "eduroam", "RSSI": "-71", "MAC": "00:42:68:9c:86:ad"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-73", "MAC": "00:42:68:9c:86:ae"}, {"SSID": "eduroam", "RSSI": "-77", "MAC": "00:42:68:80:0b:cd"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-77", "MAC": "00:42:68:80:0b:ce"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-82", "MAC": "00:42:68:80:0b:c1"}, {"SSID": "eduroam", "RSSI": "-70", "MAC": "00:42:68:6e:29:6d"}, {"SSID": "eduroam", "RSSI": "-77", "MAC": "00:42:68:9c:8a:4d"}, {"SSID": "eduroam", "RSSI": "-78", "MAC": "00:c8:8b:ab:a4:fd"}, {"SSID": "eduroam", "RSSI": "-44", "MAC": "00:c8:8b:45:e0:d2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-69", "MAC": "00:42:68:6e:29:6e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-76", "MAC": "00:42:68:9c:8a:4e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-78", "MAC": "00:c8:8b:ab:a4:fe"}, {"SSID": "eduroam", "RSSI": "-64", "MAC": "00:42:68:9c:8a:42"}, {"SSID": "eduroam", "RSSI": "-52", "MAC": "00:c8:8b:45:e0:dd"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:42:68:9c:19:2d"}, {"SSID": "eduroam", "RSSI": "-78", "MAC": "00:c8:8b:ab:a4:f2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-58", "MAC": "00:42:68:6e:29:61"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-52", "MAC": "00:c8:8b:45:e0:d1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-52", "MAC": "00:c8:8b:45:e0:de"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-73", "MAC": "00:42:68:9c:8a:41"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-87", "MAC": "00:c8:8b:ab:a4:f1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-85", "MAC": "00:42:68:9c:19:2e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-80", "MAC": "00:c8:8b:e8:7d:21"}, {"SSID": "eduroam", "RSSI": "-79", "MAC": "00:c8:8b:e8:7d:22"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:c8:8b:e8:7d:2d"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:42:68:81:e1:e2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-80", "MAC": "00:c8:8b:e8:7d:2e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-81", "MAC": "00:c8:8b:67:d3:5e"}, {"SSID": "Accenture-Free", "RSSI": "-93", "MAC": "00:23:5e:4b:b8:d0"}], "section": "D"}, {"floor": "2", "wifiScan": [{"SSID": "eduroam", "RSSI": "-70", "MAC": "00:42:68:6e:29:6d"}, {"SSID": "eduroam", "RSSI": "-78", "MAC": "00:42:68:9c:8a:4d"}, {"SSID": "eduroam", "RSSI": "-70", "MAC": "00:c8:8b:ab:a4:fd"}, {"SSID": "eduroam", "RSSI": "-44", "MAC": "00:c8:8b:45:e0:d2"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-69", "MAC": "00:42:68:6e:29:6e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-80", "MAC": "00:42:68:9c:8a:4e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-70", "MAC": "00:c8:8b:ab:a4:fe"}, {"SSID": "eduroam", "RSSI": "-52", "MAC": "00:c8:8b:45:e0:dd"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-52", "MAC": "00:c8:8b:45:e0:d1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-52", "MAC": "00:c8:8b:45:e0:de"}, {"SSID": "Accenture-Free", "RSSI": "-62", "MAC": "00:23:5e:4b:b8:d0"}, {"SSID": "netD1", "RSSI": "-73", "MAC": "ac:22:0b:8d:94:d1"}, {"SSID": "eduroam", "RSSI": "-73", "MAC": "00:c8:8b:45:dc:8d"}, {"SSID": "netD1", "RSSI": "-80", "MAC": "ac:22:0b:8d:27:76"}, {"SSID": "NETGEAR", "RSSI": "-89", "MAC": "e0:91:f5:60:6b:22"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "88:75:56:db:e2:a1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-73", "MAC": "00:c8:8b:45:dc:8e"}, {"SSID": "Accenture-Free", "RSSI": "-63", "MAC": "00:23:5e:b9:53:10"}, {"SSID": "netD1", "RSSI": "-62", "MAC": "ac:22:0b:8d:8e:45"}, {"SSID": "Accenture-internal", "RSSI": "-93", "MAC": "68:bc:0c:63:57:10"}, {"SSID": "D106", "RSSI": "-91", "MAC": "00:17:31:94:76:9e"}, {"SSID": "", "RSSI": "-81", "MAC": "88:75:56:db:e2:a0"}], "section": "D"}, {"floor": "3", "wifiScan": [{"SSID": "Accenture-Free", "RSSI": "-45", "MAC": "00:23:5e:4b:b8:d0"}, {"SSID": "eduroam", "RSSI": "-74", "MAC": "88:75:56:db:e2:a1"}, {"SSID": "Accenture-Free", "RSSI": "-62", "MAC": "00:23:5e:b9:53:10"}, {"SSID": "Accenture-internal", "RSSI": "-76", "MAC": "68:bc:0c:63:57:10"}, {"SSID": "", "RSSI": "-87", "MAC": "88:75:56:db:e2:a0"}, {"SSID": "ADB-7FC5E5", "RSSI": "-74", "MAC": "a4:5d:a1:7f:c5:e5"}, {"SSID": "eduroam", "RSSI": "-77", "MAC": "88:75:56:83:74:b1"}, {"SSID": "ZyXEL7245cc", "RSSI": "-81", "MAC": "ee:43:f6:72:45:cc"}, {"SSID": "Accenture-internal5", "RSSI": "-90", "MAC": "68:bc:0c:5d:56:40"}, {"SSID": "eduroam", "RSSI": "-88", "MAC": "88:75:56:db:d9:51"}, {"SSID": "EVOLVEO WINPC X5", "RSSI": "-60", "MAC": "30:f7:d7:04:94:1a"}, {"SSID": "ANV_01", "RSSI": "-60", "MAC": "d6:ca:6d:d7:55:9f"}, {"SSID": "ANV_GUEST", "RSSI": "-60", "MAC": "d6:ca:6d:d7:55:a0"}, {"SSID": "", "RSSI": "-60", "MAC": "d4:ca:6d:d7:55:9f"}, {"SSID": "", "RSSI": "-77", "MAC": "88:75:56:db:d9:50"}, {"SSID": "AKUBA", "RSSI": "-87", "MAC": "c4:e9:84:b3:60:33"}, {"SSID": "OSK-597544", "RSSI": "-88", "MAC": "c4:6e:1f:59:75:44"}, {"SSID": "eduroam", "RSSI": "-91", "MAC": "58:97:1e:23:3c:91"}, {"SSID": "", "RSSI": "-93", "MAC": "58:97:1e:23:3c:90"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-86", "MAC": "00:c8:8b:45:e0:d1"}], "section": "D"}, {"floor": "4", "wifiScan": [{"SSID": "Accenture-Free", "RSSI": "-74", "MAC": "00:23:5e:4b:b8:d0"}, {"SSID": "eduroam", "RSSI": "-46", "MAC": "88:75:56:db:e2:a1"}, {"SSID": "Accenture-Free", "RSSI": "-83", "MAC": "00:23:5e:b9:53:10"}, {"SSID": "Accenture-internal", "RSSI": "-88", "MAC": "68:bc:0c:63:57:10"}, {"SSID": "", "RSSI": "-44", "MAC": "88:75:56:db:e2:a0"}, {"SSID": "Accenture-internal5", "RSSI": "-90", "MAC": "68:bc:0c:5d:56:40"}, {"SSID": "eduroam", "RSSI": "-72", "MAC": "88:75:56:db:d9:51"}, {"SSID": "", "RSSI": "-93", "MAC": "58:97:1e:23:3c:90"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-86", "MAC": "00:c8:8b:45:e0:d1"}, {"SSID": "", "RSSI": "-78", "MAC": "88:75:56:db:d9:50"}, {"SSID": "AOWP", "RSSI": "-86", "MAC": "e4:71:85:32:4b:64"}], "section": "D"}, {"floor": "5", "wifiScan": [{"SSID": "AE_WIFI_2EX", "RSSI": "-85", "MAC": "80:1f:02:e8:98:9c"}, {"SSID": "Accenture-Free", "RSSI": "-87", "MAC": "00:23:5e:4b:b8:d0"}, {"SSID": "", "RSSI": "-89", "MAC": "64:e9:50:b1:95:a0"}, {"SSID": "eduroam", "RSSI": "-90", "MAC": "64:e9:50:b1:95:a2"}, {"SSID": "", "RSSI": "-91", "MAC": "64:e9:50:b1:95:a1"}], "section": "D"}, {"floor": "6", "wifiScan": [{"SSID": "AE_WIFI_2EX", "RSSI": "-83", "MAC": "80:1f:02:e8:98:9c"}, {"SSID": "Accenture-Free", "RSSI": "-91", "MAC": "00:23:5e:4b:b8:d0"}, {"SSID": "", "RSSI": "-80", "MAC": "64:e9:50:b1:95:a0"}, {"SSID": "eduroam", "RSSI": "-79", "MAC": "64:e9:50:b1:95:a2"}, {"SSID": "", "RSSI": "-81", "MAC": "64:e9:50:b1:95:a1"}, {"SSID": "", "RSSI": "-79", "MAC": "58:97:1e:23:3c:90"}, {"SSID": "Komnata_D610", "RSSI": "-79", "MAC": "00:24:01:8d:2b:da"}, {"SSID": "MARTIN-PC_Wifi", "RSSI": "-80", "MAC": "c8:3a:35:42:be:58"}, {"SSID": "eduroam", "RSSI": "-82", "MAC": "88:75:56:db:e2:a1"}, {"SSID": "", "RSSI": "-90", "MAC": "54:78:1a:21:06:60"}, {"SSID": "eduroam", "RSSI": "-85", "MAC": "64:e9:50:af:95:b2"}, {"SSID": "", "RSSI": "-83", "MAC": "64:e9:50:af:95:b1"}, {"SSID": "", "RSSI": "-84", "MAC": "88:75:56:db:e2:a0"}, {"SSID": "eduroam", "RSSI": "-87", "MAC": "54:78:1a:21:06:62"}, {"SSID": "", "RSSI": "-89", "MAC": "54:78:1a:21:06:61"}, {"SSID": "eduroam", "RSSI": "-88", "MAC": "00:08:30:b6:26:f0"}, {"SSID": "eduroam", "RSSI": "-92", "MAC": "58:97:1e:23:3c:91"}, {"SSID": "D606-Network", "RSSI": "-92", "MAC": "00:11:09:0d:06:ad"}, {"SSID": "", "RSSI": "-92", "MAC": "54:78:1a:05:e1:70"}, {"SSID": "", "RSSI": "-88", "MAC": "64:e9:50:af:95:b0"}, {"SSID": "", "RSSI": "-89", "MAC": "54:78:1a:05:e1:71"}, {"SSID": "eduroam", "RSSI": "-89", "MAC": "54:78:1a:05:e1:72"}], "section": "D"}, {"floor": "7", "wifiScan": [{"SSID": "AE_WIFI_2EX", "RSSI": "-90", "MAC": "80:1f:02:e8:98:9c"}, {"SSID": "", "RSSI": "-91", "MAC": "64:e9:50:b1:95:a0"}, {"SSID": "eduroam", "RSSI": "-85", "MAC": "64:e9:50:b1:95:a2"}, {"SSID": "", "RSSI": "-84", "MAC": "64:e9:50:b1:95:a1"}, {"SSID": "", "RSSI": "-93", "MAC": "58:97:1e:23:3c:90"}, {"SSID": "Komnata_D610", "RSSI": "-66", "MAC": "00:24:01:8d:2b:da"}, {"SSID": "MARTIN-PC_Wifi", "RSSI": "-80", "MAC": "c8:3a:35:42:be:58"}, {"SSID": "", "RSSI": "-77", "MAC": "54:78:1a:21:06:60"}, {"SSID": "eduroam", "RSSI": "-89", "MAC": "64:e9:50:af:95:b2"}, {"SSID": "eduroam", "RSSI": "-68", "MAC": "54:78:1a:21:06:62"}, {"SSID": "", "RSSI": "-76", "MAC": "54:78:1a:21:06:61"}, {"SSID": "eduroam", "RSSI": "-75", "MAC": "00:08:30:b6:26:f0"}, {"SSID": "D606-Network", "RSSI": "-76", "MAC": "00:11:09:0d:06:ad"}, {"SSID": "", "RSSI": "-85", "MAC": "54:78:1a:05:e1:70"}, {"SSID": "", "RSSI": "-90", "MAC": "54:78:1a:05:e1:71"}, {"SSID": "eduroam", "RSSI": "-72", "MAC": "54:78:1a:05:e1:72"}, {"SSID": "AE_WIFI", "RSSI": "-79", "MAC": "e0:3f:49:40:ad:38"}, {"SSID": "trololo", "RSSI": "-85", "MAC": "98:0c:a5:c2:49:01"}, {"SSID": "ROBOTIKA D-617", "RSSI": "-72", "MAC": "00:13:d3:7f:24:77"}], "section": "D"}, {"floor": "0", "wifiScan": [{"SSID": "Accenture-Free", "RSSI": "-78", "MAC": "00:23:5e:b9:53:10"}, {"SSID": "Accenture-Free", "RSSI": "-93", "MAC": "00:23:5e:4b:b8:d0"}, {"SSID": "eduroam", "RSSI": "-64", "MAC": "00:c8:8b:45:e0:dd"}, {"SSID": "eduroam", "RSSI": "-70", "MAC": "00:c8:8b:45:e0:d2"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:42:68:6e:29:6d"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:c8:8b:e8:7d:2d"}, {"SSID": "eduroam", "RSSI": "-82", "MAC": "00:42:68:9c:8a:4d"}, {"SSID": "eduroam", "RSSI": "-70", "MAC": "00:42:68:9c:19:2d"}, {"SSID": "eduroam", "RSSI": "-86", "MAC": "00:c8:8b:ab:a4:fd"}, {"SSID": "eduroam", "RSSI": "-82", "MAC": "00:42:68:9c:8a:42"}, {"SSID": "WR", "RSSI": "-85", "MAC": "34:23:87:f7:4a:55"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-63", "MAC": "00:c8:8b:45:e0:de"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-67", "MAC": "00:c8:8b:45:e0:d1"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-74", "MAC": "00:42:68:6e:29:6e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-83", "MAC": "00:c8:8b:e8:7d:2e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-79", "MAC": "00:42:68:9c:8a:4e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-67", "MAC": "00:42:68:9c:19:2e"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:c8:8b:67:d3:5d"}, {"SSID": "eduroam", "RSSI": "-62", "MAC": "00:c8:8b:67:d3:52"}, {"SSID": "eduroam", "RSSI": "-56", "MAC": "00:42:68:9c:19:22"}, {"SSID": "eduroam", "RSSI": "-81", "MAC": "00:c8:8b:e8:7d:22"}, {"SSID": "eduroam", "RSSI": "-83", "MAC": "00:c8:8b:9c:7b:0d"}, {"SSID": "eduroam", "RSSI": "-80", "MAC": "00:42:68:6e:29:62"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-79", "MAC": "00:c8:8b:67:d3:5e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-56", "MAC": "00:42:68:9c:19:21"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-65", "MAC": "00:c8:8b:e8:7d:21"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-81", "MAC": "00:c8:8b:9c:7b:0e"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-78", "MAC": "00:42:68:6e:29:61"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-76", "MAC": "00:c8:8b:c0:20:a1"}, {"SSID": "eduroam", "RSSI": "-71", "MAC": "00:c8:8b:e8:8f:f2"}, {"SSID": "eduroam", "RSSI": "-76", "MAC": "00:c8:8b:c0:20:a2"}, {"SSID": "DELIKANTI", "RSSI": "-86", "MAC": "e8:94:f6:62:04:a4"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-71", "MAC": "00:c8:8b:e8:8f:f1"}, {"SSID": "eduroam", "RSSI": "-64", "MAC": "00:c8:8b:e8:8f:fd"}, {"SSID": "FEI-FREE-1Mbit", "RSSI": "-64", "MAC": "00:c8:8b:e8:8f:fe"}], "section": "E"}]
+[
+  {
+    "edited_at": "Dec 4, 2016 11:50:30 AM",
+    "floor": "8",
+    "id": 1,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "bc:ae:c5:c4:96:c1",
+        "RSSI": "-59",
+        "SSID": "A806"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f0:79:59:c6:31:b4",
+        "RSSI": "-89",
+        "SSID": "KMECH"
+      },
+      {
+        "is_used": 0,
+        "MAC": "e2:f2:fb:cc:b8:6b",
+        "RSSI": "-54",
+        "SSID": "Iphone5sTom25"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:12:0e:51:84:c7",
+        "RSSI": "-85",
+        "SSID": "KMECH253"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 11:55:57 AM",
+    "floor": "7",
+    "id": 2,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "bc:ae:c5:c4:96:c1",
+        "RSSI": "-83",
+        "SSID": "A806"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f0:79:59:c6:31:b4",
+        "RSSI": "-63",
+        "SSID": "KMECH"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:12:0e:51:84:c7",
+        "RSSI": "-72",
+        "SSID": "KMECH253"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 11:57:10 AM",
+    "floor": "6",
+    "id": 3,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "f0:79:59:c6:31:b4",
+        "RSSI": "-84",
+        "SSID": "KMECH"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:12:0e:51:84:c7",
+        "RSSI": "-84",
+        "SSID": "KMECH253"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:40:f4:80:b5:d8",
+        "RSSI": "-79",
+        "SSID": "KJFT"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:27:19:1c:80:d8",
+        "RSSI": "-91",
+        "SSID": "TP-LINK_1C80D8"
+      },
+      {
+        "is_used": 0,
+        "MAC": "00:24:36:aa:c1:81",
+        "RSSI": "-93",
+        "SSID": ""
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 11:58:13 AM",
+    "floor": "5",
+    "id": 4,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:27:19:1c:80:d8",
+        "RSSI": "-75",
+        "SSID": "TP-LINK_1C80D8"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:0e:7b:d8",
+        "RSSI": "-78",
+        "SSID": "H2020"
+      },
+      {
+        "is_used": 1,
+        "MAC": "80:1f:02:e5:9e:db",
+        "RSSI": "-90",
+        "SSID": "KJFT-WPA2"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 11:59:34 AM",
+    "floor": "4",
+    "id": 5,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:27:19:1c:80:d8",
+        "RSSI": "-95",
+        "SSID": "TP-LINK_1C80D8"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:0e:7b:d8",
+        "RSSI": "-92",
+        "SSID": "H2020"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:26:f2:24:96:f4",
+        "RSSI": "-79",
+        "SSID": "Allegro-512"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:00:37 PM",
+    "floor": "3",
+    "id": 6,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:26:f2:24:96:f4",
+        "RSSI": "-63",
+        "SSID": "Allegro-512"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f0:7d:68:49:6f:30",
+        "RSSI": "-90",
+        "SSID": "GravityLab"
+      },
+      {
+        "is_used": 1,
+        "MAC": "60:a4:4c:eb:b7:8c",
+        "RSSI": "-87",
+        "SSID": "A316"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:01:51 PM",
+    "floor": "2",
+    "id": 7,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:26:f2:24:96:f4",
+        "RSSI": "-83",
+        "SSID": "Allegro-512"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:23:54:01:2b:35",
+        "RSSI": "-94",
+        "SSID": "SimLab"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:4f:62:01:e9:c0",
+        "RSSI": "-93",
+        "SSID": "SP_WiFi"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:03:29 PM",
+    "floor": "1",
+    "id": 8,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:4f:62:01:e9:c0",
+        "RSSI": "-85",
+        "SSID": "SP_WiFi"
+      },
+      {
+        "is_used": 1,
+        "MAC": "08:d0:9f:ed:e5:50",
+        "RSSI": "-78",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "08:d0:9f:ed:e5:51",
+        "RSSI": "-79",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:12:0e:51:84:c7",
+        "RSSI": "-94",
+        "SSID": "KMECH253"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:26:f2:24:96:f4",
+        "RSSI": "-85",
+        "SSID": "Allegro-512"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:04:39 PM",
+    "floor": "0",
+    "id": 9,
+    "section": "A",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:12:0e:51:84:c7",
+        "RSSI": "-95",
+        "SSID": "KMECH253"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:9c:7b:02",
+        "RSSI": "-65",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:24:38:f3:eb:b0",
+        "RSSI": "-72",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:9c:7b:01",
+        "RSSI": "-64",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:9c:7b:62",
+        "RSSI": "-86",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:9c:7b:61",
+        "RSSI": "-86",
+        "SSID": "FEI-FREE-1Mbit"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:13:14 PM",
+    "floor": "7",
+    "id": 10,
+    "section": "B",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6e:10:49",
+        "RSSI": "-70",
+        "SSID": "HQ"
+      },
+      {
+        "is_used": 1,
+        "MAC": "34:08:04:14:60:07",
+        "RSSI": "-88",
+        "SSID": "B-508"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0b:18",
+        "RSSI": "-80",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0c:b7",
+        "RSSI": "-86",
+        "SSID": "KTL"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:19:23 PM",
+    "floor": "6",
+    "id": 11,
+    "section": "B",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6e:10:49",
+        "RSSI": "-74",
+        "SSID": "HQ"
+      },
+      {
+        "is_used": 1,
+        "MAC": "34:08:04:14:60:07",
+        "RSSI": "-75",
+        "SSID": "B-508"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0b:18",
+        "RSSI": "-54",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6a:f0:87",
+        "RSSI": "-81",
+        "SSID": "B-410"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:18:f3:98:e4:af",
+        "RSSI": "-90",
+        "SSID": "B5posch-zapad"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0c:b7",
+        "RSSI": "-84",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1e:8c:50:e5:d9",
+        "RSSI": "-91",
+        "SSID": "KTL"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:21:38 PM",
+    "floor": "5",
+    "id": 12,
+    "section": "B",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "34:08:04:14:60:07",
+        "RSSI": "-52",
+        "SSID": "B-508"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0b:18",
+        "RSSI": "-76",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6a:f0:87",
+        "RSSI": "-63",
+        "SSID": "B-410"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0c:b7",
+        "RSSI": "-58",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:18:f3:98:e4:af",
+        "RSSI": "-67",
+        "SSID": "B5posch-zapad"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1d:60:b6:56:2d",
+        "RSSI": "-92",
+        "SSID": "B501"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1e:8c:50:e5:d9",
+        "RSSI": "-71",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 0,
+        "MAC": "f8:1a:67:5c:68:aa",
+        "RSSI": "-79",
+        "SSID": "wifinka2"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1f:c6:ce:3f:d8",
+        "RSSI": "-87",
+        "SSID": "B-516"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f8:d1:11:56:7e:92",
+        "RSSI": "-75",
+        "SSID": "TP-LINK_567E92"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:71:5d:a2",
+        "RSSI": "-84",
+        "SSID": "MMCLab_public"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1c:f0:83:cd:e4",
+        "RSSI": "-86",
+        "SSID": "hp_laserjet1020"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:13:d3:7f:23:a1",
+        "RSSI": "-89",
+        "SSID": "B502"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:11:2f:de:20:85",
+        "RSSI": "-84",
+        "SSID": "default"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6e:10:49",
+        "RSSI": "-84",
+        "SSID": "HQ"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:71:5e:08",
+        "RSSI": "-92",
+        "SSID": "B-417"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:24:27 PM",
+    "floor": "4",
+    "id": 13,
+    "section": "B",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "34:08:04:14:60:07",
+        "RSSI": "-71",
+        "SSID": "B-508"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0b:18",
+        "RSSI": "-89",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6a:f0:87",
+        "RSSI": "-56",
+        "SSID": "B-410"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0c:b7",
+        "RSSI": "-82",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1e:8c:50:e5:d9",
+        "RSSI": "-60",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:71:5d:a2",
+        "RSSI": "-64",
+        "SSID": "MMCLab_public"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:71:5e:08",
+        "RSSI": "-74",
+        "SSID": "B-417"
+      },
+      {
+        "is_used": 0,
+        "MAC": "4c:5e:0c:76:74:28",
+        "RSSI": "-71",
+        "SSID": "Multimedia1 B401"
+      },
+      {
+        "is_used": 0,
+        "MAC": "00:11:09:0c:70:f7",
+        "RSSI": "-94",
+        "SSID": "MSI"
+      },
+      {
+        "is_used": 1,
+        "MAC": "34:08:04:d4:5e:60",
+        "RSSI": "-87",
+        "SSID": "B402"
+      },
+      {
+        "is_used": 1,
+        "MAC": "34:08:04:d4:05:3c",
+        "RSSI": "-93",
+        "SSID": "KMer-PK"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:18:f3:98:e4:af",
+        "RSSI": "-87",
+        "SSID": "B5posch-zapad"
+      },
+      {
+        "is_used": 0,
+        "MAC": "f8:1a:67:5c:68:aa",
+        "RSSI": "-95",
+        "SSID": "wifinka2"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:26:14 PM",
+    "floor": "3",
+    "id": 14,
+    "section": "B",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "34:08:04:14:60:07",
+        "RSSI": "-91",
+        "SSID": "B-508"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6a:f0:87",
+        "RSSI": "-63",
+        "SSID": "B-410"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:df:0c:b7",
+        "RSSI": "-96",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1e:8c:50:e5:d9",
+        "RSSI": "-78",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:71:5d:a2",
+        "RSSI": "-92",
+        "SSID": "MMCLab_public"
+      },
+      {
+        "is_used": 0,
+        "MAC": "00:11:09:0c:70:f7",
+        "RSSI": "-78",
+        "SSID": "MSI"
+      },
+      {
+        "is_used": 1,
+        "MAC": "34:08:04:d4:05:3c",
+        "RSSI": "-92",
+        "SSID": "KMer-PK"
+      },
+      {
+        "is_used": 1,
+        "MAC": "32:cd:a7:9e:58:cd",
+        "RSSI": "-90",
+        "SSID": "DIRECT-YnM283x Series"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:27:32 PM",
+    "floor": "2",
+    "id": 15,
+    "section": "B",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6a:f0:87",
+        "RSSI": "-87",
+        "SSID": "B-410"
+      },
+      {
+        "is_used": 0,
+        "MAC": "00:11:09:0c:70:f7",
+        "RSSI": "-92",
+        "SSID": "MSI"
+      },
+      {
+        "is_used": 1,
+        "MAC": "32:cd:a7:9e:58:cd",
+        "RSSI": "-77",
+        "SSID": "DIRECT-YnM283x Series"
+      },
+      {
+        "is_used": 1,
+        "MAC": "74:ea:3a:de:ae:1c",
+        "RSSI": "-89",
+        "SSID": "ktee1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b0:48:7a:dc:ce:aa",
+        "RSSI": "-91",
+        "SSID": "steamlab"
+      },
+      {
+        "is_used": 1,
+        "MAC": "74:ea:3a:ae:9c:14",
+        "RSSI": "-87",
+        "SSID": "ktee"
+      },
+      {
+        "is_used": 0,
+        "MAC": "00:1e:8c:50:e5:d9",
+        "RSSI": "-92",
+        "SSID": "KTL"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:28:43 PM",
+    "floor": "1",
+    "id": 16,
+    "section": "B",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "32:cd:a7:9e:58:cd",
+        "RSSI": "-62",
+        "SSID": "DIRECT-YnM283x Series"
+      },
+      {
+        "is_used": 1,
+        "MAC": "74:ea:3a:de:ae:1c",
+        "RSSI": "-61",
+        "SSID": "ktee1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:86:b1",
+        "RSSI": "-78",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "74:ea:3a:ae:9c:14",
+        "RSSI": "-64",
+        "SSID": "ktee"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:86:b2",
+        "RSSI": "-78",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:5b:bc:92",
+        "RSSI": "-82",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1b:fc:60:de:c6",
+        "RSSI": "-83",
+        "SSID": "ktee3"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:5b:bc:91",
+        "RSSI": "-82",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:29:72",
+        "RSSI": "-85",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:29:71",
+        "RSSI": "-84",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:4f:62:01:e9:c0",
+        "RSSI": "-92",
+        "SSID": "SP_WiFi"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:1e:8c:50:e5:d9",
+        "RSSI": "-95",
+        "SSID": "KTL"
+      },
+      {
+        "is_used": 1,
+        "MAC": "4c:5e:0c:6a:f0:87",
+        "RSSI": "-96",
+        "SSID": "B-410"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:11:26 PM",
+    "floor": "0",
+    "id": 17,
+    "section": "B",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:9c:7b:62",
+        "RSSI": "-83",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:9c:7b:61",
+        "RSSI": "-83",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 0,
+        "MAC": "c8:3a:35:21:52:88",
+        "RSSI": "-67",
+        "SSID": "xpeterkoB"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:86:b2",
+        "RSSI": "-53",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "74:ea:3a:de:ae:1c",
+        "RSSI": "-86",
+        "SSID": "ktee1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:ab:59:32",
+        "RSSI": "-73",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 0,
+        "MAC": "32:cd:a7:9e:58:cd",
+        "RSSI": "-90",
+        "SSID": "DIRECT-YnM283x Series"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:86:b1",
+        "RSSI": "-53",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:ab:59:31",
+        "RSSI": "-72",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "74:ea:3a:ae:9c:14",
+        "RSSI": "-81",
+        "SSID": "ktee"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:24:38:f3:eb:b0",
+        "RSSI": "-88",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "80:1f:02:e6:0b:b0",
+        "RSSI": "-92",
+        "SSID": "ktee2"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:80:0b:c2",
+        "RSSI": "-87",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:29:72",
+        "RSSI": "-91",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:29:71",
+        "RSSI": "-90",
+        "SSID": "FEI-FREE-1Mbit"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:32:30 PM",
+    "floor": "0",
+    "id": 18,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:80:0b:c2",
+        "RSSI": "-79",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:80:0b:c1",
+        "RSSI": "-79",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:89:62",
+        "RSSI": "-55",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:74:8c:31",
+        "RSSI": "-88",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:89:61",
+        "RSSI": "-54",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "74:ea:3a:ed:05:85",
+        "RSSI": "-84",
+        "SSID": "TP-LINK_ED0585"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:6e:29:62",
+        "RSSI": "-75",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:74:8c:32",
+        "RSSI": "-87",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:6e:29:61",
+        "RSSI": "-76",
+        "SSID": "FEI-FREE-1Mbit"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:41:23 PM",
+    "floor": "8",
+    "id": 19,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "e0:0e:da:8d:a6:11",
+        "RSSI": "-85",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "bc:f6:85:5b:36:d3",
+        "RSSI": "-83",
+        "SSID": "D-Link DSL-2751"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:22:2d:03:cb:14",
+        "RSSI": "-68",
+        "SSID": "KEE7"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:0e:a6:26:83:54",
+        "RSSI": "-87",
+        "SSID": "OEMP"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:40:31 PM",
+    "floor": "7",
+    "id": 20,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "e0:0e:da:8d:a6:11",
+        "RSSI": "-85",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "bc:f6:85:5b:36:d3",
+        "RSSI": "-64",
+        "SSID": "D-Link DSL-2751"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:22:2d:03:cb:14",
+        "RSSI": "-59",
+        "SSID": "KEE7"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c4:e9:84:e5:b1:40",
+        "RSSI": "-80",
+        "SSID": "c604"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:0e:a6:26:83:54",
+        "RSSI": "-80",
+        "SSID": "OEMP"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:39:39 PM",
+    "floor": "6",
+    "id": 21,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:2e:00",
+        "RSSI": "-92",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:0e:da:8d:a6:11",
+        "RSSI": "-92",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:0e:da:8d:a6:10",
+        "RSSI": "-91",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "16:fe:ed:89:21:4b",
+        "RSSI": "-83",
+        "SSID": "MLgroup_guest"
+      },
+      {
+        "is_used": 1,
+        "MAC": "10:fe:ed:89:21:4b",
+        "RSSI": "-83",
+        "SSID": "ml_group2"
+      },
+      {
+        "is_used": 1,
+        "MAC": "bc:f6:85:5b:36:d3",
+        "RSSI": "-55",
+        "SSID": "D-Link DSL-2751"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:22:2d:03:cb:14",
+        "RSSI": "-72",
+        "SSID": "KEE7"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c4:e9:84:e5:b1:40",
+        "RSSI": "-70",
+        "SSID": "c604"
+      },
+      {
+        "is_used": 1,
+        "MAC": "10:08:b1:aa:0d:56",
+        "RSSI": "-78",
+        "SSID": "HP-Print-56-Color LaserJet Pro"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:0e:a6:26:83:54",
+        "RSSI": "-94",
+        "SSID": "OEMP"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:38:37 PM",
+    "floor": "5",
+    "id": 22,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:2e:00",
+        "RSSI": "-80",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:36:b8",
+        "RSSI": "-90",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:0e:da:8d:a6:11",
+        "RSSI": "-58",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:0e:da:8d:a6:10",
+        "RSSI": "-58",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "16:fe:ed:89:21:4b",
+        "RSSI": "-70",
+        "SSID": "MLgroup_guest"
+      },
+      {
+        "is_used": 1,
+        "MAC": "10:fe:ed:89:21:4b",
+        "RSSI": "-70",
+        "SSID": "ml_group2"
+      },
+      {
+        "is_used": 1,
+        "MAC": "bc:f6:85:5b:36:d3",
+        "RSSI": "-67",
+        "SSID": "D-Link DSL-2751"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:22:2d:03:cb:14",
+        "RSSI": "-91",
+        "SSID": "KEE7"
+      },
+      {
+        "is_used": 1,
+        "MAC": "64:66:b3:f7:97:78",
+        "RSSI": "-81",
+        "SSID": "C516"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c4:e9:84:e5:b1:40",
+        "RSSI": "-85",
+        "SSID": "c604"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:37:44 PM",
+    "floor": "4",
+    "id": 23,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:40:c2:88",
+        "RSSI": "-94",
+        "SSID": "Hatapata-2p"
+      },
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:2e:00",
+        "RSSI": "-72",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:36:b8",
+        "RSSI": "-73",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:0e:da:8d:a6:11",
+        "RSSI": "-87",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:0e:da:8d:a6:10",
+        "RSSI": "-88",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "16:fe:ed:89:21:4b",
+        "RSSI": "-88",
+        "SSID": "MLgroup_guest"
+      },
+      {
+        "is_used": 1,
+        "MAC": "10:fe:ed:89:21:4b",
+        "RSSI": "-87",
+        "SSID": "ml_group2"
+      },
+      {
+        "is_used": 1,
+        "MAC": "1c:b7:2c:d8:31:08",
+        "RSSI": "-89",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "bc:f6:85:5b:36:d3",
+        "RSSI": "-89",
+        "SSID": "D-Link DSL-2751"
+      },
+      {
+        "is_used": 0,
+        "MAC": "f0:7d:68:46:ef:42",
+        "RSSI": "-96",
+        "SSID": "SinaY"
+      },
+      {
+        "is_used": 1,
+        "MAC": "5c:d9:98:6c:94:02",
+        "RSSI": "-94",
+        "SSID": "UEAE-R"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:36:38 PM",
+    "floor": "3",
+    "id": 24,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:40:c2:88",
+        "RSSI": "-75",
+        "SSID": "Hatapata-2p"
+      },
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:2e:00",
+        "RSSI": "-47",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f8:d1:11:92:0a:0c",
+        "RSSI": "-92",
+        "SSID": "Hatapata1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "5c:d9:98:6c:94:02",
+        "RSSI": "-77",
+        "SSID": "UEAE-R"
+      },
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:36:b8",
+        "RSSI": "-92",
+        "SSID": "UEAE"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:35:52 PM",
+    "floor": "2",
+    "id": 25,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:89:62",
+        "RSSI": "-87",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:89:61",
+        "RSSI": "-86",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:40:c2:88",
+        "RSSI": "-60",
+        "SSID": "Hatapata-2p"
+      },
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:2e:00",
+        "RSSI": "-66",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f8:d1:11:92:0a:0c",
+        "RSSI": "-81",
+        "SSID": "Hatapata1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "5c:d9:98:6c:94:02",
+        "RSSI": "-93",
+        "SSID": "UEAE-R"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:34:46 PM",
+    "floor": "1",
+    "id": 26,
+    "section": "C",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:89:62",
+        "RSSI": "-80",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:74:8c:31",
+        "RSSI": "-72",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:89:61",
+        "RSSI": "-80",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:74:8c:32",
+        "RSSI": "-70",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:40:c2:88",
+        "RSSI": "-85",
+        "SSID": "Hatapata-2p"
+      },
+      {
+        "is_used": 1,
+        "MAC": "1c:87:2c:67:2e:00",
+        "RSSI": "-79",
+        "SSID": "UEAE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:71:f1",
+        "RSSI": "-76",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:86:a1",
+        "RSSI": "-89",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:71:f2",
+        "RSSI": "-76",
+        "SSID": "eduroam"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:47:23 PM",
+    "floor": "0",
+    "id": 27,
+    "section": "D",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:6e:29:62",
+        "RSSI": "-74",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:6e:29:61",
+        "RSSI": "-76",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:7d:22",
+        "RSSI": "-69",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:7d:21",
+        "RSSI": "-69",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:d2",
+        "RSSI": "-49",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:d1",
+        "RSSI": "-49",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "04:18:d6:e2:ae:9a",
+        "RSSI": "-92",
+        "SSID": "eduroam"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:48:57 PM",
+    "floor": "1",
+    "id": 28,
+    "section": "D",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:d2",
+        "RSSI": "-81",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:d1",
+        "RSSI": "-81",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:8a:41",
+        "RSSI": "-82",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:23:5e:4b:b8:d0",
+        "RSSI": "-70",
+        "SSID": "Accenture-Free"
+      },
+      {
+        "is_used": 1,
+        "MAC": "ac:22:0b:8d:8e:45",
+        "RSSI": "-78",
+        "SSID": "netD1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:8a:42",
+        "RSSI": "-82",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "ac:22:0b:8d:27:76",
+        "RSSI": "-87",
+        "SSID": "netD1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:ab:a4:f2",
+        "RSSI": "-78",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:91:f5:60:6b:22",
+        "RSSI": "-92",
+        "SSID": "NETGEAR"
+      },
+      {
+        "is_used": 1,
+        "MAC": "ac:22:0b:8d:94:d1",
+        "RSSI": "-85",
+        "SSID": "netD1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "a4:5d:a1:7f:c5:e5",
+        "RSSI": "-91",
+        "SSID": "ADB-7FC5E5"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:ab:a4:f1",
+        "RSSI": "-77",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 0,
+        "MAC": "30:f7:d7:04:94:1a",
+        "RSSI": "-90",
+        "SSID": "EVOLVEO WINPC X5"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d6:ca:6d:d7:55:a0",
+        "RSSI": "-91",
+        "SSID": "ANV_GUEST"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d6:ca:6d:d7:55:9f",
+        "RSSI": "-90",
+        "SSID": "ANV_01"
+      },
+      {
+        "is_used": 0,
+        "MAC": "d4:ca:6d:d7:55:9f",
+        "RSSI": "-90",
+        "SSID": ""
+      },
+      {
+        "is_used": 0,
+        "MAC": "88:75:56:db:e2:a0",
+        "RSSI": "-94",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:e2:a1",
+        "RSSI": "-90",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:dc:82",
+        "RSSI": "-72",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:dc:81",
+        "RSSI": "-72",
+        "SSID": "FEI-FREE-1Mbit"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:59:42 PM",
+    "floor": "2",
+    "id": 29,
+    "section": "D",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "d6:ca:6d:d7:55:a0",
+        "RSSI": "-71",
+        "SSID": "ANV_GUEST"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d6:ca:6d:d7:55:9f",
+        "RSSI": "-70",
+        "SSID": "ANV_01"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d4:ca:6d:d7:55:9f",
+        "RSSI": "-70",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "a4:5d:a1:7f:c5:e5",
+        "RSSI": "-75",
+        "SSID": "ADB-7FC5E5"
+      },
+      {
+        "is_used": 1,
+        "MAC": "ee:43:f6:72:45:cc",
+        "RSSI": "-81",
+        "SSID": "ZyXEL7245cc"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:e2:a0",
+        "RSSI": "-72",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "e4:71:85:32:4b:64",
+        "RSSI": "-81",
+        "SSID": "AOWP"
+      },
+      {
+        "is_used": 1,
+        "MAC": "30:f7:d7:04:94:1a",
+        "RSSI": "-59",
+        "SSID": "EVOLVEO WINPC X5"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:23:5e:4b:b8:d0",
+        "RSSI": "-47",
+        "SSID": "Accenture-Free"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c4:6e:1f:59:75:44",
+        "RSSI": "-93",
+        "SSID": "OSK-597544"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:83:74:b1",
+        "RSSI": "-90",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "ac:22:0b:8d:8e:45",
+        "RSSI": "-94",
+        "SSID": "netD1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:d9:51",
+        "RSSI": "-89",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:e2:a1",
+        "RSSI": "-79",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "68:bc:0c:63:57:10",
+        "RSSI": "-79",
+        "SSID": "Accenture-internal"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:d9:50",
+        "RSSI": "-90",
+        "SSID": ""
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:51:21 PM",
+    "floor": "3",
+    "id": 30,
+    "section": "D",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:d2",
+        "RSSI": "-84",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:d1",
+        "RSSI": "-78",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:8a:41",
+        "RSSI": "-85",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:23:5e:4b:b8:d0",
+        "RSSI": "-68",
+        "SSID": "Accenture-Free"
+      },
+      {
+        "is_used": 1,
+        "MAC": "ac:22:0b:8d:8e:45",
+        "RSSI": "-73",
+        "SSID": "netD1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:8a:42",
+        "RSSI": "-86",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "ac:22:0b:8d:27:76",
+        "RSSI": "-86",
+        "SSID": "netD1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:ab:a4:f2",
+        "RSSI": "-79",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:91:f5:60:6b:22",
+        "RSSI": "-92",
+        "SSID": "NETGEAR"
+      },
+      {
+        "is_used": 1,
+        "MAC": "ac:22:0b:8d:94:d1",
+        "RSSI": "-86",
+        "SSID": "netD1"
+      },
+      {
+        "is_used": 1,
+        "MAC": "a4:5d:a1:7f:c5:e5",
+        "RSSI": "-90",
+        "SSID": "ADB-7FC5E5"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:ab:a4:f1",
+        "RSSI": "-82",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 0,
+        "MAC": "30:f7:d7:04:94:1a",
+        "RSSI": "-87",
+        "SSID": "EVOLVEO WINPC X5"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d6:ca:6d:d7:55:a0",
+        "RSSI": "-92",
+        "SSID": "ANV_GUEST"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d6:ca:6d:d7:55:9f",
+        "RSSI": "-92",
+        "SSID": "ANV_01"
+      },
+      {
+        "is_used": 0,
+        "MAC": "d4:ca:6d:d7:55:9f",
+        "RSSI": "-93",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:e2:a1",
+        "RSSI": "-87",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:dc:82",
+        "RSSI": "-75",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:dc:81",
+        "RSSI": "-76",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e4:71:85:32:4b:64",
+        "RSSI": "-94",
+        "SSID": "AOWP"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:52:52 PM",
+    "floor": "4",
+    "id": 31,
+    "section": "D",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:23:5e:4b:b8:d0",
+        "RSSI": "-78",
+        "SSID": "Accenture-Free"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:e2:a1",
+        "RSSI": "-77",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c4:6e:1f:59:75:44",
+        "RSSI": "-91",
+        "SSID": "OSK-597544"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:e2:a0",
+        "RSSI": "-77",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:83:74:b1",
+        "RSSI": "-82",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:d9:51",
+        "RSSI": "-90",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 0,
+        "MAC": "88:75:56:db:d9:50",
+        "RSSI": "-94",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "58:97:1e:23:3c:91",
+        "RSSI": "-65",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 0,
+        "MAC": "58:97:1e:23:3c:90",
+        "RSSI": "-64",
+        "SSID": ""
+      },
+      {
+        "is_used": 0,
+        "MAC": "c8:3a:35:42:be:58",
+        "RSSI": "-88",
+        "SSID": "MARTIN-PC_Wifi"
+      },
+      {
+        "is_used": 1,
+        "MAC": "64:e9:50:af:95:b2",
+        "RSSI": "-89",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "9e:93:4e:43:72:14",
+        "RSSI": "-71",
+        "SSID": "DIRECT-TZWorkCentre 3225"
+      },
+      {
+        "is_used": 0,
+        "MAC": "88:75:56:83:74:b0",
+        "RSSI": "-82",
+        "SSID": ""
+      },
+      {
+        "is_used": 0,
+        "MAC": "64:e9:50:af:95:b1",
+        "RSSI": "-93",
+        "SSID": ""
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:54:03 PM",
+    "floor": "5",
+    "id": 32,
+    "section": "D",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:e2:a1",
+        "RSSI": "-87",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "88:75:56:db:e2:a0",
+        "RSSI": "-85",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "58:97:1e:23:3c:91",
+        "RSSI": "-86",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "64:e9:50:af:95:b2",
+        "RSSI": "-84",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "80:1f:02:e8:98:9c",
+        "RSSI": "-80",
+        "SSID": "AE_WIFI_2EX"
+      },
+      {
+        "is_used": 0,
+        "MAC": "c8:3a:35:42:be:58",
+        "RSSI": "-81",
+        "SSID": "MARTIN-PC_Wifi"
+      },
+      {
+        "is_used": 0,
+        "MAC": "64:e9:50:af:95:b0",
+        "RSSI": "-85",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:24:01:8d:2b:da",
+        "RSSI": "-84",
+        "SSID": "Komnata_D610"
+      },
+      {
+        "is_used": 0,
+        "MAC": "64:e9:50:af:95:b1",
+        "RSSI": "-85",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:08:30:b6:26:f0",
+        "RSSI": "-91",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:11:09:0d:06:ad",
+        "RSSI": "-92",
+        "SSID": "D606-Network"
+      },
+      {
+        "is_used": 0,
+        "MAC": "54:78:1a:21:06:61",
+        "RSSI": "-90",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "54:78:1a:21:06:62",
+        "RSSI": "-90",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:13:d3:7f:24:77",
+        "RSSI": "-95",
+        "SSID": "ROBOTIKA D-617"
+      },
+      {
+        "is_used": 1,
+        "MAC": "9e:93:4e:43:72:14",
+        "RSSI": "-95",
+        "SSID": "DIRECT-TZWorkCentre 3225"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:55:12 PM",
+    "floor": "6",
+    "id": 33,
+    "section": "D",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "64:e9:50:af:95:b2",
+        "RSSI": "-96",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "80:1f:02:e8:98:9c",
+        "RSSI": "-88",
+        "SSID": "AE_WIFI_2EX"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:42:be:58",
+        "RSSI": "-52",
+        "SSID": "MARTIN-PC_Wifi"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:24:01:8d:2b:da",
+        "RSSI": "-61",
+        "SSID": "Komnata_D610"
+      },
+      {
+        "is_used": 0,
+        "MAC": "54:78:1a:21:06:61",
+        "RSSI": "-77",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "54:78:1a:21:06:62",
+        "RSSI": "-77",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:13:d3:7f:24:77",
+        "RSSI": "-78",
+        "SSID": "ROBOTIKA D-617"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:11:09:0d:06:ad",
+        "RSSI": "-76",
+        "SSID": "D606-Network"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e0:3f:49:40:ad:38",
+        "RSSI": "-83",
+        "SSID": "AE_WIFI"
+      },
+      {
+        "is_used": 1,
+        "MAC": "64:ae:0c:25:8f:40",
+        "RSSI": "-93",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 0,
+        "MAC": "54:78:1a:21:06:60",
+        "RSSI": "-74",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:08:30:b6:26:f0",
+        "RSSI": "-83",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "48:f8:b3:9a:41:66",
+        "RSSI": "-87",
+        "SSID": "profesor"
+      },
+      {
+        "is_used": 1,
+        "MAC": "58:97:1e:23:3c:91",
+        "RSSI": "-93",
+        "SSID": "eduroam"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 4, 2016 12:56:09 PM",
+    "floor": "7",
+    "id": 34,
+    "section": "D",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:42:be:58",
+        "RSSI": "-77",
+        "SSID": "MARTIN-PC_Wifi"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:24:01:8d:2b:da",
+        "RSSI": "-79",
+        "SSID": "Komnata_D610"
+      },
+      {
+        "is_used": 1,
+        "MAC": "54:78:1a:21:06:62",
+        "RSSI": "-88",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:11:09:0d:06:ad",
+        "RSSI": "-87",
+        "SSID": "D606-Network"
+      },
+      {
+        "is_used": 0,
+        "MAC": "54:78:1a:21:06:60",
+        "RSSI": "-88",
+        "SSID": ""
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:08:30:b6:26:f0",
+        "RSSI": "-58",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "64:ae:0c:25:8f:40",
+        "RSSI": "-75",
+        "SSID": "eduroam"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 2, 2016 2:00:16 PM",
+    "floor": "0",
+    "id": 35,
+    "section": "E",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:23:5e:b9:53:10",
+        "RSSI": "-78",
+        "SSID": "Accenture-Free"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:23:5e:4b:b8:d0",
+        "RSSI": "-93",
+        "SSID": "Accenture-Free"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:dd",
+        "RSSI": "-64",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:d2",
+        "RSSI": "-70",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:6e:29:6d",
+        "RSSI": "-83",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:7d:2d",
+        "RSSI": "-83",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:8a:4d",
+        "RSSI": "-82",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:19:2d",
+        "RSSI": "-70",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:ab:a4:fd",
+        "RSSI": "-86",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:8a:42",
+        "RSSI": "-82",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "34:23:87:f7:4a:55",
+        "RSSI": "-85",
+        "SSID": "WR"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:de",
+        "RSSI": "-63",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:45:e0:d1",
+        "RSSI": "-67",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:6e:29:6e",
+        "RSSI": "-74",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:7d:2e",
+        "RSSI": "-83",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:8a:4e",
+        "RSSI": "-79",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:19:2e",
+        "RSSI": "-67",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:67:d3:5d",
+        "RSSI": "-81",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:67:d3:52",
+        "RSSI": "-62",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:19:22",
+        "RSSI": "-56",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:7d:22",
+        "RSSI": "-81",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:9c:7b:0d",
+        "RSSI": "-83",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:6e:29:62",
+        "RSSI": "-80",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:67:d3:5e",
+        "RSSI": "-79",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:19:21",
+        "RSSI": "-56",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:7d:21",
+        "RSSI": "-65",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:9c:7b:0e",
+        "RSSI": "-81",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:6e:29:61",
+        "RSSI": "-78",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:c0:20:a1",
+        "RSSI": "-76",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:8f:f2",
+        "RSSI": "-71",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:c0:20:a2",
+        "RSSI": "-76",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "e8:94:f6:62:04:a4",
+        "RSSI": "-86",
+        "SSID": "DELIKANTI"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:8f:f1",
+        "RSSI": "-71",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:8f:fd",
+        "RSSI": "-64",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:c8:8b:e8:8f:fe",
+        "RSSI": "-64",
+        "SSID": "FEI-FREE-1Mbit"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 2, 2016 4:08:45 PM",
+    "floor": "1",
+    "id": 36,
+    "section": "E",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:72:a1",
+        "RSSI": "-78",
+        "SSID": "FEI-FREE-1Mbit"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:42:68:9c:72:a2",
+        "RSSI": "-79",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "98:de:d0:7e:4d:26",
+        "RSSI": "-89",
+        "SSID": "E2 Organic Electronics"
+      },
+      {
+        "is_used": 1,
+        "MAC": "80:e0:1d:08:bc:e2",
+        "RSSI": "-81",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d8:b1:90:dc:3b:82",
+        "RSSI": "-93",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d8:b1:90:dc:3b:81",
+        "RSSI": "-94",
+        "SSID": "Ontio"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d8:b1:90:dc:3b:80",
+        "RSSI": "-93",
+        "SSID": "FEI-FREE"
+      },
+      {
+        "is_used": 1,
+        "MAC": "80:e0:1d:08:bc:e1",
+        "RSSI": "-79",
+        "SSID": "Ontio"
+      },
+      {
+        "is_used": 1,
+        "MAC": "32:cd:a7:15:e9:4d",
+        "RSSI": "-91",
+        "SSID": "DIRECT-IZC1810 Series"
+      },
+      {
+        "is_used": 1,
+        "MAC": "80:e0:1d:08:bc:e0",
+        "RSSI": "-79",
+        "SSID": "FEI-FREE"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 2, 2016 4:10:00 PM",
+    "floor": "2",
+    "id": 37,
+    "section": "E",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "98:de:d0:7e:4d:26",
+        "RSSI": "-71",
+        "SSID": "E2 Organic Electronics"
+      },
+      {
+        "is_used": 1,
+        "MAC": "32:cd:a7:15:e9:4d",
+        "RSSI": "-72",
+        "SSID": "DIRECT-IZC1810 Series"
+      },
+      {
+        "is_used": 1,
+        "MAC": "22:25:d3:f7:9b:16",
+        "RSSI": "-76",
+        "SSID": "Connectify-me"
+      },
+      {
+        "is_used": 1,
+        "MAC": "14:d6:4d:e8:b1:70",
+        "RSSI": "-87",
+        "SSID": "LST_E306"
+      },
+      {
+        "is_used": 1,
+        "MAC": "d8:5d:4c:f5:60:02",
+        "RSSI": "-75",
+        "SSID": "E211"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b2:b2:dc:6a:b2:cd",
+        "RSSI": "-94",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b0:b2:dc:6a:b2:cd",
+        "RSSI": "-96",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "6c:19:8f:bb:18:18",
+        "RSSI": "-88",
+        "SSID": "M_P_P"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 2, 2016 4:13:39 PM",
+    "floor": "3",
+    "id": 38,
+    "section": "E",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "98:de:d0:7e:4d:26",
+        "RSSI": "-86",
+        "SSID": "E2 Organic Electronics"
+      },
+      {
+        "is_used": 1,
+        "MAC": "32:cd:a7:15:e9:4d",
+        "RSSI": "-91",
+        "SSID": "DIRECT-IZC1810 Series"
+      },
+      {
+        "is_used": 1,
+        "MAC": "14:d6:4d:e8:b1:70",
+        "RSSI": "-75",
+        "SSID": "LST_E306"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b2:b2:dc:6a:b2:cd",
+        "RSSI": "-79",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b0:b2:dc:6a:b2:cd",
+        "RSSI": "-79",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "62:6d:c7:5b:55:88",
+        "RSSI": "-75",
+        "SSID": "DIRECT-88-HP M252 LaserJet"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b2:b2:dc:6d:2e:4d",
+        "RSSI": "-85",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b0:b2:dc:6d:2e:4d",
+        "RSSI": "-82",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "42:b8:9a:47:5f:9a",
+        "RSSI": "-91",
+        "SSID": "DIRECT-9a-HP M252 LaserJet"
+      },
+      {
+        "is_used": 1,
+        "MAC": "14:d6:4d:e8:ae:aa",
+        "RSSI": "-87",
+        "SSID": "E404"
+      },
+      {
+        "is_used": 1,
+        "MAC": "84:c9:b2:51:90:fd",
+        "RSSI": "-89",
+        "SSID": "E303"
+      },
+      {
+        "is_used": 1,
+        "MAC": "14:da:e9:82:be:fc",
+        "RSSI": "-89",
+        "SSID": "ASUS_E509"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:0c:42:62:f5:f8",
+        "RSSI": "-93",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "02:0c:42:62:f5:f9",
+        "RSSI": "-93",
+        "SSID": "eduroam"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 2, 2016 4:14:49 PM",
+    "floor": "4",
+    "id": 39,
+    "section": "E",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "14:d6:4d:e8:b1:70",
+        "RSSI": "-88",
+        "SSID": "LST_E306"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b0:b2:dc:6a:b2:cd",
+        "RSSI": "-78",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "02:0c:42:62:f5:f9",
+        "RSSI": "-83",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:0c:42:62:f5:f8",
+        "RSSI": "-83",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "14:da:e9:82:be:fc",
+        "RSSI": "-80",
+        "SSID": "ASUS_E509"
+      },
+      {
+        "is_used": 1,
+        "MAC": "64:66:b3:9c:80:54",
+        "RSSI": "-95",
+        "SSID": "OMSLab"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b0:b2:dc:6d:2f:b8",
+        "RSSI": "-91",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b2:b2:dc:6d:2f:b8",
+        "RSSI": "-92",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "06:0c:42:62:f5:e3",
+        "RSSI": "-90",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "00:0c:42:62:f5:e3",
+        "RSSI": "-88",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:1f:96:50",
+        "RSSI": "-92",
+        "SSID": "nano"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 2, 2016 4:16:22 PM",
+    "floor": "5",
+    "id": 40,
+    "section": "E",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "14:da:e9:82:be:fc",
+        "RSSI": "-65",
+        "SSID": "ASUS_E509"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b0:b2:dc:6d:2f:b8",
+        "RSSI": "-84",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b2:b2:dc:6d:2f:b8",
+        "RSSI": "-82",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:1f:96:50",
+        "RSSI": "-76",
+        "SSID": "nano"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f4:6d:04:a2:54:98",
+        "RSSI": "-75",
+        "SSID": "E608"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 2, 2016 4:32:14 PM",
+    "floor": "6",
+    "id": 41,
+    "section": "E",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "b0:b2:dc:6d:2f:b8",
+        "RSSI": "-95",
+        "SSID": "eduroam"
+      },
+      {
+        "is_used": 1,
+        "MAC": "14:da:e9:82:be:fc",
+        "RSSI": "-84",
+        "SSID": "ASUS_E509"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:1f:96:50",
+        "RSSI": "-57",
+        "SSID": "nano"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f4:6d:04:a2:54:98",
+        "RSSI": "-61",
+        "SSID": "E608"
+      },
+      {
+        "is_used": 1,
+        "MAC": "b2:b2:dc:6d:2f:b8",
+        "RSSI": "-93",
+        "SSID": "UEF"
+      },
+      {
+        "is_used": 1,
+        "MAC": "14:cc:20:46:8c:75",
+        "RSSI": "-84",
+        "SSID": "KME-LIBRARY"
+      }
+    ]
+  },
+  {
+    "edited_at": "Dec 2, 2016 4:33:02 PM",
+    "floor": "7",
+    "id": 42,
+    "section": "E",
+    "wifiScan": [
+      {
+        "is_used": 1,
+        "MAC": "14:da:e9:82:be:fc",
+        "RSSI": "-92",
+        "SSID": "ASUS_E509"
+      },
+      {
+        "is_used": 1,
+        "MAC": "c8:3a:35:1f:96:50",
+        "RSSI": "-75",
+        "SSID": "nano"
+      },
+      {
+        "is_used": 1,
+        "MAC": "f4:6d:04:a2:54:98",
+        "RSSI": "-73",
+        "SSID": "E608"
+      },
+      {
+        "is_used": 1,
+        "MAC": "14:cc:20:46:8c:75",
+        "RSSI": "-86",
+        "SSID": "KME-LIBRARY"
+      }
+    ]
+  }
+]
