@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fei.mv.wifiscanner.model.Record;
@@ -67,12 +68,11 @@ public class LocationListFragment extends Fragment {
             }
         });
 
-        this.locationResultText = (TextView) view.findViewById(R.id.location_result);
+        RelativeLayout locationResultLayout = (RelativeLayout) view.findViewById(R.id.location_result_layout);
 
-        this.locationResultText.setOnClickListener(new View.OnClickListener() {
+        locationResultLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //activity.scanResults = activity.startScan(view);
                 IdentifiedLocationFragment createFragment = new IdentifiedLocationFragment();
 
                 getFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment)
