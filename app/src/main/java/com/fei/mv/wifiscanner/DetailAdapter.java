@@ -80,7 +80,7 @@ public class DetailAdapter extends ArrayAdapter<WifiScan> implements View.OnClic
         viewHolder.checkBox.setChecked( dataModel.getIs_used() == 1 );
         viewHolder.ssidText.setText(dataModel.getSSID());
         viewHolder.macText.setText(dataModel.getMAC());
-        viewHolder.signal.setText(dataModel.getRSSI());
+        viewHolder.signal.setText(dataModel.getRSSI() + " dBm");
         viewHolder.checkBox.setTag(dataModel);
 
         return convertView;
