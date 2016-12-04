@@ -14,6 +14,7 @@ import com.fei.mv.wifiscanner.model.WifiScan;
 import com.fei.mv.wifiscanner.model.WifiScanCompared;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -48,10 +49,13 @@ public class IdentifiedLocationFragment extends Fragment {
         TextView locText = (TextView) view.findViewById(R.id.location_result);
         String nazov = activity.currentLocation;
         //ToDo if is N/A  toas nenaslo sa ---
+
+
+
         comparaWifiScans(scanResults,sqlHelper.getLocationRecordByName(nazov).getWifiScan());
 
         IdentifiedLocationAdapter adapter = new IdentifiedLocationAdapter(getActivity(), resultComparetWifis);
-
+        Collections.sort(resultComparetWifis);
         listView.setAdapter(adapter);
 
 
@@ -62,18 +66,20 @@ public class IdentifiedLocationFragment extends Fragment {
     private void comparaWifiScans(List<WifiScan> list_akt_data, List<WifiScan> list_db_data) {
         resultComparetWifis = new ArrayList<WifiScanCompared>();
         List<String> listMac = new ArrayList<String>();
+        String con = "-100";
 
         for (WifiScan akt_scan : list_akt_data) {
             WifiScanCompared wifi = new WifiScanCompared();
             wifi.setcompareResult("new");
             wifi.setSSID(akt_scan.getSSID());
-            wifi.setRSSI("NewLevel:"+akt_scan.getRSSI());
+            wifi.setRSSI(akt_scan.getRSSI());
+            wifi.setRSSIold(con);
             wifi.setMAC(akt_scan.getMAC());
             listMac.add(wifi.getMAC());
             for (WifiScan db_scan : list_db_data) {
                 if (akt_scan.getMAC().equals(db_scan.getMAC())) {
                     wifi.setcompareResult("identical");
-                    wifi.setRSSI(wifi.getRSSI() + "OldLevel:"+db_scan.getRSSI());
+                    wifi.setRSSIold(db_scan.getRSSI());
                 }
             }
             resultComparetWifis.add(wifi);
@@ -84,7 +90,8 @@ public class IdentifiedLocationFragment extends Fragment {
             if(!listMac.contains(db_scan.getMAC())){
                 wifidb.setcompareResult("unknown");
                 wifidb.setSSID(db_scan.getSSID());
-                wifidb.setRSSI("OldLevel:"+db_scan.getRSSI());
+                wifidb.setRSSI(con);
+                wifidb.setRSSIold(db_scan.getRSSI());
                 wifidb.setMAC(db_scan.getMAC());
                 resultComparetWifis.add(wifidb);
             }

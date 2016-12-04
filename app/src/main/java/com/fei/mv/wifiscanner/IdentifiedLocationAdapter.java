@@ -83,7 +83,14 @@ public class IdentifiedLocationAdapter extends ArrayAdapter<WifiScanCompared> {
         WifiScanCompared wifi = comparedWifiList.get(position);
         rowElementHolder.ssidText.setText(wifi.getSSID());
         rowElementHolder.macText.setText(wifi.getMAC());
-        rowElementHolder.rssiText.setText(wifi.getRSSI());
+        if(wifi.getRSSI() == "-100"){
+            rowElementHolder.rssiText.setText("Aktuálny signál: " +"N/A"+ ", Predošlý signál: "+ wifi.getRSSIold());
+        }else if(wifi.getRSSIold() == "-100"){
+            rowElementHolder.rssiText.setText("Aktuálny signál: " + wifi.getRSSI()+ ", Predošlý signál: "+ "N/A");
+        }else{
+            rowElementHolder.rssiText.setText("Aktuálny signál: " + wifi.getRSSI()+ ", Predošlý signál: "+ wifi.getRSSIold());
+        }
+
         if(wifi.getcompareResult()== "identical"){
             Drawable myIcon = context.getResources().getDrawable(R.drawable.ic_action_check);
             rowElementHolder.compareStatus.setImageDrawable(myIcon);

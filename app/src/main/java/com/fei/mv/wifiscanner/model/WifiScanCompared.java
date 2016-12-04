@@ -4,14 +4,19 @@ package com.fei.mv.wifiscanner.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class WifiScanCompared {
+public class WifiScanCompared implements Comparable<WifiScanCompared> {
 
     @SerializedName("SSID")
     @Expose
     private String sSID;
+
     @SerializedName("RSSI")
     @Expose
     private String rSSI;
+
+    @SerializedName("RSSIold")
+    @Expose
+    private String rSSIold;
 
     @SerializedName("MAC")
     @Expose
@@ -46,6 +51,25 @@ public class WifiScanCompared {
     /**
      * 
      * @return
+     *     The rSSIold
+     */
+    public String getRSSIold() {
+        return rSSIold;
+    }
+
+    /**
+     * 
+     * @param rSSIold
+     *     The RSSIold
+     */
+    public void setRSSIold(String rSSIold) {
+        this.rSSIold = rSSIold;
+    }
+
+
+    /**
+     *
+     * @return
      *     The rSSI
      */
     public String getRSSI() {
@@ -53,13 +77,14 @@ public class WifiScanCompared {
     }
 
     /**
-     * 
+     *
      * @param rSSI
      *     The RSSI
      */
     public void setRSSI(String rSSI) {
         this.rSSI = rSSI;
     }
+
 
 
     /**
@@ -117,5 +142,19 @@ public class WifiScanCompared {
     }
 
 
+    @Override
+    public int compareTo(WifiScanCompared wifiScanCompared) {
+
+        if (Integer.valueOf(rSSI) > Integer.valueOf(wifiScanCompared.rSSI)) {
+            return -1;
+        }
+        else if (Integer.valueOf(rSSI) <  Integer.valueOf(wifiScanCompared.rSSI)) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+
+    }
 }
 
