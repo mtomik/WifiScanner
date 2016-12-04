@@ -155,45 +155,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String getCurrentLocation(List<WifiScan> listOfFindWifi) {
-        //tu vytiahneme vsetky poschodia so vsetkymi wifinami
         List<Record> floors = allRecords;
         Map<String,Integer> scoredFloors = new HashMap<>();
         Map<String,Integer> sortedScoredFloors = new HashMap<>();
-        //Toast.makeText(this," z DB nacital "+floors.size()+" poschodi",Toast.LENGTH_SHORT).show();
         List<WifiScan> savedFloorWifi;
 
-        /*
-        //testovacie find wifi
-        List<WifiScan> findFloorWifi = new ArrayList<>();
-        String jsonn = "{\"floor\": \"7\", \"wifiScan\": [{\"SSID\": \"KEE7\", \"RSSI\": \"-75\", \"MAC\": \"00:22:2d:03:cb:14\"}, {\"SSID\": \"OEMP\", \"RSSI\": \"-90\", \"MAC\": \"00:0e:a6:26:83:54\"}, {\"SSID\": \"D-Link DSL-2751\", \"RSSI\": \"-87\", \"MAC\": \"bc:f6:85:5b:36:d3\"}, {\"SSID\": \"c604\", \"RSSI\": \"-87\", \"MAC\": \"c4:e9:84:e5:b1:40\"}, {\"SSID\": \"Asus RT-N10\", \"RSSI\": \"-93\", \"MAC\": \"48:5b:39:d7:33:0e\"}], \"section\": \"C\"}";
-        WifiScan wif1 = new WifiScan();
-        Gson gson = new Gson();
-        //Type listType = new TypeToken<ArrayList<Record>>(){}.getType();
-        Record findRecor = new Record();
-        findRecor = gson.fromJson(jsonn,Record.class);
-
-        wif1.setIs_used(1);
-        wif1.setMAC("00:26:f2:24:96:f4");
-        wif1.setRSSI("-80");
-        wif1.setSSID("Allegro-512");
-        findRecor.getWifiScan().get(0).setIs_used(1);
-        findRecor.getWifiScan().get(1).setIs_used(1);
-        findRecor.getWifiScan().get(2).setIs_used(1);
-        findRecor.getWifiScan().get(3).setIs_used(1);
-        findFloorWifi = findRecor.getWifiScan();
-        */
-        /*
-        for (Record flor:floors){
-            if ((flor.getSection()+flor.getFloor()).equals("A8")){
-                findFloorWifi = flor.getWifiScan();
-                break;
-            }
-
-        }
-        */
         for (Record floor:floors){
             savedFloorWifi = floor.getWifiScan();
-            //int floorScore = compareWifis(findFloorWifi,savedFloorWifi);
             int floorScore = compareWifis(listOfFindWifi,savedFloorWifi);
             scoredFloors.put(floor.getSection()+floor.getFloor(),floorScore);
         }
@@ -205,36 +173,9 @@ public class MainActivity extends AppCompatActivity {
         }else
             return "N/A";
 
-        /*
-        Integer[] scores = new Integer[floors.size()];
-        scoredFloors.values().toArray(scores);
-        //zoradit mapu podla score
-        Arrays.sort(scores);
-        List<Object> listScores = Arrays.asList((Object[]) scores);
-        Collections.reverse(listScores);
 
-        //najdenie kluca podla value
-
-        //int counter=0;
-        //Vector<String> vec = new Vector<String>();
-        String helDesc = new String();
-        if ((Integer)listScores.get(0) != 0){
-            Iterator<Map.Entry<String,Integer>> iter = scoredFloors.entrySet().iterator();
-
-            while (iter.hasNext()) {
-                Map.Entry<String,Integer> entry = iter.next();
-                if (entry.getValue().equals(listScores.get(0))) {
-                    //counter++;
-                    key = entry.getKey();
-                    //vec.add(key);
-                    //helDesc.concat(key);
-                }
-            }
-        }else
-            return "N/A";
-        */
-        Toast.makeText(this,entryListScores.get(0).getKey().toString()+": "+ entryListScores.get(0).getValue().toString()+"  "+entryListScores.get(1).getKey().toString()+": "+ entryListScores.get(1).getValue().toString()+"  "+
-                entryListScores.get(2).getKey().toString()+": "+ entryListScores.get(2).getValue().toString()+"  "+entryListScores.get(3).getKey().toString()+": "+ entryListScores.get(3).getValue().toString()+"  ",Toast.LENGTH_LONG).show();
+        //Toast.makeText(this,entryListScores.get(0).getKey().toString()+": "+ entryListScores.get(0).getValue().toString()+"  "+entryListScores.get(1).getKey().toString()+": "+ entryListScores.get(1).getValue().toString()+"  "+
+        //      entryListScores.get(2).getKey().toString()+": "+ entryListScores.get(2).getValue().toString()+"  "+entryListScores.get(3).getKey().toString()+": "+ entryListScores.get(3).getValue().toString()+"  ",Toast.LENGTH_LONG).show();
         return key;
     }
 
@@ -242,8 +183,6 @@ public class MainActivity extends AppCompatActivity {
         int score = 0;
 
         //sortovanie podla signalu
-        //List<WifiScan> listOfFindWifi = new1.getWifiScan();
-
         Collections.sort(savedFloorWifi, new Comparator<WifiScan>() {
             @Override
             public int compare(WifiScan wifi1, WifiScan wifi2) {
@@ -259,27 +198,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int isWifiInList(WifiScan wifina, List<WifiScan> savedFloorWifi){
-        int signalTolerance = 5;
-        boolean topWifi = true;
         for (WifiScan wifiFromList:savedFloorWifi){
             if (wifiFromList.getIs_used()==1){
                 if (wifiFromList.getMAC().equals(wifina.getMAC())){
                     int euklid = (int)Math.pow(RSSI_COMPARE_CONST - Math.abs( Math.abs(Integer.parseInt(wifiFromList.getRSSI())) - Math.abs(Integer.parseInt(wifina.getRSSI())) ),2);
-                    /*
-                     if( Math.abs( Math.abs(Integer.parseInt(wifiFromList.getRSSI())) - Math.abs(Integer.parseInt(wifina.getRSSI())) ) <= signalTolerance ){
-                         if (topWifi){
-                              topWifi = false;
-                              return 3;
-                         }
-                         else
-                            return 2;
-                     }else
-                         return 1;
-                         */
                     return euklid;
                 }
             }
-            topWifi = false;
         }
         return 0;
     }
