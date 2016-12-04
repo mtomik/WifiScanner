@@ -30,7 +30,7 @@ public class DetailFragment extends Fragment {
         ListView listView = (ListView)view.findViewById(R.id.detail_list_view);
         TextView text = (TextView) view.findViewById(R.id.recordText);
 
-        text.setText("Blok: " + record.getSection() + " Poschodie: " + record.getFloor());
+        text.setText("Blok: " + record.getSection() + ", poschodie: " + record.getFloor());
 
         DetailAdapter adapter = new DetailAdapter(record, getActivity());
         listView.setAdapter(adapter);
