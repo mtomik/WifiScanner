@@ -175,7 +175,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         List<WifiScan> wifiScans = new ArrayList<WifiScan>();
         String id = String.valueOf(getLocationIDbyName(location,db));
         String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_WS + " WHERE "
-                + FeedEntry.COLUMN_LOC + " = " + id;
+                + FeedEntry.COLUMN_LOC + " = " + id + " ORDER BY " + FeedEntry.COLUMN_RSSI +" ASC";
 
         Log.e(LOG, selectQueryWS);
         Cursor c = db.rawQuery(selectQueryWS, null);
@@ -350,7 +350,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         List<WifiScan> wifiScans = new ArrayList<WifiScan>();
         List<Record> records = new ArrayList<Record>();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-        String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION ;
+        String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION + " ORDER BY "+ FeedEntry.COLUMN_LOC_NAME +" ASC";
 
         Log.e(LOG, selectQueryWS);
         Cursor c = db.rawQuery(selectQueryWS, null);
