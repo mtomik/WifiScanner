@@ -68,7 +68,8 @@ public class LocationListFragment extends Fragment {
             }
         });
 
-        RelativeLayout locationResultLayout = (RelativeLayout) view.findViewById(R.id.location_result_layout);
+        RelativeLayout locationResultLayout =
+                (RelativeLayout) view.findViewById(R.id.location_result_layout);
 
         locationResultLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,8 +84,12 @@ public class LocationListFragment extends Fragment {
         return view;
     }
 
-    public void setLocationResultText(String result) {
+    @Override
+    public void onStart() {
+        super.onStart();
+        MainActivity activity = (MainActivity) getActivity();
+        activity.updateCurrentLocation();
         locationResultText = (TextView) this.getView().findViewById(R.id.location_result);
-        locationResultText.setText(result);
+        locationResultText.setText(activity.getCurrentLocation());
     }
 }

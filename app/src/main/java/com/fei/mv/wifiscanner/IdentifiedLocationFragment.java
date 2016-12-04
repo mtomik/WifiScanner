@@ -1,15 +1,11 @@
 package com.fei.mv.wifiscanner;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.app.ListFragment;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -50,7 +46,7 @@ public class IdentifiedLocationFragment extends Fragment {
         View view = inflater.inflate(R.layout.activity_detail, container, false);
         ListView listView = (ListView) view.findViewById(R.id.detail_list_view);
         TextView locText = (TextView) view.findViewById(R.id.location_result);
-        String nazov = activity.foundFloor;
+        String nazov = activity.currentLocation;
         //ToDo if is N/A  toas nenaslo sa ---
         comparaWifiScans(scanResults,sqlHelper.getLocationRecordByName(nazov).getWifiScan());
 

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     SQLHelper sqlHelper;
     List<WifiScan> scanResults;
     LocationListFragment locationListFragment;
-    String foundFloor;
+    String currentLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,15 +62,6 @@ public class MainActivity extends AppCompatActivity {
         if (!wifi.isWifiEnabled()) {
             Toast.makeText(MainActivity.this, "Enabling Wifi", Toast.LENGTH_SHORT).show();
             wifi.setWifiEnabled(true);
-        }
-
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-                    MY_PERMISSIONS_ACCESS_COARSE_LOCATION);
-        } else {
-            showMeFloor();
         }
     }
 
@@ -101,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode) {
             case MY_PERMISSIONS_ACCESS_COARSE_LOCATION:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    showMeFloor();
+                    scanResults = scan();
+                    currentLocation = getCurrentLocation(scanResults);
                 } else {
                     Toast.makeText(this, R.string.location_permission_not_granted,
                             Toast.LENGTH_LONG).show();
@@ -113,14 +105,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        showMeFloor();
-    }
-
     public void showSaveLocation() {
-        scanResults = startScan();
+        scanResults = scan();
         LocationCreateFragment createFragment = new LocationCreateFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, createFragment)
                 .addToBackStack("save_location").commit();
@@ -139,7 +125,23 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
-    public List<WifiScan> startScan() {
+    public String getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void updateCurrentLocation() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                    MY_PERMISSIONS_ACCESS_COARSE_LOCATION);
+        } else {
+            scanResults = scan();
+            currentLocation = getCurrentLocation(scanResults);
+        }
+    }
+
+    public List<WifiScan> scan() {
         wifi.startScan();
         List<WifiScan> scans = new ArrayList<>();
         for (ScanResult result : wifi.getScanResults()) {
@@ -152,12 +154,7 @@ public class MainActivity extends AppCompatActivity {
         return scans;
     }
 
-    public void showMeFloor() {
-        scanResults = startScan();
-        foundFloor = getTheFloor(scanResults);
-        locationListFragment.setLocationResultText(foundFloor);
-    }
-    public String getTheFloor(List<WifiScan> listOfFindWifi){
+    public String getCurrentLocation(List<WifiScan> listOfFindWifi) {
         //tu vytiahneme vsetky poschodia so vsetkymi wifinami
         List<Record> floors = allRecords;
         Map<String,Integer> scoredFloors = new HashMap<>();

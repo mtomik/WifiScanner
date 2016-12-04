@@ -41,7 +41,7 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.location_add, container, false);
 
-        this.scanResults = ((MainActivity)getActivity()).startScan();
+        this.scanResults = ((MainActivity) getActivity()).scan();
         this.wifi = ((MainActivity)getActivity()).wifi;
         this.sqlHelper = ((MainActivity)getActivity()).sqlHelper;
 
@@ -79,7 +79,7 @@ public class LocationCreateFragment extends Fragment implements View.OnClickList
     }
 
     public void rescan(View v){
-        scanResults = ((MainActivity)getActivity()).startScan();
+        scanResults = ((MainActivity) getActivity()).scan();
         ((MainActivity)getActivity()).scanResults = scanResults;
         adapter.clear();
         adapter.addAll(scanResults);
