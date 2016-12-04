@@ -101,7 +101,7 @@ public class LocationListAdapter extends BaseExpandableListAdapter {
             floorText.setText(floor + ". " + this.context.getResources().getString(R.string.floor));
         }
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("d. MMM yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("d. MMM yyyy HH:mm");
         TextView updatedText = (TextView) convertView.findViewById(R.id.location_list_item_updated);
         Date edited = child.getEdited_at();
         if (edited == null) {
