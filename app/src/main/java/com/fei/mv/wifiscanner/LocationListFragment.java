@@ -92,6 +92,10 @@ public class LocationListFragment extends Fragment {
         MainActivity activity = (MainActivity) getActivity();
         activity.updateCurrentLocation();
         locationResultText = (TextView) this.getView().findViewById(R.id.location_result);
-        locationResultText.setText("Bloku "+activity.getCurrentLocation().substring(0,1)+" - "+activity.getCurrentLocation().substring(1,2)+". poschodí");
+        if(activity.getCurrentLocation() == "N/A"){
+            locationResultText.setText("Neznámej pozícii");
+        }else {
+            locationResultText.setText("Bloku " + activity.getCurrentLocation().substring(0, 1) + " - " + activity.getCurrentLocation().substring(1, 2) + ". poschodí");
+        }
     }
 }
