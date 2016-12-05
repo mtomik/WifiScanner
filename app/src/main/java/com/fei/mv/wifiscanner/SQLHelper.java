@@ -136,14 +136,12 @@ public class SQLHelper extends SQLiteOpenHelper {
      * Private - pridanie listu zaznamov o wifinach ku konkretnej pozicii
      */
     private void insertWifiScans(List<WifiScan> wifiScans, long location_id,SQLiteDatabase db) {
-        //SQLiteDatabase db = this.getWritableDatabase();
-
         for (WifiScan ws : wifiScans) {
-            //ws.setIs_used(1);
             long ws_id = insertWS(ws,location_id,db);
         }
 
     }
+
     /**
      * Private - ziskanie vsetkych ID wifin zaznamov pre konkretnu poziciu pomocou jej ID
      */
@@ -156,19 +154,16 @@ public class SQLHelper extends SQLiteOpenHelper {
         Log.e(LOG, selectQuery);
         Cursor c = db.rawQuery(selectQuery, null);
 
-        // looping through all rows and adding to list
         if (c.moveToFirst()) {
             do {
                 wsIDs.add(c.getLong((c.getColumnIndex(FeedEntry.KEY_ID))));
             } while (c.moveToNext());
         }
-
         return wsIDs;
-
     }
 
     /**
-     * Ziskanie vsetkych objektov WifiScan pre konkretnu poziciu pomocou jej nazvu
+     * Ziskanie vsetkych objektov WifiScan pre konkretnu poziciu pomocou jej nazvu a zoradene podla sily signalu
      */
     public List<WifiScan> getWifiScansByLocation(String location){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -180,7 +175,6 @@ public class SQLHelper extends SQLiteOpenHelper {
         Log.e(LOG, selectQueryWS);
         Cursor c = db.rawQuery(selectQueryWS, null);
 
-        // looping through all rows and adding to list
         if (c.moveToFirst()) {
             do {
                 WifiScan ws = new WifiScan();
@@ -188,13 +182,10 @@ public class SQLHelper extends SQLiteOpenHelper {
                 ws.setMAC((c.getString(c.getColumnIndex(FeedEntry.COLUMN_MAC_ADD))));
                 ws.setRSSI(c.getString(c.getColumnIndex(FeedEntry.COLUMN_RSSI)));
                 ws.setIs_used(c.getInt(c.getColumnIndex(FeedEntry.COLUMN_USED)));
-                // adding to todo list
                 wifiScans.add(ws);
             } while (c.moveToNext());
         }
-
         return wifiScans;
-
     }
 
     /**
@@ -220,9 +211,7 @@ public class SQLHelper extends SQLiteOpenHelper {
      */
     public void updateWifiScansByLocation(String location, List<WifiScan> wifiScans ){
         SQLiteDatabase db = this.getWritableDatabase();
-        List<WifiScan> wifiScansDB = new ArrayList<WifiScan>();
         List<Long> wsIDs = new ArrayList<Long>();
-        wifiScansDB = getWifiScansByLocation(location);
         wsIDs = getWifiScanIDsByLocation(getLocationIDbyName(location,db));
 
         for (Long id : wsIDs) {
@@ -264,7 +253,6 @@ public class SQLHelper extends SQLiteOpenHelper {
         wifiscans = location.getWifiScan();
         String locname = location.getSection()+location.getFloor();
         long loc_id;
-        // SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(FeedEntry.COLUMN_LOC_NAME, location.getSection()+location.getFloor());
@@ -278,9 +266,6 @@ public class SQLHelper extends SQLiteOpenHelper {
                     FeedEntry.COLUMN_LOC_NAME+ "='" +locname+"'", null);
             updateWifiScansByLocation(location.getSection()+location.getFloor(),wifiscans);
         }
-
-
-
         return loc_id;
     }
 
@@ -293,7 +278,6 @@ public class SQLHelper extends SQLiteOpenHelper {
      *  Private - True/False Overenie ci tabulka obsahuje zaznam o danej pozici blok/poschodie
      */
     private boolean containsLocation(String locName,SQLiteDatabase db) {
-        //SQLiteDatabase db = this.getReadableDatabase();
         boolean contains = false;
         String selectQuery = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION
                 + " WHERE " + FeedEntry.COLUMN_LOC_NAME + " = '" + locName + "'"
@@ -318,14 +302,11 @@ public class SQLHelper extends SQLiteOpenHelper {
      *  Private - Ziskanie ID pozicie podla nazvu pozicie
      */
     private Long getLocationIDbyName(String location_name,SQLiteDatabase db) {
-        //SQLiteDatabase db = this.getReadableDatabase();
         Long result;
-
         String selectQuery = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION + " WHERE "
                 + FeedEntry.COLUMN_LOC_NAME + " = '" + location_name + "'";
 
         Log.e(LOG, selectQuery);
-
         Cursor c = db.rawQuery(selectQuery, null);
 
         if (c != null) {
@@ -347,9 +328,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     public List<Record> getAllLocationRecords(){
 
         SQLiteDatabase db = this.getWritableDatabase();
-        List<WifiScan> wifiScans = new ArrayList<WifiScan>();
         List<Record> records = new ArrayList<Record>();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION + " ORDER BY "+ FeedEntry.COLUMN_LOC_NAME +" ASC";
 
         Log.e(LOG, selectQueryWS);
@@ -372,18 +351,20 @@ public class SQLHelper extends SQLiteOpenHelper {
         return records;
     }
 
+
+    /**
+     *  Ziskanie objektu typu Record z DB podla nazvu.
+     */
     public Record getLocationRecordByName(String name){
 
         SQLiteDatabase db = this.getWritableDatabase();
-        List<WifiScan> wifiScans = new ArrayList<WifiScan>();
         Record r = new Record();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-        String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION ;
+        String selectQueryWS = "SELECT  * FROM " + FeedEntry.TABLE_LOCATION+ " WHERE "
+                + FeedEntry.COLUMN_LOC_NAME + " = '" + name + "'";
 
         Log.e(LOG, selectQueryWS);
         Cursor c = db.rawQuery(selectQueryWS, null);
 
-        //prejdem cursorom vsetky zazanamy co vrati select a naplnim ich do pola Record-ov
         if (c.moveToFirst()) {
                 r.setId(c.getInt(c.getColumnIndex(FeedEntry.KEY_ID)));
                 r.setSection(name.substring(0,1));
@@ -397,9 +378,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     // ------------------------ "DEFAUL" metody ----------------//
 
     /**
-     *  Metoda na prvu inicializaciu DB z suboru test.json, metodu treba volat v ResultWriteri pri recover() metode
-     *  Neskor bude private - kedze default data budeme importovat nejak inac...
-     *  TODO treba doriesit import def dat   ===    HOTOVO
+     *  Private metoda na prvu inicializaciu DB z suboru default_data.json v res\raw\
      *
      */
     private void readDefaultData(SQLiteDatabase db){
@@ -432,8 +411,7 @@ public class SQLHelper extends SQLiteOpenHelper {
         recordList = gson.fromJson(jsonString,listType);
 
         for (Record location : recordList) {
-
-            //Podmienka aby sa nepridavali rovnake zaznamy viacej krat tu by asi ani nemusela byt kedze je to on create TODO treba asi odstranit
+            //Podmienka aby sa nepridavali rovnake zaznamy viacej krat v pripade ze su zdrojove datat chybne
            if (!containsLocation(location.getSection()+location.getFloor(),db)) {
                long loc_id = addLocationRecord(location,db);
            }

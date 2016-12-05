@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fei.mv.wifiscanner.model.Record;
@@ -93,6 +92,6 @@ public class LocationListFragment extends Fragment {
         MainActivity activity = (MainActivity) getActivity();
         activity.updateCurrentLocation();
         locationResultText = (TextView) this.getView().findViewById(R.id.location_result);
-        locationResultText.setText("Bloku: "+activity.getCurrentLocation().substring(0,1)+" - "+activity.getCurrentLocation().substring(1,2)+". poschodí");
+        locationResultText.setText("Bloku "+activity.getCurrentLocation().substring(0,1)+" - "+activity.getCurrentLocation().substring(1,2)+". poschodí");
     }
 }

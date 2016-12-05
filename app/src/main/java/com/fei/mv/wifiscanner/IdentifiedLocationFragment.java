@@ -1,13 +1,11 @@
 package com.fei.mv.wifiscanner;
 
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.fei.mv.wifiscanner.model.WifiScan;
@@ -22,13 +20,8 @@ import java.util.List;
  */
 
 public class IdentifiedLocationFragment extends Fragment {
-
-    private WifiManager wifi;
     private SQLHelper sqlHelper;
-    private Spinner sectionSpinner;
-    private Spinner floorSpinner;
     private List<WifiScan> scanResults;
-    private View rootView;
     private List<WifiScanCompared> resultComparetWifis;
 
 
@@ -41,7 +34,6 @@ public class IdentifiedLocationFragment extends Fragment {
                              Bundle savedInstanceState) {
         MainActivity activity = (MainActivity) getActivity();
         this.scanResults = ((MainActivity) getActivity()).scanResults;
-        this.wifi = ((MainActivity) getActivity()).wifi;
         this.sqlHelper = ((MainActivity) getActivity()).sqlHelper;
 
         View view = inflater.inflate(R.layout.activity_detail, container, false);
@@ -50,7 +42,7 @@ public class IdentifiedLocationFragment extends Fragment {
         String nazov = activity.currentLocation;
         locText.setText("Detail lokalizácie pre: "+nazov);
 
-        comparaWifiScans(scanResults,sqlHelper.getLocationRecordByName(nazov).getWifiScan());
+        compareWifiScans(scanResults,sqlHelper.getLocationRecordByName(nazov).getWifiScan());
 
         IdentifiedLocationAdapter adapter = new IdentifiedLocationAdapter(getActivity(), resultComparetWifis);
         Collections.sort(resultComparetWifis);
@@ -61,17 +53,17 @@ public class IdentifiedLocationFragment extends Fragment {
     }
 
 
-    private void comparaWifiScans(List<WifiScan> list_akt_data, List<WifiScan> list_db_data) {
+    private void compareWifiScans(List<WifiScan> list_akt_data, List<WifiScan> list_db_data) {
         resultComparetWifis = new ArrayList<WifiScanCompared>();
         List<String> listMac = new ArrayList<String>();
-        String con = "-100";
+        String cnst = "-100";
 
         for (WifiScan akt_scan : list_akt_data) {
             WifiScanCompared wifi = new WifiScanCompared();
             wifi.setcompareResult("new");
             wifi.setSSID(akt_scan.getSSID());
             wifi.setRSSI(akt_scan.getRSSI());
-            wifi.setRSSIold(con);
+            wifi.setRSSIold(cnst);
             wifi.setMAC(akt_scan.getMAC());
             listMac.add(wifi.getMAC());
             for (WifiScan db_scan : list_db_data) {
@@ -88,7 +80,7 @@ public class IdentifiedLocationFragment extends Fragment {
             if(!listMac.contains(db_scan.getMAC())){
                 wifidb.setcompareResult("unknown");
                 wifidb.setSSID(db_scan.getSSID());
-                wifidb.setRSSI(con);
+                wifidb.setRSSI(cnst);
                 wifidb.setRSSIold(db_scan.getRSSI());
                 wifidb.setMAC(db_scan.getMAC());
                 resultComparetWifis.add(wifidb);

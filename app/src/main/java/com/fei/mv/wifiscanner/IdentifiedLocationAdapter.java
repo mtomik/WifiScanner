@@ -5,17 +5,11 @@ import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.fei.mv.wifiscanner.model.WifiScan;
 import com.fei.mv.wifiscanner.model.WifiScanCompared;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,8 +33,6 @@ public class IdentifiedLocationAdapter extends ArrayAdapter<WifiScanCompared> {
         TextView macText;
         TextView rssiText;
         ImageView compareStatus;
-        //TextView compareStatus;
-        //CheckBox chBoxIsUsed;
     }
 
 
@@ -48,7 +40,6 @@ public class IdentifiedLocationAdapter extends ArrayAdapter<WifiScanCompared> {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         RowElementsHolder rowElementHolder = null;
-        ;
 
         Log.v("ConvertView", String.valueOf(position));
 
@@ -63,19 +54,6 @@ public class IdentifiedLocationAdapter extends ArrayAdapter<WifiScanCompared> {
             rowElementHolder.compareStatus = (ImageView) convertView.findViewById(R.id.compare_Status_icon);
 
             convertView.setTag(rowElementHolder);
-            /**
-             holder.name.setOnClickListener( new View.OnClickListener() {
-             public void onClick(View v) {
-             CheckBox cb = (CheckBox) v ;
-             Country country = (Country) cb.getTag();
-             Toast.makeText(getApplicationContext(),
-             "Clicked on Checkbox: " + cb.getText() +
-             " is " + cb.isChecked(),
-             Toast.LENGTH_LONG).show();
-             country.setSelected(cb.isChecked());
-             }
-             });
-             **/
         } else {
             rowElementHolder = (RowElementsHolder) convertView.getTag();
         }
@@ -104,12 +82,7 @@ public class IdentifiedLocationAdapter extends ArrayAdapter<WifiScanCompared> {
             rowElementHolder.compareStatus.setImageDrawable(myIcon);
         }
 
-        //rowElementHolder.name.setChecked(wifi.isSelected());
-        //rowElementHolder.name.setTag(wifi);
         return convertView;
-
-
     }
-
 
 }

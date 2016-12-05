@@ -11,12 +11,22 @@
         android:id="@+id/wifi_infoSSDI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/wifi_infoMACtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAC: "
+        android:layout_below="@+id/wifi_infoSSDI"
+        />
 
     <TextView
         android:id="@+id/wifi_infoMAC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/wifi_infoMACtext"
         android:layout_below="@+id/wifi_infoSSDI"
         />
 
@@ -33,22 +43,5 @@
         android:layout_centerInParent="true"
         android:layout_alignParentRight="true"
         />
-
-  <!--  <TextView
-        android:id="@+id/compareStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_alignParentRight="true"
-        android:padding="10dp"
-        android:text="Compare" />-->
-
-<!--    <CheckBox
-        android:id="@+id/chckBoxIsUsed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerInParent="true"
-        android:padding="10dp" />-->
 
 </RelativeLayout>
