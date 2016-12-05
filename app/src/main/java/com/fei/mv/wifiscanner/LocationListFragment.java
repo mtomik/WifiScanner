@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -68,10 +69,12 @@ public class LocationListFragment extends Fragment {
             }
         });
 
-        RelativeLayout locationResultLayout =
-                (RelativeLayout) view.findViewById(R.id.location_result_layout);
+        //OnClick listener pre detail hodnotenia k najdenej polohe.
 
-        locationResultLayout.setOnClickListener(new View.OnClickListener() {
+        ImageView locationResultIc =
+                (ImageView) view.findViewById(R.id.result_detail_icon);
+
+        locationResultIc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 IdentifiedLocationFragment createFragment = new IdentifiedLocationFragment();
@@ -90,6 +93,6 @@ public class LocationListFragment extends Fragment {
         MainActivity activity = (MainActivity) getActivity();
         activity.updateCurrentLocation();
         locationResultText = (TextView) this.getView().findViewById(R.id.location_result);
-        locationResultText.setText(activity.getCurrentLocation());
+        locationResultText.setText("Bloku: "+activity.getCurrentLocation().substring(0,1)+" - "+activity.getCurrentLocation().substring(1,2)+". poschodí");
     }
 }

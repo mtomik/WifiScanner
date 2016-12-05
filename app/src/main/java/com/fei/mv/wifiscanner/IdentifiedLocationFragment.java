@@ -46,11 +46,9 @@ public class IdentifiedLocationFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_detail, container, false);
         ListView listView = (ListView) view.findViewById(R.id.detail_list_view);
-        TextView locText = (TextView) view.findViewById(R.id.location_result);
+        TextView locText = (TextView) view.findViewById(R.id.recordText);
         String nazov = activity.currentLocation;
-        //ToDo if is N/A  toas nenaslo sa ---
-
-
+        locText.setText("Detail lokalizácie pre: "+nazov);
 
         comparaWifiScans(scanResults,sqlHelper.getLocationRecordByName(nazov).getWifiScan());
 
